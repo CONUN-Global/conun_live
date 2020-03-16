@@ -1,0 +1,69 @@
+<?php
+
+
+
+?>
+<header class="snap" id="setting">
+    <div class="wrap">
+        <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        <button type="button" name="button" class="clear" id="back" onclick="window.history.back()"><?=$this->lang->line('BACK');?></button>
+        <p class="title snap"><?=$this->lang->line('notice');?></p>
+    </div>
+</header>
+
+<? include "menu.html"; ?>
+<section id="content" class="snap">
+    <div class="sidewrap">
+
+        <table class="default" cellpadding="0" cellspacing="0">
+            <tbody>
+
+
+            <?
+              foreach($bbs as $item){
+
+            ?>
+
+
+
+            <tr data="<?=$item->bbs_no;?>" onclick="location.href='/conun/notice/view?bbs_no=<?=$item->bbs_no;?>'"  >
+                <td>
+                    <div class="flex row">
+                        <span class="title_nano"><?=$count;?></span>
+                        <p><?=$item->subject;?></p>
+                    </div>
+                </td>
+                <td class="title_nano">
+                   <?=date("m-d",strtotime($item->regdate));?>
+                </td>
+            </tr>
+            <?
+            $i--;
+            }
+            ?>
+
+            <script type="text/javascript">
+
+                $(document).on('scroll',function(){
+                    if($(window).scrollTop() + $(window).height() == $(document).height()){
+
+
+
+                    }
+                })
+            </script>
+            </tbody>
+        </table>
+    </div>
+</section>
+</div>
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+    });
+</script>
+</body>
+</html>

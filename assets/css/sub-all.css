@@ -1,0 +1,5748 @@
+.input {
+  border: 1px solid #cccccc;
+  padding: 10px 20px;
+  height: 44px;
+  background: #ffffff;
+}
+@media screen and (max-width: 400px) {
+  .input {
+    padding: 10px;
+  }
+}
+
+.btn-submit {
+  color: #ffffff;
+  border: 0;
+  background-image: url("/assets/img/btn_submit.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+.btn-submit.large {
+  background-position: 100% 0;
+  background-color: #804097;
+  height: 48px;
+  line-height: 48px;
+}
+@media screen and (max-width: 450px) {
+  .btn-submit.large {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.btn-submit.btn-hock, .btn-submit.btn-hock:active {
+  cursor: wait;
+  opacity: 0.6;
+}
+.btn-submit.blue {
+  background-image: url("/assets/img/btn_submit_blue.png");
+  background-color: #4e4097;
+}
+
+.input-separate {
+  display: inline-block;
+  width: 100%;
+}
+
+*, body {
+  color: #3d3d3d;
+}
+
+/*color change*/
+.hd .area-hd-top .layout .language,
+.hd .area-hd-top .layout .language option,
+.hd .area-hd-top .layout .btn-link-trade,
+.ft p {
+  color: #ffffff;
+}
+
+.ft a {
+  color: #ffffff;
+}
+
+.ft .bottom .right-info ul li {
+  color: #ffffff;
+}
+
+.hd .area-hd-top .layout .mall a {
+  color: #ffffff;
+}
+
+.sub .hd .area-hd-menu.layout .btn-mo-menu .mo-menu-line, .sub .hd .area-hd-menu.layout .btn-mo-menu .mo-menu-line:before, .sub .hd .area-hd-menu.layout .btn-mo-menu .mo-menu-line:after {
+  background: #ffffff;
+}
+.sub .hd .area-hd-menu.layout .btn-mo-menu.active .mo-menu-line, .sub .hd .area-hd-menu.layout .btn-mo-menu.active .mo-menu-line:before, .sub .hd .area-hd-menu.layout .btn-mo-menu.active .mo-menu-line:after {
+  background: transparent;
+}
+.sub .hd .area-hd-menu.layout .btn-mo-menu.active .mo-menu-line:before, .sub .hd .area-hd-menu.layout .btn-mo-menu.active .mo-menu-line:after {
+  background: #ffffff;
+}
+
+/*header*/
+.hd .layout .main-nav ul li a {
+  color: #7b7b7b;
+}
+@media screen and (max-width: 650px) {
+  .hd .layout .main-nav ul li a {
+    color: #ffffff;
+  }
+}
+
+.hd .layout .main-nav ul li:after {
+  background-color: #7b7b7b;
+}
+
+/*path*/
+/*member*/
+.area-member {
+  float: left;
+  width: 100%;
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+.area-member .member {
+  text-align: center;
+  width: 730px;
+  margin: 0 auto;
+}
+.area-member .member .title {
+  font-size: 2rem;
+  margin: 0 0 5%;
+}
+@media screen and (max-width: 650px) {
+  .area-member .member .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-member .member .title {
+    font-size: 1.3rem;
+  }
+}
+.area-member .member .member-form {
+  background: #f4f4f4;
+  padding: 5% 7%;
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (max-width: 450px) {
+  .area-member .member .member-form {
+    padding: 5% 3%;
+  }
+}
+.area-member .member .area-info-btn {
+  margin: 4% 0 0;
+  text-align: left;
+  letter-spacing: -1px;
+  display: inline-block;
+  width: 100%;
+}
+.area-member .member .area-info-btn ul li {
+  float: left;
+  width: 50%;
+  padding: 5%;
+}
+.area-member .member .area-info-btn ul li i {
+  margin: 0 20px 0 0;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  float: left;
+}
+.area-member .member .area-info-btn ul li.join i {
+  background-image: url("/assets/img/icon_join.png");
+}
+.area-member .member .area-info-btn ul li.pw i {
+  background-image: url("/assets/img/icon_pw.png");
+}
+.area-member .member .area-info-btn ul li p {
+  color: #626262;
+  font-size: 0.875rem;
+}
+.area-member .member .area-info-btn ul li .btn {
+  border: 0;
+  background: url("/assets/img/icon_arrow_right.png") no-repeat 100% 90%;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+  color: #333333;
+  padding: 7px 20px 0 0;
+  display: inline-block;
+}
+@media screen and (max-width: 650px) {
+  .area-member .member .area-info-btn ul li {
+    padding: 2%;
+  }
+  .area-member .member .area-info-btn ul li i {
+    margin: 0 5% 0 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-member .member .area-info-btn ul li {
+    padding: 0;
+  }
+  .area-member .member .area-info-btn ul li i {
+    width: 30px;
+    height: 30px;
+    background-size: 30px auto;
+    -webkit-background-size: 30px auto;
+  }
+  .area-member .member .area-info-btn ul li .btn {
+    padding: 3px 20px 0 0;
+  }
+}
+.area-member .member.login .member-form .area-member-input {
+  float: left;
+  width: 80%;
+}
+.area-member .member.login .member-form .area-member-input p:first-child {
+  margin: 0 0 17px;
+}
+.area-member .member.login .member-form .area-member-input p label {
+  width: 80px;
+  text-align: left;
+  letter-spacing: -1px;
+  display: inline-block;
+  float: left;
+  line-height: 44px;
+}
+.area-member .member.login .member-form .area-member-input p .input {
+  width: 85%;
+  width: calc(100% - 100px);
+}
+@media screen and (max-width: 650px) {
+  .area-member .member.login .member-form .area-member-input p label {
+    width: 60px;
+  }
+  .area-member .member.login .member-form .area-member-input p .input {
+    width: 80%;
+    width: calc(100% - 80px);
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-member .member.login .member-form .area-member-input p label {
+    display: none;
+  }
+  .area-member .member.login .member-form .area-member-input p .input {
+    width: 86%;
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-member .member.login .member-form .area-member-input {
+    width: 75%;
+  }
+  .area-member .member.login .member-form .area-member-input p:first-child {
+    margin: 0 0 10px;
+  }
+}
+.area-member .member.login .btn-submit {
+  width: 19.57%;
+  float: right;
+  height: 105px;
+}
+@media screen and (max-width: 450px) {
+  .area-member .member.login .btn-submit {
+    width: 24.57%;
+    height: 98px;
+  }
+}
+.area-member .member.register .g-recaptcha > div {
+  float: right;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 650px) {
+  .area-member .member.register .g-recaptcha > div {
+    float: left;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .area-member .member.register .g-recaptcha > div {
+    margin-bottom: 5px;
+    width: 100% !important;
+    overflow: hidden;
+    border-right: 1px solid #d3d3d3;
+  }
+}
+.area-member .member.register .member-form {
+  padding: 5% 14%;
+}
+@media screen and (max-width: 650px) {
+  .area-member .member.register .member-form {
+    padding: 5%;
+  }
+}
+.area-member .member.register .member-form p {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 2.5% 0;
+}
+.area-member .member.register .member-form p label {
+  width: 145px;
+  text-align: left;
+  line-height: 44px;
+  display: inline-block;
+  margin: 0 3% 0 0;
+  float: left;
+}
+.area-member .member.register .member-form p .input {
+  width: 350px;
+  width: calc(97% - 145px);
+  float: left;
+}
+.area-member .member.register .member-form p .register-ment {
+  border: 0;
+  background: none;
+  letter-spacing: -1px;
+  margin: 5px 0;
+  font-size: 0.85rem;
+  width: 350px;
+  width: calc(97% - 145px);
+  text-align: left;
+  float: right;
+}
+.area-member .member.register .member-form .btn-submit {
+  background-position: 100% 0;
+  background-color: #804097;
+  width: 350px;
+  width: calc(97% - 145px);
+  float: right;
+  height: 48px;
+}
+@media screen and (max-width: 650px) {
+  .area-member .member.register .member-form p {
+    margin: 0 0 5px;
+  }
+  .area-member .member.register .member-form p label {
+    line-height: 30px;
+  }
+  .area-member .member.register .member-form p .input, .area-member .member.register .member-form p .register-ment {
+    width: 100%;
+  }
+  .area-member .member.register .member-form .btn-submit {
+    width: 100%;
+    margin: 4% 0 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .area-member .member {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .area-member .member {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-member .member {
+    width: 96%;
+  }
+}
+
+/*main-sended*/
+.mail-sended .area-mail-sended {
+  background: #f7f7f7;
+  padding: 7%;
+  display: inline-block;
+  width: 100%;
+}
+.mail-sended .area-mail-sended .icon {
+  width: 81px;
+  height: 81px;
+  display: block;
+  background-color: #9a9a9a;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("/assets/img/icon_email_white.png");
+  margin: 0 auto 6%;
+}
+@media screen and (max-width: 750px) {
+  .mail-sended .area-mail-sended .icon {
+    margin: 0 auto 3%;
+    width: 50px;
+    height: 50px;
+    background-size: 25px;
+  }
+}
+.mail-sended .area-mail-sended p {
+  line-height: 1.55rem;
+  letter-spacing: -1px;
+  margin: 0 0 3% 0;
+}
+.mail-sended .area-mail-sended .area-info-btn {
+  width: 85%;
+}
+@media screen and (max-width: 450px) {
+  .mail-sended .area-mail-sended .area-info-btn {
+    width: 100%;
+  }
+}
+.mail-sended .area-mail-sended .area-info-btn .btn-submit {
+  width: 240px;
+  display: inline-block;
+  text-align: center;
+}
+.mail-sended .area-mail-sended .area-info-btn .btn-submit.blue {
+  float: right;
+}
+@media screen and (max-width: 750px) {
+  .mail-sended .area-mail-sended .area-info-btn .btn-submit {
+    width: 47%;
+  }
+}
+.mail-sended .area-mail-sended .area-info-btn p {
+  font-size: 0.9rem;
+  margin: 5% 0 0;
+  text-align: center;
+}
+.mail-sended .area-mail-sended .area-info-btn p button {
+  border: 0;
+  background: none;
+  border-bottom: 1px solid;
+  margin: 0 0 0 5px;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+  letter-spacing: -1.5px;
+}
+.mail-sended .area-mail-sended .area-info-btn p button:hover {
+  color: #ed145b;
+}
+@media screen and (max-width: 750px) {
+  .mail-sended .area-mail-sended {
+    padding: 5% 3%;
+  }
+}
+
+
+
+
+
+
+
+
+.area-contents .content {
+  width: 75%;
+  float: right;
+  padding: 5% 0;
+  min-height: 700px;
+}
+.area-contents .content .content-title {
+  font-size: 1.85rem;
+  text-align: center;
+  margin: 0 0 5%;
+}
+@media screen and (max-width: 600px) {
+  .area-contents .content .content-title {
+    font-size: 1.4rem;
+    margin: 20px 0 0;
+  }
+}
+.area-contents .content .table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.area-contents .content .table.list {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .area-contents .content .table.list .mobile_skip {
+    display: none;
+  }
+}
+.area-contents .content .table.list td.subject {
+  text-align: left;
+}
+.area-contents .content .table.view, .area-contents .content .table.write {
+  text-align: left;
+}
+.area-contents .content .table.view tr th, .area-contents .content .table.write tr th {
+  text-align: center;
+  background: #f2f2f2;
+  font-size: 0.9em;
+}
+.area-contents .content .table.view tr .inputs, .area-contents .content .table.write tr .inputs {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  background: #ffffff;
+  width: 100% !important;
+}
+.area-contents .content .table.view tr .inputs.textarea, .area-contents .content .table.write tr .inputs.textarea {
+  height: 300px;
+  max-height: 300px;
+}
+.area-contents .content .table.view tbody tr:first-child, .area-contents .content .table.write tbody tr:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+.area-contents .content .table thead th {
+  background: #e9e9e9;
+}
+.area-contents .content .table tbody tr {
+  border-bottom: 1px solid #d9d9d9;
+}
+.area-contents .content .table tbody tr.time {
+  display: none;
+}
+.area-contents .content .table tr th {
+  color: #3d3d3d;
+  padding: 14px;
+  vertical-align: middle;
+}
+.area-contents .content .table tr td {
+  font-size: 0.875em;
+  padding: 14px;
+}
+.area-contents .content .table tr td a {
+  font-size: inherit;
+}
+@media screen and (max-width: 600px) {
+  .area-contents .content .table tbody tr.time {
+    display: table-row;
+    text-align: right;
+    border-bottom: 1px solid #d9d9d9 !important;
+  }
+  .area-contents .content .table tbody tr.time td {
+    font-size: 0.8rem;
+    color: #999999;
+    padding: 0 14px 5px;
+  }
+  .area-contents .content .table tr th {
+    padding: 10px 5px;
+  }
+  .area-contents .content .table tr td {
+    padding: 10px 5px;
+  }
+}
+.area-contents .content .table .send {
+  color: #1489c5;
+  text-align: left;
+}
+.area-contents .content .table .receive {
+  color: #ed145b;
+  text-align: left;
+}
+.area-contents .area-board-btn {
+  float: left;
+  width: 100%;
+  margin: 3% 0 0;
+  text-align: right;
+}
+.area-contents .area-board-btn .btn-board {
+  padding: 7px 15px;
+  background: none;
+  border: 1px solid;
+  font-size: 0.9em;
+}
+.area-contents .area-board-btn .btn-board.list {
+  color: #3f51b5;
+}
+.area-contents .area-board-btn .btn-board.list:hover {
+  background: #3f51b5;
+  border-color: #3f51b5;
+  color: #ffffff;
+}
+.area-contents .area-board-btn .btn-board:hover {
+  background: #3d3d3d;
+  color: #ffffff;
+  border-color: #3d3d3d;
+}
+.area-contents .area-board-btn .btn-board.delete, .area-contents .area-board-btn .btn-board.cancel {
+  color: #f44336;
+}
+.area-contents .area-board-btn .btn-board.delete:hover, .area-contents .area-board-btn .btn-board.cancel:hover {
+  background: #f44336;
+  border-color: #f44336;
+  color: #ffffff;
+}
+
+.paging {
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  display: inline-block;
+}
+.paging ul {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+}
+.paging ul li {
+  float: left;
+  padding-right: 5px;
+}
+.paging ul li a {
+  border: 1px solid #dedede;
+  background: #ffffff;
+  padding: 6px 11px;
+  display: block;
+  letter-spacing: -2px;
+  font-size: 0.8rem;
+}
+.paging ul li a:hover {
+  background: #353535;
+  color: #ffffff;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+}
+@media screen and (max-width: 450px) {
+  .paging ul li a {
+    padding: 5px 9px;
+    font-size: 0.7rem;
+    letter-spacing: -1px;
+  }
+}
+.paging ul li.on a {
+  background: #353535;
+  color: #ffffff;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+  border-color: #353535;
+}
+
+
+
+
+
+
+
+
+
+
+
+.area-contents {
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 999px) {
+  .area-contents .content {
+    float: none;
+    margin: 0 auto;
+    width: 83%;
+    min-height: 400px;
+  }
+  .area-contents .content .area-content-in {
+    margin-top: 150px;
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 450px) {
+  .area-contents .content .area-content-in {
+    margin-top: 130px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 600px) {
+  .area-contents .content .area-content-in.area-table .table.view {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 600px) {
+  .area-contents .content .area-content-in.area-table.deal-list .table tbody tr {
+    border-bottom: 0;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 340px) {
+  .area-contents .content .area-content-in.area-table.deal-list {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 999px) {
+  .area-contents .content .area-content-in.area-table-oneline {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 450px) {
+  .area-contents .content .area-content-in.area-table-oneline {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .area-contents .content {
+    width: 93%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .area-contents .content {
+    width: 100%;
+  }
+}
+.area-contents.area-board.area-table {
+  margin-top: 85px;
+}
+@media screen and (max-width: 750px) {
+  .area-contents.area-plus .content {
+    width: 100%;
+  }
+}
+
+/*layerpopup*/
+.bg-layerpop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 70;
+  display: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.bg-layerpop.active {
+  display: block;
+  opacity: 1;
+}
+
+.layerpop {
+  display: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: fixed;
+  box-shadow: 0 14px 43px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0 14px 43px rgba(0, 0, 0, 0.55);
+  top: 20%;
+  width: 570px;
+  z-index: 100;
+  padding: 2%;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  /*find pw*/
+}
+.layerpop.active {
+  display: block;
+}
+.layerpop .layerpop-title {
+  font-size: 1.75rem;
+  font-family: "ngB", sans-serif, "Malgun Gothic";
+  font-weight: normal;
+  margin: 3% 0 6%;
+}
+.layerpop .layerpop-icon {
+  width: 81px;
+  height: 81px;
+  display: inline-block;
+  background-color: #9a9a9a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.layerpop .layerpop-icon.pw {
+  background-image: url("/assets/img/icon_pw_find.png");
+  background-position: 70% 50%;
+}
+.layerpop.pw-find {
+  left: 35%;
+  left: calc(50% - 285.5px);
+  text-align: center;
+}
+.layerpop.pw-find .input-separate {
+  padding: 0 5%;
+}
+.layerpop.pw-find .input-separate label {
+  float: left;
+  line-height: 44px;
+}
+.layerpop.pw-find .input-separate .input {
+  width: 350px;
+  width: calc(100% - 80px);
+  float: right;
+}
+.layerpop.pw-find .input-separate .btn-submit {
+  width: 350px;
+  float: right;
+  width: calc(100% - 80px);
+  margin: 4% 0 10%;
+}
+.layerpop.pw-find .area-pw-find-ment {
+  display: inline-block;
+  width: 350px;
+  float: right;
+  width: calc(100% - 80px);
+}
+.layerpop.pw-find .area-pw-find-ment .icon-mail {
+  width: 80px;
+  height: 40px;
+  display: inline-block;
+  float: left;
+  margin: 0 20px 0 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("/assets/img/icon_email.png");
+}
+.layerpop.pw-find .area-pw-find-ment .pw-find-ment {
+  float: left;
+  width: 58%;
+  text-align: left;
+  color: #333333;
+}
+.layerpop .btn-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("/assets/images/wallet/common/btn_close.png");
+  text-indent: -9999px;
+  border: 0;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+ul, li {
+  list-style: none;
+}
+
+#sub-layout {
+  width: 100%;
+  background: url("/assets/images/wallet/renew/sub_visual01.png");
+}
+#sub-layout .visual-intro {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 105px;
+}
+#sub-layout .visual-intro h2 {
+  color: #ffffff;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+#sub-layout .visual-intro .nav {
+  text-align: center;
+  margin-bottom: 75px;
+}
+#sub-layout .visual-intro .nav ul {
+  overflow: hidden;
+  display: inline-block;
+}
+#sub-layout .visual-intro .nav ul li {
+  float: left;
+  color: #ffffff;
+  font-size: 0.75em;
+}
+#sub-layout .visual-intro .nav ul li a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 13px;
+  font-size: 1em;
+}
+#sub-layout .visual-intro .tab-menu {
+  background: #ffffff;
+}
+#sub-layout .visual-intro .tab-menu a {
+  display: block;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 1.15em;
+}
+#sub-layout .visual-intro .tab-menu ul {
+  overflow: hidden;
+}
+#sub-layout .visual-intro .tab-menu ul li {
+  float: left;
+  background: url("/assets/images/wallet/renew/tab_bg.png") no-repeat right center;
+}
+#sub-layout .visual-intro .tab-menu ul li a:hover {
+  color: #804097;
+  font-weight: bold;
+  border-top: 5px solid #804097;
+}
+#sub-layout .visual-intro .tab-menu ul li.on {
+  border-top: 5px solid #804097;
+}
+#sub-layout .visual-intro .tab-menu ul li.on a {
+  font-weight: bold;
+  color: #804097;
+  background: url("/assets/images/wallet/renew/tab_arrow.png") no-repeat center bottom;
+}
+#sub-layout .visual-intro .tab-menu ul li.on a:hover {
+  border-top: none;
+}
+#sub-layout .visual-intro .w25 ul li {
+  width: 25%;
+}
+#sub-layout .visual-intro .w50 ul li {
+  width: 50%;
+}
+#sub-layout .visual-intro .w33 ul li {
+  width: 33.33%;
+}
+
+#sub-layout-2 {
+  width: 100%;
+  background: url("/assets/images/wallet/renew/sub_visual06.jpg");
+}
+#sub-layout-2 .visual-intro {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+#sub-layout-2 .visual-intro h2 {
+  color: #ffffff;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+#sub-layout-2 .visual-intro .nav {
+  text-align: center;
+}
+#sub-layout-2 .visual-intro .nav ul {
+  overflow: hidden;
+  display: inline-block;
+}
+#sub-layout-2 .visual-intro .nav ul li {
+  float: left;
+  color: #ffffff;
+  font-size: 0.75em;
+}
+#sub-layout-2 .visual-intro .nav ul li a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 13px;
+  font-size: 1em;
+}
+
+.visual03 {
+  background: url("/assets/images/wallet/renew/sub_visual03.jpg") !important;
+}
+
+.visual02 {
+  background: url("/assets/images/wallet/renew/sub_visual02.jpg") !important;
+}
+
+.visual04 {
+  background: url("/assets/images/wallet/renew/sub_visual06.jpg") !important;
+}
+
+.visual05 {
+  background: url("/assets/images/wallet/renew/sub_visual05.jpg") !important;
+}
+
+#contents {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 70px 10px;
+}
+#contents h3 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+  background: url("/assets/images/wallet/renew/title_bg.png") no-repeat center bottom;
+  padding-bottom: 25px;
+  margin-bottom: 55px;
+}
+#contents h3 strong {
+  font-weight: bold;
+}
+#contents .con {
+  overflow: hidden;
+}
+#contents .con h4 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #818181;
+  margin: 0 0 15px 0;
+}
+#contents .con .his {
+  overflow: hidden;
+  background: url("/assets/images/wallet/renew/history_bg.png") no-repeat center 0;
+}
+#contents .con .his div {
+  width: 50%;
+}
+#contents .con .his .Left {
+  float: left;
+  background: url("/assets/images/wallet/renew/history_01.png") no-repeat 100% 0;
+  text-align: right;
+  padding-right: 6%;
+}
+#contents .con .his .Right {
+  float: right;
+  background: url("/assets/images/wallet/renew/history_02.png") no-repeat 0 0;
+  text-align: left;
+  padding-left: 6%;
+}
+#contents .con .his h5 {
+  color: #804097;
+  font-size: 1em;
+}
+#contents .con .his h5 span {
+  font-size: 1.16em;
+  color: #804097;
+}
+#contents .con .his p {
+  padding: 10px 0;
+}
+#contents .con .his .po1 {
+  margin-top: 5%;
+}
+#contents .con .his .po2 {
+  margin-top: 15%;
+}
+#contents .con .his .po3 {
+  margin-top: 5%;
+}
+#contents .con .his .po4 {
+  margin-top: 5%;
+}
+#contents .con .vision h4 {
+  color: #804097;
+}
+#contents .con .vision .in-1 {
+  width: 850px;
+  margin: 0 auto;
+}
+#contents .con .vision .in-1 ul {
+  overflow: hidden;
+  padding-left: 12%;
+  margin: 6% 0;
+}
+#contents .con .vision .in-1 ul li {
+  float: left;
+  width: 33.33%;
+  background: url("/assets/images/wallet/renew/vision_04.png") no-repeat 89% center;
+}
+#contents .con .vision .in-1 ul li div {
+  text-align: center;
+  width: 171px;
+  height: 171px;
+}
+#contents .con .vision .in-1 ul li div span {
+  display: block;
+  padding: 67% 0 0 0;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+#contents .con .vision .in-1 ul li .ico1 {
+  background: url("/assets/images/wallet/renew/vision_01.png") no-repeat 0 0;
+}
+#contents .con .vision .in-1 ul li .ico1 span {
+  background: url("/assets/images/wallet/renew/vision_05.png") no-repeat center 50%;
+}
+#contents .con .vision .in-1 ul li .ico2 {
+  background: url("/assets/images/wallet/renew/vision_02.png") no-repeat 0 0;
+}
+#contents .con .vision .in-1 ul li .ico2 span {
+  background: url("/assets/images/wallet/renew/vision_06.png") no-repeat center 50%;
+}
+#contents .con .vision .in-1 ul li .ico3 {
+  background: url("/assets/images/wallet/renew/vision_03.png") no-repeat 0 0;
+}
+#contents .con .vision .in-1 ul li .ico3 span {
+  background: url("/assets/images/wallet/renew/vision_07.png") no-repeat center 50%;
+}
+#contents .con .vision .in-1 ul li:last-child {
+  background: none;
+}
+#contents .con .vision .in-1 h5 {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 2% 0;
+  color: #666666;
+}
+#contents .con .vision .in-1 p {
+  text-align: center;
+}
+#contents .con .vision .in-2 {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0;
+}
+#contents .con .vision .in-2 .coin-use ul {
+  overflow: hidden;
+}
+#contents .con .vision .in-2 .coin-use ul li {
+  float: left;
+  width: 33.33%;
+  height: 272px;
+}
+#contents .con .vision .in-2 .coin-use ul li p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.15em;
+  padding-top: 34%;
+  font-weight: bold;
+  width: 42%;
+  margin: 0 auto;
+}
+#contents .con .vision .in-2 .coin-use ul li span {
+  display: block;
+  color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+}
+#contents .con .vision .in-2 .coin-use ul li.pic1 {
+  background: url("/assets/images/wallet/renew/vision_09.png") no-repeat 0 0;
+}
+#contents .con .vision .in-2 .coin-use ul li.pic2 {
+  background: url("/assets/images/wallet/renew/vision_10.png") no-repeat 0 0;
+}
+#contents .con .vision .in-2 .coin-use ul li.pic3 {
+  background: url("/assets/images/wallet/renew/vision_11.png") no-repeat 0 0;
+}
+#contents .con .vision .in-2 .coin-tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1% 23%;
+  background: rgba(81, 49, 93, 0.7);
+}
+#contents .con .vision .in-2 .coin-tit p {
+  color: #ffffff;
+  padding: 15px 0 15px 73px;
+  background: url("/assets/images/wallet/renew/vision_08.png") no-repeat left 50%;
+  line-height: 1.5em;
+}
+#contents .con .vision .in-3 h4 {
+  color: #666666;
+  font-size: 1.4em;
+  background: url("/assets/images/wallet/renew/vision_12.png") no-repeat 50% 0;
+  padding: 10px 0;
+}
+#contents .con .vision .in-3 ul {
+  margin-top: 50px;
+  overflow: hidden;
+}
+#contents .con .vision .in-3 ul li {
+  float: left;
+  width: 33.33%;
+  background: url("/assets/images/wallet/renew/vision_16.png") no-repeat 54% 40%;
+  height: 270px;
+}
+#contents .con .vision .in-3 ul li p {
+  font-weight: bold;
+  padding: 149px 10px 0 10px;
+  text-align: center;
+}
+#contents .con .vision .in-3 ul li .ico1 {
+  background: url("/assets/images/wallet/renew/vision_13.png") no-repeat 50% 0;
+}
+#contents .con .vision .in-3 ul li .ico2 {
+  background: url("/assets/images/wallet/renew/vision_14.png") no-repeat 50% 0;
+}
+#contents .con .vision .in-3 ul li .ico3 {
+  background: url("/assets/images/wallet/renew/vision_15.png") no-repeat 50% 0;
+}
+#contents .con .vision .in-3 ul li span {
+  color: #666666;
+  display: block;
+  text-align: center;
+  padding: 20px 50px 0 50px;
+}
+#contents .con .intro {
+  text-align: left;
+  background: url("/assets/images/wallet/renew/intro_01.png") no-repeat right 9%;
+}
+#contents .con .intro p {
+  padding: 12px 0;
+  line-height: 1.6em;
+}
+#contents .con .intro .Tit {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding-bottom: 40px;
+}
+#contents .con .intro .Tit span {
+  display: block;
+  color: #804097;
+  font-size: 1em;
+}
+#contents .con .intro-2 {
+  background: url("/assets/images/wallet/renew/intro_02.png") no-repeat 0 0;
+  padding: 10px 0 40px 0;
+}
+#contents .con .intro-2 p {
+  color: #ffffff;
+  text-align: center;
+}
+#contents .con .intro-2 span {
+  color: #ffffff;
+}
+#contents .con .intro-2 .tit {
+  padding: 50px 0;
+}
+#contents .con .intro-2 .tit span {
+  text-decoration: underline;
+  display: block;
+  font-size: 1.15em;
+  line-height: 2em;
+}
+#contents .con .intro-2 ul {
+  overflow: hidden;
+}
+#contents .con .intro-2 ul li {
+  float: left;
+  width: 25%;
+}
+#contents .con .intro-2 ul li p {
+  padding: 70px 0;
+  background: url("/assets/images/wallet/renew/intro_03.png") no-repeat center 0;
+}
+#contents .con .intro-2 ul li .long {
+  padding: 61px 0;
+}
+#contents .con .intro-2 ul li span {
+  display: block;
+  padding: 10% 17% 0 17%;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+#contents .con .intro-2 p.bottom {
+  padding: 15px 0;
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+#contents .con .intro-3 {
+  text-align: left;
+}
+#contents .con .intro-3 p {
+  padding: 12px 0;
+  line-height: 1.6em;
+}
+#contents .con .how ul {
+  overflow: hidden;
+}
+#contents .con .how ul li {
+  width: 32%;
+  float: left;
+  padding: 2% 0 0 2.8%;
+  background: url("/assets/images/wallet/renew/how_arrow.png") no-repeat 1.5% center;
+}
+#contents .con .how ul li div {
+  text-align: center;
+  width: 100%;
+  min-height: 315px;
+  position: relative;
+  padding: 14% 0 0 0;
+}
+#contents .con .how ul li div h5 {
+  font-size: 1.3em;
+  color: #ffffff;
+  position: absolute;
+  top: -12%;
+  left: 44%;
+  background: url("/assets/images/wallet/renew/how_tit.png") no-repeat 0 0;
+  padding: 5%;
+}
+#contents .con .how ul li div h5.top {
+  top: -8%;
+}
+#contents .con .how ul li div p {
+  color: #ffffff;
+  font-size: 1.3em;
+  padding: 100px 0 20px 0;
+}
+#contents .con .how ul li div p strong {
+  font-weight: bold;
+}
+#contents .con .how ul li div span {
+  display: block;
+  color: #ffffff;
+  background: url("/assets/images/wallet/renew/how_tit2.png") no-repeat center 0;
+  padding: 20px 86px 0 86px;
+}
+#contents .con .how ul li div span strong {
+  font-weight: bold;
+}
+#contents .con .how ul li div.pro-1 {
+  background: url("/assets/images/wallet/renew/how_01.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-1 p {
+  background: url("/assets/images/wallet/renew/how_ico_01.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-2 {
+  background: url("/assets/images/wallet/renew/how_02.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-2 p {
+  background: url("/assets/images/wallet/renew/how_ico_02.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-3 {
+  background: url("/assets/images/wallet/renew/how_03.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-3 p {
+  background: url("/assets/images/wallet/renew/how_ico_03.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-4 {
+  background: url("/assets/images/wallet/renew/how_04.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-4 p {
+  background: url("/assets/images/wallet/renew/how_ico_04.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-5 {
+  background: url("/assets/images/wallet/renew/how_05.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-5 p {
+  background: url("/assets/images/wallet/renew/how_ico_05.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-6 {
+  background: url("/assets/images/wallet/renew/how_06.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-6 p {
+  background: url("/assets/images/wallet/renew/how_ico_06.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-7 {
+  background: url("/assets/images/wallet/renew/how_07.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-7 p {
+  background: url("/assets/images/wallet/renew/how_ico_07.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-8 {
+  background: url("/assets/images/wallet/renew/how_08.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-8 p {
+  background: url("/assets/images/wallet/renew/how_ico_08.png") no-repeat center 0;
+}
+#contents .con .how ul li div.pro-9 {
+  background: url("/assets/images/wallet/renew/how_09.png") no-repeat 0 0;
+}
+#contents .con .how ul li div.pro-9 p {
+  background: url("/assets/images/wallet/renew/how_ico_09.png") no-repeat center 0;
+}
+#contents .con .how ul li.fi {
+  background: none;
+}
+#contents .con .introduce {
+  background: url("/assets/images/wallet/renew/pay_01.png") no-repeat 0 0;
+  padding: 70px 130px;
+}
+#contents .con .introduce h4 {
+  color: #ffffff;
+  background: url("/assets/images/wallet/renew/pay_02.png") no-repeat 38% center;
+  margin: 0 0 15px 0;
+  padding: 10px 0;
+}
+#contents .con .introduce .topbox {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px 0 10px 0;
+}
+#contents .con .introduce .topbox h5 {
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: normal;
+  text-align: center;
+}
+#contents .con .introduce .topbox ul {
+  overflow: hidden;
+  margin: 35px 0;
+}
+#contents .con .introduce .topbox ul li {
+  float: left;
+  width: 33.33%;
+  background: url("/assets/images/wallet/renew/pay_06.png") no-repeat right center;
+}
+#contents .con .introduce .topbox ul li span {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 62px 0 0 0;
+}
+#contents .con .introduce .topbox ul li span.ico1 {
+  background: url("/assets/images/wallet/renew/pay_03.png") no-repeat center 0;
+}
+#contents .con .introduce .topbox ul li span.ico2 {
+  background: url("/assets/images/wallet/renew/pay_04.png") no-repeat center 0;
+}
+#contents .con .introduce .topbox ul li span.ico3 {
+  background: url("/assets/images/wallet/renew/pay_05.png") no-repeat center 0;
+}
+#contents .con .introduce .topbox ul li:last-child {
+  background: none;
+}
+#contents .con .introduce .in2 ul {
+  overflow: hidden;
+  background: url("/assets/images/wallet/renew/pay_09.png") no-repeat 0 bottom;
+  padding: 20px 0;
+}
+#contents .con .introduce .in2 ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+#contents .con .introduce .in2 ul li p {
+  color: #ffffff;
+}
+#contents .con .introduce .in2 ul li p span {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#contents .con .introduce .in2 ul li span {
+  color: #ffffff;
+  display: block;
+}
+#contents .con .introduce .in2 ul li.ar1 {
+  background: url("/assets/images/wallet/renew/pay_07.png") no-repeat 40% 0;
+}
+#contents .con .introduce .in2 ul li.ar1 p {
+  padding: 47px 117px 0 57px;
+}
+#contents .con .introduce .in2 ul li.ar1 span {
+  padding: 36px 85px 0 19px;
+}
+#contents .con .introduce .in2 ul li.ar2 {
+  background: url("/assets/images/wallet/renew/pay_08.png") no-repeat center 0;
+}
+#contents .con .introduce .in2 ul li.ar2 span {
+  padding-top: 124px;
+}
+#contents .con .introduce .in2 ul li.ar3 {
+  background: url("/assets/images/wallet/renew/pay_07.png") no-repeat 60% 0;
+}
+#contents .con .introduce .in2 ul li.ar3 p {
+  padding: 47px 8px 0 62px;
+}
+#contents .con .introduce .in2 ul li.ar3 p span {
+  padding: 0;
+}
+#contents .con .introduce .in2 ul li.ar3 span {
+  padding: 40px 50px 0 100px;
+}
+#contents .con ul.bu01 li {
+  background: url("/assets/images/wallet/renew/bu_01.png") no-repeat 10px center;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+#contents .con .pri-01 p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#contents .con .pri-01 .box {
+  background: #f6f6f6;
+  padding: 15px 35px;
+}
+#contents .con .pri-01 .box p {
+  text-align: left;
+  margin: 20px 0;
+  line-height: 1.5em;
+}
+#contents .con .h4 {
+  margin: 25px 0 0 0;
+}
+#contents .con .h4 p {
+  margin: 20px 0;
+}
+#contents .con .h4 h4 {
+  font-size: 1.25em;
+  text-align: left;
+  color: #1f1f1f;
+  line-height: 1.4em;
+}
+#contents .con .h4 h5 {
+  color: #804097;
+  font-weight: bold;
+  margin: 25px 0 0 0;
+  padding-left: 5px;
+}
+#contents .con .h4 .h4-tit {
+  margin: 15px 0;
+}
+#contents .con .h4 .h4-con {
+  margin: 30px 0 15px 0;
+}
+#contents .con .h4 ul.pri {
+  margin: 10px 0 0 10px;
+}
+#contents .con .h4 ul.pri li {
+  padding: 20px 0 0 0;
+}
+#contents .con .h4 ul.pri li ul li {
+  padding: 15px 0 0 20px;
+  line-height: 1.4em;
+}
+#contents .con .h4 ul.pri li ul li ul li {
+  padding: 8px 0 0 15px;
+}
+#contents .con .site ul {
+  overflow: hidden;
+}
+#contents .con .site ul li {
+  float: left;
+}
+#contents .con .site ul li strong {
+  font-weight: bold;
+}
+#contents .con .site ul li a:hover {
+  color: #804097;
+  font-weight: bold;
+}
+#contents .con .site ul li.L-tit {
+  width: 25%;
+  margin-right: 5%;
+  border-top: 5px solid #804097;
+}
+#contents .con .site ul li.L-tit span {
+  color: #804097;
+  font-size: 1.4em;
+  display: inline-block;
+  padding: 20px 0 0 30px;
+}
+#contents .con .site ul li.R-con {
+  width: 70%;
+  border-top: 1px solid #cbcbcb;
+}
+#contents .con .site ul li.R-con ul li {
+  float: none;
+  padding: 20px 0 20px 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: #e4e4e4;
+}
+#contents .con .site ul li.R-con ul li:last-child {
+  border-bottom: none;
+}
+
+.location .location-map {
+  float: left;
+  width: 67.77%;
+}
+.location .location-map .map {
+  border: 0;
+}
+.location .location-map .map .wrap_controllers {
+  display: none;
+}
+.location .location-map .map .map_border {
+  display: none;
+}
+.location .location_txt {
+  float: left;
+  width: 32.23%;
+  padding: 4.3%;
+  height: 435px;
+  margin-bottom: 8%;
+  background-color: #f3f0f4;
+}
+.location .location_txt h4 {
+  color: #666666;
+  font-size: 1.33rem;
+}
+.location .location_txt h4 i {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: #d8c3df;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/wallet/renew/icon_location.png");
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.location .location_txt .address {
+  color: #585858;
+  line-height: 1.6rem;
+  margin: 5% 0;
+}
+.location .location_txt hr {
+  border: none;
+  border-top: 1px solid #d1d1d1;
+}
+.location .location_txt .traffic {
+  color: #ffffff;
+  background-color: #7a737d;
+  display: block;
+  width: 125px;
+  padding: 9px 0;
+  text-align: center;
+  margin: 10% 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.location .location_txt .traffic-list {
+  display: inline-block;
+  width: 100%;
+}
+.location .location_txt .traffic-list li {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  color: #585858;
+  font-size: 0.93rem;
+}
+.location .location_txt .traffic-list li:first-child {
+  margin-top: 0;
+}
+.location .location_txt .traffic-list li i {
+  width: 57px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 10px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 500px) {
+  .location .location-map {
+    width: 100%;
+  }
+  .location .location-map .map {
+    width: 100% !important;
+  }
+  .location .location_txt {
+    width: 100%;
+    height: auto;
+  }
+  .location .location_txt .traffic {
+    margin: 4% 0;
+  }
+}
+
+.starcoin-definition {
+  color: #ffffff;
+  padding: 6% 5%;
+  float: left;
+  width: 100%;
+  background-image: url("/assets/images/wallet/renew/starcoin_logo.png"), url("/assets/images/wallet/renew/bg_starcoin.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 90% 50%, 50% 50%;
+}
+.starcoin-definition .title {
+  color: #ffffff;
+  font-size: 2.66rem;
+  text-transform: uppercase;
+}
+.starcoin-definition .desc {
+  color: #ffffff;
+  margin: 1% 0 3%;
+  line-height: 1.5rem;
+}
+.starcoin-definition .desc strong {
+  display: block;
+}
+.starcoin-definition .list {
+  width: 69%;
+}
+.starcoin-definition .list li {
+  margin: 0 0 11px;
+  letter-spacing: -0.25px;
+  float: left;
+  width: 100%;
+}
+.starcoin-definition .list li i {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 16px;
+  height: 21px;
+  float: left;
+  background: url("/assets/images/wallet/renew/icon_starcoin_list.png") no-repeat 0 50%;
+}
+.starcoin-definition .list li p {
+  float: left;
+  color: #ffffff;
+  width: 70%;
+  width: calc(100% - 26px);
+  line-height: 1.4rem;
+}
+@media screen and (max-width: 500px) {
+  .starcoin-definition {
+    background-size: cover;
+    background-image: url("/assets/images/wallet/renew/bg_starcoin.png");
+    text-align: center;
+  }
+  .starcoin-definition .title {
+    font-size: 1.66rem;
+  }
+  .starcoin-definition .list {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.starcoin-problem {
+  float: left;
+  width: 100%;
+  margin: 9% 0 0;
+  text-align: center;
+}
+.starcoin-problem h4 {
+  color: #666666;
+  font-size: 1.53rem;
+  font-weight: normal;
+}
+.starcoin-problem .desc {
+  color: #666666;
+  margin: 3% 0 5%;
+  line-height: 1.6rem;
+  background: url("/assets/images/wallet/renew/vision_12.png") no-repeat 50% 0;
+}
+.starcoin-problem .list li {
+  float: left;
+  width: 24.33%;
+  margin: 0 0 0 0.89%;
+  letter-spacing: -0.25px;
+}
+.starcoin-problem .list li b {
+  border: 5px solid #ffffff;
+  background: #804097;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.93rem;
+}
+.starcoin-problem .list li b i {
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.starcoin-problem .list li p {
+  padding: 11% 7%;
+  background: #eeeeee;
+  text-align: left;
+  color: #353535;
+  font-size: 0.93rem;
+  line-height: 1.53rem;
+  height: 129px;
+}
+.starcoin-problem .list li:first-child {
+  margin: 0;
+}
+@media screen and (max-width: 500px) {
+  .starcoin-problem h4 {
+    font-size: 1.2rem;
+  }
+  .starcoin-problem .list li {
+    width: 49%;
+    margin: 0;
+  }
+  .starcoin-problem .list li:nth-of-type(even) {
+    margin: 0 0 0 2%;
+  }
+}
+
+.starcoin-process {
+  float: left;
+  width: 100%;
+  margin: 10% 0 7%;
+}
+.starcoin-process .process-map {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.starcoin-process .process-map .process-element {
+  width: 122px;
+  height: 69px;
+  display: block;
+  background-color: #49b7e9;
+  border-left: 6px solid #bee4f5;
+  border-right: 6px solid #bee4f5;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -61px;
+}
+.starcoin-process .process-map .process-element:before, .starcoin-process .process-map .process-element:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 77px;
+  height: 79px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: #49b7e9;
+  left: 12px;
+}
+.starcoin-process .process-map .process-element:before {
+  top: -44.1px;
+  border-top: 9px solid #bee4f5;
+  border-right: 9px solid #bee4f5;
+}
+.starcoin-process .process-map .process-element:after {
+  bottom: -44.1px;
+  border-bottom: 9px solid #bee4f5;
+  border-left: 9px solid #bee4f5;
+  left: 12px;
+}
+.starcoin-process .process-map .process-element > img {
+  z-index: 50;
+  display: block;
+  top: -10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+}
+.starcoin-process .process-map .process-element > i {
+  color: #ffffff;
+  z-index: 50;
+  width: 58px;
+  display: inline-block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -29px;
+}
+.starcoin-process .process-map .process-selement {
+  width: 51px;
+  height: 89px;
+  display: block;
+  background-color: #ffffff;
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  color: #69afdf;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 165px;
+}
+.starcoin-process .process-map .process-selement:before, .starcoin-process .process-map .process-selement:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 33px;
+  height: 33px;
+  -webkit-transform: scaleY(1.7) rotate(-135deg);
+  -ms-transform: scaleY(1.7) rotate(-135deg);
+  transform: scaleY(1.7) rotate(-135deg);
+  left: 0;
+  background-color: #ffffff;
+}
+.starcoin-process .process-map .process-selement:before {
+  top: 21px;
+  color: #69afdf;
+  border-top: 4px solid;
+  border-right: 4px solid;
+  left: -18px;
+}
+.starcoin-process .process-map .process-selement:after {
+  color: #69afdf;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  left: 33px;
+  top: 21px;
+}
+.starcoin-process .process-map .process-selement > img {
+  z-index: 50;
+  display: block;
+  top: 14px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+}
+.starcoin-process .process-map .process-selement > i {
+  color: #ffffff;
+  z-index: 50;
+  width: 58px;
+  display: inline-block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -29px;
+}
+.starcoin-process .process-map .process-selement.left {
+  left: 105px;
+  color: #99c7e7;
+}
+.starcoin-process .process-map .process-selement.left:before, .starcoin-process .process-map .process-selement.left:after {
+  color: #99c7e7;
+}
+.starcoin-process .process-map .process-selement.right {
+  left: 490px;
+  color: #3492d4;
+}
+.starcoin-process .process-map .process-selement.right:before, .starcoin-process .process-map .process-selement.right:after {
+  color: #3492d4;
+}
+.starcoin-process .process-map .process-selement-txt {
+  color: #666666;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  margin-left: -63.5px;
+  text-align: center;
+}
+.starcoin-process .process-map .process-selement-txt.left {
+  left: 35px;
+  margin-left: 0;
+}
+.starcoin-process .process-map .process-selement-txt.right {
+  left: 435px;
+  margin-left: 0;
+}
+.starcoin-process .process-map .process-arrow {
+  position: absolute;
+  font-weight: bold;
+  z-index: 100;
+}
+.starcoin-process .process-map .process-arrow mark {
+  background: none;
+}
+.starcoin-process .process-map .process-arrow.arrow01 {
+  top: 79px;
+  left: 135px;
+}
+.starcoin-process .process-map .process-arrow.arrow01 mark {
+  position: absolute;
+  left: -34px;
+  top: 16px;
+}
+.starcoin-process .process-map .process-arrow.arrow02 {
+  left: 50%;
+  margin-left: -10px;
+  top: 95px;
+}
+.starcoin-process .process-map .process-arrow.arrow-line2 {
+  top: 198px;
+  z-index: 1;
+}
+.starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+  left: 114px;
+}
+.starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+  left: 308px;
+}
+.starcoin-process .process-map .process-arrow.arrow05 {
+  top: 318px;
+  left: 50%;
+  margin-left: -205px;
+}
+.starcoin-process .process-map .process-arrow.arrow05 mark {
+  display: block;
+  text-align: center;
+  margin: 8px 0 0;
+}
+@media screen and (max-width: 500px) {
+  .starcoin-process .process-map {
+    width: 100%;
+    padding: 10% 0 3%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow01 {
+    top: 122px;
+    left: 66px;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .starcoin-process .process-map .process-arrow.arrow01 {
+    top: 126px;
+    left: 45px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .starcoin-process .process-map .process-arrow.arrow02 {
+    margin-left: -10px;
+    top: 134px;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2 {
+    top: 240px;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 13%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    left: auto;
+    right: 13%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 11.5%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 11.5%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 420px) {
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 9.5%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 7.5%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 9%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 370px) {
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 7.5%;
+  }
+  .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .starcoin-process .process-map .process-arrow.arrow05 {
+    top: 358px;
+    left: 50%;
+    margin-left: -175px;
+  }
+  .starcoin-process .process-map .process-arrow.arrow05 img {
+    width: 335px;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .starcoin-process .process-map .process-arrow.arrow05 {
+    margin-left: -150px;
+  }
+  .starcoin-process .process-map .process-arrow.arrow05 img {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .starcoin-process .process-map .process-selement {
+    top: 207px;
+  }
+  .starcoin-process .process-map .process-selement.left {
+    left: 14%;
+  }
+  .starcoin-process .process-map .process-selement.right {
+    left: auto;
+    right: 6%;
+  }
+  .starcoin-process .process-map .process-selement-txt {
+    top: 306px;
+    margin-left: -55.5px;
+  }
+  .starcoin-process .process-map .process-selement-txt.left {
+    left: 2%;
+    margin-left: 0;
+    width: 80px;
+  }
+  .starcoin-process .process-map .process-selement-txt.right {
+    left: auto;
+    margin-left: 0;
+    width: 80px;
+    right: 2%;
+  }
+}
+.starcoin-process .process-text {
+  width: 50%;
+  text-align: left;
+  padding: 6%;
+  float: right;
+}
+.starcoin-process .process-text h4 {
+  color: #353535;
+  font-size: 1.66rem;
+  line-height: 2.13rem;
+}
+.starcoin-process .process-text b {
+  color: #666666;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2% 0 9%;
+  display: block;
+}
+.starcoin-process .process-text p {
+  color: #666666;
+  font-size: 0.93rem;
+  line-height: 1.6rem;
+  margin: 2% 0 0;
+}
+@media screen and (max-width: 500px) {
+  .starcoin-process .process-text {
+    width: 100%;
+    margin-top: 380px;
+    padding: 6% 3%;
+  }
+  .starcoin-process .process-text h4 {
+    font-size: 1.2rem;
+    line-height: 1.13rem;
+  }
+  .starcoin-process .process-text b {
+    font-size: 1rem;
+  }
+}
+
+.technology .list li {
+  list-style-image: url("/assets/images/wallet/renew/icon_list_style.png");
+  list-style-position: inside;
+}
+.technology .title {
+  width: 269px;
+  margin: -30px auto 6%;
+  text-align: center;
+  background: #ffffff;
+  border: 4px solid #afbecf;
+  font-size: 1.3rem;
+  padding: 16px 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.technology .blockchain {
+  width: 47.91%;
+  height: 447px;
+  float: left;
+  background: #f3f4f6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 9%;
+}
+.technology .blockchain .blockchain-graphic {
+  text-align: center;
+}
+.technology .blockchain .blockchain-graphic i {
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  text-align: center;
+  border: 5px solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 19px 0 0;
+}
+.technology .blockchain .blockchain-graphic i img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.technology .blockchain .blockchain-graphic i strong {
+  text-transform: capitalize;
+  color: #ffffff;
+  width: 60px;
+  line-height: 1.06rem;
+  display: inline-block;
+}
+.technology .blockchain .blockchain-graphic i.block {
+  background-color: #804097;
+  border-color: #dbcee2;
+}
+.technology .blockchain .blockchain-graphic i.new {
+  background-color: #49b7e9;
+  border-color: #bee4f5;
+}
+.technology .blockchain .blockchain-graphic .arrow {
+  margin-top: -60px;
+}
+.technology .blockchain .desc {
+  margin: 5% auto 0;
+  width: 80%;
+  line-height: 1.46rem;
+  padding: 10px 8%;
+  text-align: center;
+  background-color: #ffffff;
+}
+.technology .blockchain .blockchain-character {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10%;
+  margin: 5% 0 0;
+}
+.technology .blockchain .blockchain-character li {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+  color: #393939;
+}
+.technology .blockchain.pree {
+  margin-right: 4.18%;
+}
+.technology .blockchain.pree .title {
+  color: #00284c;
+}
+.technology .technology-content {
+  float: left;
+  width: 100%;
+  padding: 8% 0;
+}
+.technology .technology-content .technology-title {
+  font-size: 2rem;
+  color: #353535;
+  text-align: center;
+}
+.technology .technology-content .technology-title:after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #999999;
+  display: block;
+  margin: 2.1% auto;
+}
+.technology .technology-content .technology-desc {
+  text-align: center;
+  color: #555555;
+  width: 78%;
+  margin: 0 auto 3%;
+}
+.technology .technology-content .dott-line {
+  border: 0;
+  border-top: 1px dotted #707070;
+  float: left;
+  width: 100%;
+  margin: 5% 0;
+}
+.technology .technology-content.cryptocurrency {
+  background-color: #f3f4f6;
+  text-align: center;
+}
+.technology .technology-content.cryptocurrency .cryp-flow {
+  width: 67.79%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 5%;
+  text-align: center;
+  display: inline-block;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle {
+  float: left;
+  width: 109px;
+  height: 109px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 4px solid rgba(128, 64, 151, 0.21);
+  padding: 13px 0 0;
+  text-transform: uppercase;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.starocin {
+  color: #ffffff;
+  background: url("/assets/images/wallet/renew/bg_flow_circle_starcoin.png") no-repeat 50% 50%;
+  border: 0;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm {
+  padding: 32px 0 0;
+  margin: 0 30px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm strong {
+  display: inline-block;
+  width: 44px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+  padding: 27px 0 0;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank strong {
+  display: inline-block;
+  word-break: keep-all;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circles {
+  float: right;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+  margin: 9% 0;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain {
+  display: inline-block;
+  width: 47%;
+  padding: 10px 0;
+  text-transform: capitalize;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: 4px solid rgba(128, 64, 151, 0.21);
+  float: left;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain img {
+  margin-right: 10px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain strong {
+  font-size: 1.2rem;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain.private {
+  float: right;
+  background-color: #804097;
+  border-color: #dbcee2;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain.private strong {
+  color: #ffffff;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet {
+  width: 47%;
+  display: inline-block;
+  float: left;
+  height: 95px;
+  background-color: #ffffff;
+  border: 5px solid #bee4f5;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #49b7e9;
+  float: left;
+  margin-left: -10px;
+  margin-top: -5px;
+  padding: 11px 0 0;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon strong {
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+  display: inline-block;
+  padding: 16px 0 0;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt strong {
+  color: #ed9025;
+  display: block;
+  margin: 0 0 13px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt mark {
+  color: #ffffff;
+  background: #a9a9a9;
+  font-style: italic;
+  padding: 3px 5px;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet.individual {
+  float: right;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.diagonal {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_diagonal.png");
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.down {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_down.png");
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.cross {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_cross.png");
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .down {
+  right: 25%;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .down + .down {
+  right: 4.5%;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .diagonal {
+  margin-left: 40px;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+  margin-top: -8.5%;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .cross {
+  margin-left: -24px;
+}
+@media screen and (max-width: 500px) {
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .cross {
+    margin-left: -15px;
+  }
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .down {
+  left: 20%;
+}
+.technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .down.last {
+  left: auto;
+  right: 20%;
+}
+.technology .technology-content.cryptocurrency .cryp-desc-list {
+  float: left;
+  width: 100%;
+  padding: 2% 7%;
+  margin: 3% 0 0;
+  text-align: left;
+  background-image: url("/assets/images/wallet/renew/bg_cryp_desc_left.png"), url("/assets/images/wallet/renew/bg_cryp_desc_right.png");
+  background-repeat: no-repeat;
+  background-position: 3% 50%, 97% 50%;
+}
+.technology .technology-content.cryptocurrency .cryp-desc-list li {
+  margin: 2.5% 0 0;
+  line-height: 1.6rem;
+}
+.technology .technology-content.cryptocurrency .cryp-desc-list li:first-child {
+  margin: 0;
+}
+.technology .technology-content.pg .pg-flow {
+  width: 47.91%;
+  height: 439px;
+  float: left;
+  background: #f3f4f6;
+  padding: 4%;
+}
+.technology .technology-content.pg .pg-flow header {
+  display: inline-block;
+}
+.technology .technology-content.pg .pg-flow header .pg-circle {
+  width: 175px;
+  height: 175px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid #bee4f5;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 15px;
+  padding: 90px 0 0;
+  float: left;
+}
+.technology .technology-content.pg .pg-flow header .pg-circle.kpop {
+  background-image: url("/assets/images/wallet/renew/icon_pg_kpop.png");
+  background-color: #49b7e9;
+}
+.technology .technology-content.pg .pg-flow header .pg-circle.no-pay {
+  background-image: url("/assets/images/wallet/renew/icon_pg_no.png");
+  background-color: #e73a6b;
+  border-color: #f2bccb;
+}
+.technology .technology-content.pg .pg-flow header .pg-circle.starpay {
+  border: 0;
+  background-image: url("/assets/images/wallet/renew/icon_cryp_starcoin.png"), url("/assets/images/wallet/renew/bg_pg_starpay.png");
+  background-position: 50% 35px, 0 0;
+}
+.technology .technology-content.pg .pg-flow header .pg-circle strong {
+  display: inline-block;
+  width: 60px;
+  word-break: keep-all;
+  color: #ffffff;
+}
+.technology .technology-content.pg .pg-flow header .arrow.next {
+  width: 40px;
+  height: 29px;
+  display: inline-block;
+  text-indent: -9999px;
+  background-image: url("/assets/images/wallet/renew/arrow_pg_next.png");
+  background-repeat: no-repeat;
+  margin: 16% 30px;
+  float: left;
+}
+.technology .technology-content.pg .pg-flow .pg-list {
+  float: left;
+  width: 100%;
+  margin: 5% 0 0;
+}
+.technology .technology-content.pg .pg-flow .pg-list li {
+  margin-top: 5%;
+  line-height: 1.6rem;
+  letter-spacing: -0.5px;
+}
+.technology .technology-content.pg .pg-flow .pg-list li:first-child {
+  margin-top: 0;
+}
+.technology .technology-content.pg .pg-flow.starpay-flow {
+  float: right;
+}
+.technology .technology-content .blueprint {
+  width: 47.91%;
+  height: 561px;
+  float: left;
+  background-color: #f3f4f6;
+  padding: 0 4% 4%;
+  background-image: url("/assets/images/wallet/renew/img_blueprint.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.technology .technology-content .blueprint-list {
+  float: right;
+  width: 47.91%;
+  padding: 2% 0;
+}
+.technology .technology-content .blueprint-list li {
+  line-height: 1.6rem;
+  margin-top: 3%;
+}
+.technology .technology-content .blueprint-list li:first-child {
+  margin-top: 0;
+}
+.technology .technology-content.system {
+  background-color: #f1ebf3;
+}
+.technology .technology-content.system .system-img-area {
+  width: 91.52%;
+  margin: 0 auto;
+  height: 784px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  background-image: url("/assets/images/wallet/renew/img_system_ko.png");
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  padding: 4%;
+}
+.technology .technology-content.system .system-img-area .system-list {
+  margin-top: 530px;
+  float: left;
+  width: 100%;
+  background: #f3f4f6;
+  padding: 3%;
+}
+.technology .technology-content.system .system-img-area .system-list li {
+  line-height: 1.6rem;
+  margin-top: 3%;
+}
+.technology .technology-content.system .system-img-area .system-list li:first-child {
+  margin-top: 0;
+}
+.technology .technology-content.system .management-system {
+  float: left;
+  width: 91.52%;
+  margin-left: 4.24%;
+  background-color: #ffffff;
+  padding: 0 3% 3%;
+}
+.technology .technology-content.system .management-system .management-system-contents {
+  width: 47%;
+  float: left;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content {
+  -webkit-border-radius: 105px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #bee4f5;
+  padding: 5%;
+  margin-bottom: 2%;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.shape {
+  background: #49b7e9;
+  display: inline-block;
+  width: 100%;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.shape li {
+  float: left;
+  color: #ffffff;
+  line-height: 1.6rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.shape li:nth-of-type(odd) {
+  clear: both;
+  color: #edef37;
+  margin: 0 5px 0 0;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method {
+  margin-top: 2%;
+  background: #bfd898;
+  text-align: center;
+  border-color: #e7f0d8;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code {
+  font-size: 1.33rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national {
+  color: #dd1f57;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_national.png");
+  background-position: 0;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national .arrow strong {
+  left: -35px;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch {
+  color: #143567;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_branch.png");
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch .arrow strong {
+  left: 8px;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents {
+  color: #252525;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_contents.png");
+  background-position: 100% 0;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents .arrow strong {
+  left: 29px;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code .arrow {
+  color: inherit;
+  position: absolute;
+  height: 36px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 40px;
+  font-size: 0.93rem;
+  letter-spacing: -0.5px;
+  width: 90px;
+  top: 23px;
+  left: -12px;
+}
+.technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code .arrow strong {
+  color: inherit;
+  width: 80px;
+  position: absolute;
+}
+.technology .technology-content.system .management-system .management-system-contents .desc {
+  margin-top: 9%;
+  color: #535353;
+  text-shadow: 1px 1px 10px rgba(244, 244, 244, 0.44);
+  font-size: 0.93rem;
+  letter-spacing: -0.5px;
+}
+.technology .technology-content.system .management-system .list {
+  width: 47%;
+  float: right;
+}
+.technology .technology-content.system .management-system .list li {
+  margin-top: 3%;
+}
+.technology .technology-content.system .management-system .list li:first-child {
+  margin-top: 0;
+}
+.technology .technology-content.document .document-list {
+  border: 1px solid #ebebeb;
+  border-bottom: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.technology .technology-content.document .document-list li {
+  float: left;
+  border-left: 1px solid #ebebeb;
+  width: 25%;
+  height: 199px;
+  padding: 6.5% 3%;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 1.4rem;
+}
+.technology .technology-content.document .document-list li:nth-of-type(1), .technology .technology-content.document .document-list li:nth-of-type(3), .technology .technology-content.document .document-list li:nth-of-type(6), .technology .technology-content.document .document-list li:nth-of-type(8), .technology .technology-content.document .document-list li:nth-of-type(9), .technology .technology-content.document .document-list li:nth-of-type(11) {
+  background-color: #f9f9f9;
+}
+.technology .technology-content.document .document-list li:nth-of-type(4n+1) {
+  clear: both;
+  border-left: 0;
+}
+.technology .technology-content.document .document-list li strong {
+  font-size: 1.06rem;
+  display: block;
+}
+.technology .technology-content.document .document-list li.long {
+  padding: 5.5% 3%;
+}
+@media screen and (max-width: 500px) {
+  .technology .title {
+    width: 214px;
+    margin: -22px auto 6%;
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+  .technology .blockchain {
+    height: auto;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+  .technology .blockchain.pree {
+    margin-right: 0;
+  }
+  .technology .blockchain .blockchain-graphic i {
+    width: 100px;
+    height: 100px;
+    padding: 12px 0 0;
+  }
+  .technology .blockchain .blockchain-graphic i img {
+    width: 32px;
+  }
+  .technology .blockchain .blockchain-graphic .arrow {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .technology .blockchain .desc {
+    width: 90%;
+  }
+  .technology .technology-content .technology-title {
+    font-size: 1.2rem;
+  }
+  .technology .technology-content .technology-desc {
+    width: 90%;
+    margin: 0 auto 4%;
+  }
+  .technology .technology-content.cryptocurrency .cryp-desc-list {
+    padding: 3%;
+    background-image: none;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow {
+    width: 97%;
+    padding: 3%;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle {
+    width: 65px;
+    height: 65px;
+    border: 3px solid rgba(128, 64, 151, 0.21);
+    padding: 7px 0 0;
+    font-size: 0.8rem;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle img {
+    margin: 0 auto 2px;
+    width: 22px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm {
+    padding: 15px 0 0;
+    margin: 0 3px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm strong {
+    width: 30px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+    padding: 10px 0 0;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow {
+    width: 30px;
+    height: 30px;
+    top: 0;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.diagonal {
+    background-size: 27px;
+    margin-left: 0;
+    right: 138px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.down {
+    background-size: 10px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.cross {
+    background-size: 30px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+    margin-top: -9.5%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+    margin-top: -11%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .arrow.down {
+    right: 92px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .arrow.down + .down {
+    right: 18px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+    margin: 9% 0;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain {
+    width: 48%;
+    padding: 10px 0;
+    border: 3px solid rgba(128, 64, 151, 0.21);
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain img {
+    margin-right: 0;
+    width: 20px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain strong {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+    margin: 11% 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet {
+    width: 48%;
+    height: auto;
+    border: 3px solid #bee4f5;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon {
+    width: 57px;
+    height: 57px;
+    margin-left: -10px;
+    margin-top: -2px;
+    padding: 7px 0 0;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon img {
+    margin: 0 auto;
+    width: 23px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon strong {
+    font-size: 0.8rem;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+    padding: 6px 0 0;
+    width: 55%;
+    width: calc(100% - 57px);
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt strong {
+    font-size: 0.8rem;
+    margin: 0 0 4px;
+  }
+  .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt mark {
+    padding: 1px;
+    font-size: 0.7rem;
+  }
+  .technology .technology-content.pg .pg-flow {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .technology .technology-content.pg .pg-flow header .pg-circle {
+    width: 110px;
+    height: 110px;
+    border: 4px solid #bee4f5;
+    padding: 60px 0 0;
+    background-size: 40px;
+  }
+  .technology .technology-content.pg .pg-flow header .pg-circle strong {
+    font-size: 0.8rem;
+  }
+  .technology .technology-content.pg .pg-flow header .pg-circle.starpay {
+    background-size: auto, cover;
+    background-position: 50% 12px ,50% 50%;
+  }
+  .technology .technology-content.pg .pg-flow header .arrow.next {
+    width: 25px;
+    margin: 16% 10px;
+    background-size: 25px;
+  }
+  .technology .technology-content.pg .pg-flow .pg-list {
+    text-align: left;
+  }
+  .technology .technology-content .blueprint {
+    margin: 7% 0 0;
+    width: 100%;
+    background-image: url("/assets/images/wallet/renew/img_blueprint_mo.png");
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .technology .technology-content .blueprint {
+    background-size: 90%;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .technology .technology-content .blueprint-list {
+    width: 100%;
+  }
+  .technology .technology-content.system .system-img-area {
+    height: 1870px;
+    background-image: url("/assets/images/wallet/renew/img_system_ko_mo.png");
+    background-position: 50% 50%;
+  }
+  .technology .technology-content.system .system-img-area .system-list {
+    margin-top: 1880px;
+    background: none;
+    padding: 0 0 2%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .technology .technology-content.system .system-img-area {
+    background-size: 80%;
+    height: 1590px;
+  }
+  .technology .technology-content.system .system-img-area .system-list {
+    margin-top: 1600px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .technology .technology-content.system .management-system {
+    margin-top: 8%;
+    padding: 0 3%;
+  }
+  .technology .technology-content.system .management-system .management-system-contents {
+    width: 100%;
+  }
+  .technology .technology-content.system .management-system .management-system-contents .desc {
+    margin-top: 17%;
+    margin-bottom: 8%;
+  }
+  .technology .technology-content.system .management-system .list {
+    width: 107%;
+    background: #f1ebf3;
+    margin-right: -3.5%;
+    padding-top: 5%;
+  }
+  .technology .technology-content.document .document-list {
+    background: #f3f4f6;
+    border: 0;
+    padding: 4%;
+    text-align: left;
+  }
+  .technology .technology-content.document .document-list li {
+    border: 0;
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+    list-style-image: url("/assets/images/wallet/renew/icon_list_style.png");
+    list-style-position: inside;
+    padding: 0;
+  }
+  .technology .technology-content.document .document-list li.long {
+    padding: 0;
+  }
+  .technology .technology-content.document .document-list li:nth-of-type(1), .technology .technology-content.document .document-list li:nth-of-type(3), .technology .technology-content.document .document-list li:nth-of-type(6), .technology .technology-content.document .document-list li:nth-of-type(8), .technology .technology-content.document .document-list li:nth-of-type(9), .technology .technology-content.document .document-list li:nth-of-type(11) {
+    background-color: transparent;
+  }
+  .technology .technology-content.document .document-list li strong {
+    display: inline-block;
+  }
+  .technology .technology-content.document .document-list li:empty {
+    display: none;
+  }
+}
+
+.en .starcoin-problem .list li p {
+  height: 138px;
+}
+@media screen and (max-width: 500px) {
+  .en .starcoin-problem .list li p {
+    height: 168px;
+  }
+}
+.en .starcoin-problem .desc {
+  background: url("/assets/images/wallet/renew/vision_12_en_1.png") no-repeat 50% 100%;
+  padding: 5px 0;
+}
+.en .starcoin-process .process-map .process-selement-txt {
+  margin-left: -93px;
+  font-size: 0.85rem;
+}
+.en .starcoin-process .process-map .process-selement-txt.left {
+  margin-left: 0;
+}
+.en .starcoin-process .process-map .process-selement-txt.right {
+  left: 403px;
+  width: 180px;
+  margin-left: 0;
+}
+@media screen and (max-width: 500px) {
+  .en .starcoin-process .process-map .process-selement-txt.left {
+    width: 100px;
+  }
+  .en .starcoin-process .process-map .process-selement-txt.right {
+    left: auto;
+    right: 1%;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .en .starcoin-process .process-map .process-selement-txt {
+    width: 130px;
+    margin-left: -65px;
+  }
+  .en .starcoin-process .process-map .process-selement-txt.left {
+    left: -1%;
+  }
+  .en .starcoin-process .process-map .process-selement-txt.right {
+    right: -1%;
+  }
+}
+.en .technology .title {
+  width: 295px;
+}
+@media screen and (max-width: 400px) {
+  .en .technology .title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .en .technology .title {
+    font-size: 1rem;
+  }
+}
+.en .technology .blockchain {
+  height: 460px;
+}
+@media screen and (max-width: 500px) {
+  .en .technology .blockchain {
+    height: auto;
+  }
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm {
+  text-transform: none;
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm strong {
+  width: 57px;
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+  padding: 32px 0 0;
+  text-transform: none;
+}
+@media screen and (max-width: 500px) {
+  .en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+    padding: 15px 0 0;
+  }
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet.individual .icon {
+  padding: 3px 0 0 0;
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+  width: 65%;
+  width: calc(100% - 96px);
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt mark {
+  margin: 1px 0 0;
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt strong {
+  margin: 0 0 10px;
+}
+.en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet.server .wallet-txt {
+  padding: 6px 0 0;
+}
+@media screen and (max-width: 500px) {
+  .en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+    width: 100%;
+    height: 70px;
+    padding: 5px 0;
+  }
+  .en .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet.individual .icon {
+    padding: 5px 0;
+  }
+}
+.en .technology .technology-content.pg .pg-flow header .pg-circle strong {
+  width: 100px;
+}
+.en .technology .technology-content .blueprint {
+  background-image: url("/assets/images/wallet/renew/img_blueprint_en.png");
+}
+@media screen and (max-width: 500px) {
+  .en .technology .technology-content .blueprint {
+    background-image: url("/assets/images/wallet/renew/img_blueprint_en_mo.png");
+  }
+}
+@media screen and (max-width: 450px) {
+  .en .technology .technology-content .blueprint {
+    height: 460px;
+  }
+}
+.en .technology .technology-content.system .system-img-area {
+  height: 833px;
+  background-image: url("/assets/images/wallet/renew/img_system_en.png");
+}
+.en .technology .technology-content.system .system-img-area .system-list {
+  margin-top: 545px;
+}
+.en .technology .technology-content.system .management-system .management-system-contents .desc {
+  margin-top: 14%;
+}
+@media screen and (max-width: 500px) {
+  .en .technology .technology-content.system .management-system .management-system-contents .desc {
+    margin-top: 17%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .en .technology .technology-content.system .system-img-area {
+    height: 1870px;
+    background-image: url("/assets/images/wallet/renew/img_system_en_mo.png");
+  }
+  .en .technology .technology-content.system .system-img-area .system-list {
+    margin-top: 1880px;
+  }
+}
+
+.area-contents.area-plus .plus .content .content-title {
+  margin: 0 0 6.5%;
+  text-align: left;
+}
+.area-contents.area-plus .plus .updown-tit {
+  margin: 0 0 3%;
+  color: #804097;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.area-contents.area-plus .plus .updown-tit:before {
+  content: "";
+  background: #804097;
+  margin: 0 15px 0 0;
+  width: 57px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .updown-tit {
+    margin: 3% 0;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+  }
+  .area-contents.area-plus .plus .updown-tit:before {
+    width: 4px;
+    height: 15px;
+    margin: 0 5px 0 0;
+  }
+}
+.area-contents.area-plus .plus .service-desc {
+  float: left;
+  padding: 0 0 0 3.9%;
+  margin: 0 0 6%;
+  width: 100%;
+}
+.area-contents.area-plus .plus .service-desc b {
+  color: #00aeef;
+  font-weight: 600;
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .service-desc {
+    padding: 0;
+  }
+}
+.area-contents.area-plus .plus .plus-form {
+  letter-spacing: -0.5px;
+}
+.area-contents.area-plus .plus .plus-form fieldset {
+  float: left;
+  width: 100%;
+  margin: 0 0 6% 0;
+}
+.area-contents.area-plus .plus .plus-form fieldset legend {
+  margin: 0 0 3%;
+  color: #804097;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.area-contents.area-plus .plus .plus-form fieldset legend:before {
+  content: "";
+  background: #804097;
+  margin: 0 15px 0 0;
+  width: 57px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset legend {
+    font-size: 1rem;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset legend:before {
+    margin: 0 5px 0 0;
+    width: 5px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset legend.short-legend {
+    margin: 0 0 3%;
+    font-size: 1rem;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset legend.short-legend:before {
+    margin: 0 5px 0 0;
+    width: 5px;
+    height: 15px;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate {
+  padding: 0 15px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short {
+  width: 79.44%;
+  padding: 0 0 0 3.9%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label {
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin-right: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #c6c6c6;
+  line-height: 65px;
+  border: 1px solid #e7e7e7;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label.not-apply {
+  border-left: 0;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label.not-apply:before {
+  background-position: 103px 50%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label.apply:before {
+  background-position: 113px 50%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label:before {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  z-index: -1;
+  border: 0;
+  background-color: transparent;
+  background-image: url("/assets/images/wallet/renew/bg_check_big.png");
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label {
+    padding-left: 0;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label:before {
+    background-image: none;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two input[type=radio]:checked + .checkbox-label {
+  color: #ffffff;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two input[type=radio]:checked + .checkbox-label:before {
+  background-image: url("/assets/images/wallet/renew/bg_checked_big.png");
+  background-color: #804097;
+  border-color: #804097;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-position: 103px 50%;
+  bottom: 0;
+}
+@media screen and (max-width: 700px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two input[type=radio]:checked + .checkbox-label:before {
+    background-image: none;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two input[type=radio]:checked + .apply.checkbox-label:before {
+  background-position: 113px 50%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label {
+  width: 30.42%;
+  margin: 0;
+  border: 1px solid #d9d9d9;
+  height: 137px;
+  padding-left: 0;
+  float: left;
+  text-align: center;
+  line-height: 234px;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 0;
+  background-repeat: no-repeat;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.bithum {
+  background-image: url("/assets/images/wallet/renew/bithum_logo_gray.png");
+  background-position: 50% 21%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.coinone {
+  background-image: url("/assets/images/wallet/renew/coinone_logo_gray.png");
+  background-position: 50% 26%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.coinone:before {
+  background-position: 66px 50%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.korbit {
+  background-image: url("/assets/images/wallet/renew/korbit_logo_gray.png");
+  background-position: 50% 27%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.center {
+  margin: 0 4.37%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label:before {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 101%;
+  height: 33px;
+  background: #e7e7e7;
+  background-image: url("/assets/images/wallet/renew/bg_check.png");
+  background-repeat: no-repeat;
+  background-position: 65px 43%;
+  bottom: 0;
+  margin-right: 0;
+  border: 0;
+  left: -1px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label .text {
+  z-index: 1;
+  position: relative;
+  font-weight: bold;
+  color: #9d9d9d;
+  margin-top: 2px;
+  padding-left: 10px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .checkbox-label {
+  border-color: #804097;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .checkbox-label .text {
+  color: #ffffff;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .bithum.checkbox-label {
+  background-image: url("/assets/images/wallet/renew/bithum_logo.png");
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .coinone.checkbox-label {
+  background-image: url("/assets/images/wallet/renew/coinone_logo.png");
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .coinone.checkbox-label:before {
+  background-position: 66px 50%;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .korbit.checkbox-label {
+  background-image: url("/assets/images/wallet/renew/korbit_logo.png");
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .checkbox-label::before {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 101%;
+  height: 33px;
+  background-position: 65px 43%;
+  background-color: #804097;
+  background-image: url("/assets/images/wallet/renew/bg_checked.png");
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.two .checkbox-label {
+    padding-left: 0;
+    font-size: 1.15rem;
+    line-height: 49px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label {
+    background-size: 75%;
+    height: 114px;
+    line-height: 194px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label:before {
+    background-image: none !important;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label .text {
+    padding-left: 0;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three input[type=checkbox]:checked + .checkbox-label::before {
+    background-image: none !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label {
+    width: 31.753%;
+    height: 95px;
+    line-height: 156px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.short.three .checkbox-label.center {
+    margin: 0 2.37%;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 26px;
+  margin-right: 20px;
+  line-height: 28px;
+}
+@media screen and (max-width: 420px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label.standard .text {
+    display: none;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label.standard:before {
+    left: 0;
+    top: -13px !important;
+    bottom: auto !important;
+  }
+}
+@media screen and (max-width: 420px) and (max-width: 365px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label.standard:before {
+    left: -7px;
+  }
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label:before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #c3c3c3;
+  border: 0;
+  background-image: url("/assets/images/wallet/renew/bg_checked.png");
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label .text {
+  z-index: 1;
+  position: relative;
+  color: #ffffff;
+  font-size: 13px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate input[type=checkbox] {
+  display: none;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate input[type=checkbox]:checked + .checkbox-label::before {
+  content: "";
+  background-color: #804097;
+}
+@media screen and (max-width: 420px) {
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label {
+    padding-left: 21px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label:before {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background-position: 50%;
+    background-size: 14px;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field {
+  float: left;
+  width: 100%;
+  min-width: auto;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines {
+  background: #f6f6f6;
+  padding: 3%;
+  margin-left: 3.9%;
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines {
+    margin-left: 0;
+    padding: 1%;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate {
+  border-top: 1px solid #ebebeb;
+  padding: 15px 10px;
+  text-align: center;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate:first-of-type {
+  border-top: 0;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .coin-title {
+  width: 125px;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate input {
+  font-size: 0.86rem;
+  height: 24px;
+  text-align: right;
+  padding: 0 5px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #acacac;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate input.coin-price {
+  width: 220px;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .narrow-input {
+  width: 75px;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate label {
+  margin: 0 4px;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .label-separate {
+  margin: 0 4px 0 31px;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate i:not(.text) {
+  margin: 0 4px;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .caution {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #804097;
+  line-height: 1.4rem;
+  margin: 2% 0 0 3.9%;
+  padding: 0;
+  background: none;
+  float: left;
+  width: 100%;
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .caution i {
+  color: #804097;
+  display: inline-block;
+  height: 93px;
+  float: left;
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .caution {
+    margin: 2% 0 0 0;
+  }
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate {
+    padding: 2% 1%;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .coin-title {
+    width: 115px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .label-separate {
+    margin: 0 4px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate input {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate input {
+    width: 140px;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .area-list-table {
+  float: left;
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines {
+    width: 100%;
+    text-align: center;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate {
+    width: auto;
+    padding: 2% 0;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .value-separate {
+    display: block;
+    margin: 10px 10px 0 0;
+  }
+}
+@media screen and (max-width: 650px) and (max-width: 380px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .value-separate {
+    margin: 10px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) and (max-width: 365px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .value-separate {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 650px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .label-separate {
+    margin: 0 4px 0 53px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate input.coin-price {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 650px) and (max-width: 400px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .checkbox-label {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 650px) and (max-width: 420px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate {
+    padding: 2% 0;
+    width: 100%;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate label {
+    margin: 0;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .label-separate {
+    margin: 0 4px 0 29px;
+  }
+}
+@media screen and (max-width: 650px) and (max-width: 365px) {
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .coin-title {
+    width: 110px;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate .label-separate {
+    margin: 0 4px 0 0;
+  }
+  .area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .plus-kind-lines .input-separate input.coin-price {
+    width: 90px;
+  }
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .input-phone {
+  margin: 0;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-phone input {
+  font-size: 0.86rem;
+  height: 29px;
+  text-align: left;
+  padding: 0 5px;
+  border: 1px solid #636363;
+  margin: 0 0 0 10px;
+}
+.area-contents.area-plus .plus .plus-form fieldset .input-phone ::-webkit-input-placeholder,
+.area-contents.area-plus .plus .plus-form fieldset .input-phone ::-moz-placeholder,
+.area-contents.area-plus .plus .plus-form fieldset .input-phone :-ms-input-placeholder,
+.area-contents.area-plus .plus .plus-form fieldset .input-phone :-moz-placeholder {
+  color: #555555;
+}
+.area-contents.area-plus .plus .plus-form .caution {
+  background: #f6f6f6;
+  padding: 3% 5%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #363636;
+  line-height: 1.7rem;
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: -3%;
+}
+@media screen and (max-width: 999px) {
+  .area-contents.area-plus .plus .plus-form .caution {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+.area-contents.area-plus .plus .area-btns-submit {
+  margin: 5% 0 0;
+}
+.area-contents.area-plus .plus .area-btns-submit .btn-apply {
+  color: #ffffff;
+  background: #2e489a;
+  border: 0;
+  width: 235px;
+  height: 46px;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 600px) {
+  .area-plus .left-menu {
+    top: 110px;
+  }
+}
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .narrow-input {
+  width: 65px;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate input.coin-price {
+  width: 150px;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate i:not(.text) {
+  font-size: 0.85rem;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate label {
+  font-size: 0.9rem;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset.plus-kind-field .input-separate .label-separate {
+  margin: 0 4px 0 15px;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate .checkbox-label.radio:before {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate input[type=radio] {
+  display: none;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .input-separate.checkbox-separate input[type=radio]:checked + .checkbox-label::before {
+  content: "";
+  background-color: #ffffff;
+  background-image: url("/assets/img/bg_checked.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-color: #804097;
+}
+
+.area-contents.area-plus .plus .plus-form fieldset .value-separate .sms {
+  width: 36px;
+  height: 18px;
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("/assets/img/sms.png");
+}
+.area-contents.area-plus .plus .plus-form fieldset .value-separate .sms.active {
+  background-image: url("/assets/img/sms_active.png");
+}
+
+@media screen and (max-width: 999px) {
+  .area-plus .left-menu {
+    display: none;
+  }
+  .area-plus.area-contents .content .area-content-in.area-table-oneline {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 999px) and (max-width: 450px) {
+  .area-plus.area-contents .content .area-content-in.area-table-oneline {
+    margin-top: 20px;
+  }
+}
+
+.area-contents .inquiry .content {
+  width: 100%;
+  padding: 0 0 5%;
+  min-height: inherit;
+  float: left;
+}
+.area-contents .inquiry .content .caution {
+  text-align: right;
+  margin: 0 0 1%;
+  letter-spacing: -1px;
+  color: #000000;
+}
+.area-contents .inquiry .content .table.write tbody tr:first-child {
+  border-top: 1px solid #3d3d3d;
+}
+.area-contents .inquiry .content .table.write tr th {
+  background: none;
+  text-align: left;
+  padding: 14px 3%;
+  width: 20%;
+}
+.area-contents .inquiry .content .table.write tr .inputs.short {
+  width: 300px !important;
+}
+@media screen and (max-width: 500px) {
+  .area-contents .inquiry .content .table.write tr .inputs.short {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .area-contents .inquiry .content .table.write tr td, .area-contents .inquiry .content .table.write tr th {
+    float: left;
+    width: 100%;
+  }
+  .area-contents .inquiry .content .table.write tr td {
+    padding: 0 0 10px;
+  }
+}
+.area-contents .inquiry .agree {
+  margin: 2% 0;
+}
+.area-contents .inquiry .agree h4 {
+  margin: 2% 0;
+  font-size: 1.2rem;
+}
+.area-contents .inquiry .agree .agree-content {
+  border: 1px solid #dddddd;
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 2%;
+  background-color: #f6f6f6;
+}
+.area-contents .inquiry .agree .agree-content p {
+  font-size: 0.85rem;
+}
+.area-contents .inquiry .agree .checkbox {
+  margin: 1% 0 0;
+}
+.area-contents .inquiry .agree .checkbox label {
+  font-size: 0.85rem;
+}
+.area-contents .inquiry .area-board-btn .btn-submit-email {
+  cursor: pointer;
+  background-image: url("/assets/images/wallet/renew/icon_email.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 0 0 0 41px;
+  width: 210px;
+  height: 46px;
+  border: 0;
+  background-color: #804097;
+  color: #ffffff;
+}
+
+.en #contents .con .intro-2 {
+  background-size: cover !important;
+  background-image: url("/assets/images/wallet/renew/intro_02_eng.png") !important;
+}
+.en #contents .con .intro-2 .tit {
+  padding: 50px 0;
+}
+.en #contents .con .intro-2 .tit span {
+  text-decoration: underline;
+  display: block;
+  font-size: 1.15em;
+  line-height: 2em;
+}
+.en #contents .con .intro-2 ul {
+  overflow: hidden;
+}
+.en #contents .con .intro-2 ul li {
+  float: left;
+  width: 25%;
+  padding: 1%;
+}
+.en #contents .con .intro-2 ul li p {
+  padding: 28px 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+.en #contents .con .intro-2 ul li .long {
+  padding: 28px 0;
+}
+.en #contents .con .intro-2 ul li span {
+  display: block;
+  padding: 10% 9% 0 9%;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+.en #contents .con .intro-2 p.bottom {
+  padding: 15px 0;
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+.en #contents .con .vision .in-3 h4 {
+  background: none;
+}
+.en #contents .con .introduce .in2 ul {
+  background-position: 0 94%;
+}
+.en #contents .con .introduce .in2 ul li.ar1 p {
+  padding: 47px 50px 0 5px;
+}
+.en #contents .con .introduce .in2 ul li.ar1 span {
+  padding: 45px 85px 0 19px;
+}
+.en #contents .con .introduce .in2 ul li.ar2 span {
+  padding-top: 144px;
+}
+.en #contents .con .introduce .in2 ul li.ar3 p span {
+  padding: 0;
+}
+.en #contents .con .introduce .in2 ul li.ar3 span {
+  padding: 34px 50px 0 100px;
+}
+.en .location .location_txt .traffic {
+  width: 100%;
+}
+.en .location .location_txt .traffic-list li i {
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  #sub-layout-2 {
+    background: url("/assets/images/wallet/renew/sub_visual06_m.jpg");
+  }
+  #sub-layout-2 .visual-intro {
+    width: 96%;
+    margin: 0 2%;
+    padding: 30px 0;
+  }
+  #sub-layout-2 .visual-intro h2 {
+    margin-bottom: 5px;
+  }
+
+  #sub-layout {
+    background: url("/assets/images/wallet/renew/sub_visual01_m.png");
+  }
+  #sub-layout .visual-intro {
+    width: 96%;
+    margin: 0 2%;
+    padding-top: 80px;
+  }
+  #sub-layout .visual-intro h2 {
+    margin-bottom: 5px;
+  }
+  #sub-layout .visual-intro .tab-menu a {
+    padding: 15px 0;
+    font-size: 1em;
+  }
+  #sub-layout .visual-intro .tab-menu ul li {
+    background: none;
+  }
+  #sub-layout .visual-intro .tab-menu ul li a:hover {
+    border-top: none;
+    color: #ffffff;
+    background: #804097;
+  }
+  #sub-layout .visual-intro .tab-menu ul li.on {
+    background: #804097;
+    border-top: none;
+  }
+  #sub-layout .visual-intro .tab-menu ul li.on a {
+    color: #ffffff;
+    background: none;
+  }
+
+  .visual02 {
+    background: url("/assets/images/wallet/renew/sub_visual02_m.jpg") !important;
+  }
+
+  .visual03 {
+    background: url("/assets/images/wallet/renew/sub_visual03_m.jpg") !important;
+  }
+
+  .visual04 {
+    background: url("/assets/images/wallet/renew/sub_visual06_m.jpg") !important;
+  }
+
+  .visual05 {
+    background: url("/assets/images/wallet/renew/sub_visual05_m.jpg") !important;
+  }
+
+  #contents {
+    width: 100%;
+    padding: 30px 10px;
+  }
+  #contents h3 {
+    margin-bottom: 45px;
+  }
+  #contents .con .his {
+    background-position: 0 0;
+    background-repeat: repeat-y;
+  }
+  #contents .con .his div {
+    width: 100%;
+  }
+  #contents .con .his .Left {
+    float: none;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 19%;
+    background: url("/assets/images/wallet/renew/history_02.png") no-repeat 0 0;
+  }
+  #contents .con .his .Right {
+    float: none;
+    padding-left: 19%;
+  }
+  #contents .con .his img {
+    width: 100%;
+    height: 100%;
+  }
+  #contents .con .his .po1 {
+    margin-top: 3%;
+  }
+  #contents .con .his .po2 {
+    margin-top: 10%;
+  }
+  #contents .con .his .po3 {
+    margin-top: 10%;
+  }
+  #contents .con .his .po4 {
+    margin-top: 10%;
+  }
+  #contents .con .vision {
+    width: 100%;
+  }
+  #contents .con .vision h4 {
+    padding: 0 11%;
+  }
+  #contents .con .vision .in-1 {
+    width: 100%;
+  }
+  #contents .con .vision .in-1 ul {
+    padding-left: 0;
+  }
+  #contents .con .vision .in-1 ul li {
+    background: none;
+  }
+  #contents .con .vision .in-1 ul li div {
+    width: 100%;
+    height: 150px;
+  }
+  #contents .con .vision .in-1 ul li .ico1 {
+    background-size: 100%;
+  }
+  #contents .con .vision .in-1 ul li .ico2 {
+    background-size: 100%;
+  }
+  #contents .con .vision .in-1 ul li .ico3 {
+    background-size: 100%;
+  }
+  #contents .con .vision .in-2 .coin-tit {
+    padding: 1% 4%;
+  }
+  #contents .con .vision .in-2 .coin-use {
+    padding-top: 37%;
+  }
+  #contents .con .vision .in-2 .coin-use ul li {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  #contents .con .vision .in-2 .coin-use ul li p {
+    width: 100%;
+    padding: 10% 0 2% 0;
+  }
+  #contents .con .vision .in-2 .coin-use ul li span {
+    padding: 3% 0 10% 0;
+  }
+  #contents .con .vision .in-3 ul li {
+    float: none;
+    width: 100%;
+  }
+  #contents .con .vision .in-3 h4 {
+    padding: 0 12%;
+  }
+  #contents .con .intro {
+    background-position: center 12%;
+  }
+  #contents .con .intro .in1 {
+    padding-top: 121px;
+  }
+  #contents .con .intro-2 {
+    background-image: url("/assets/images/wallet/renew/intro_02_m.png");
+    padding: 4%;
+  }
+  #contents .con .intro-2 .tit {
+    font-size: 1.2em;
+    padding: 30px 0 50px 0;
+  }
+  #contents .con .intro-2 .tit span {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding-top: 14px;
+  }
+  #contents .con .intro-2 ul li {
+    width: 50%;
+    padding: 4% 0;
+  }
+  #contents .con .intro-2 ul li span {
+    padding: 10% 5% 0 5%;
+  }
+  #contents .con .how ul li {
+    width: 100%;
+    float: none;
+    background: none;
+    padding: 4% 0 0 0;
+  }
+  #contents .con .how ul li h5.top {
+    top: -14%;
+  }
+  #contents .con .how ul li div span {
+    padding: 20px 50px 0 50px;
+  }
+  #contents .con .how ul li div.pro-9, #contents .con .how ul li div.pro-8, #contents .con .how ul li div.pro-7, #contents .con .how ul li div.pro-6, #contents .con .how ul li div.pro-5, #contents .con .how ul li div.pro-4, #contents .con .how ul li div.pro-3, #contents .con .how ul li div.pro-2, #contents .con .how ul li div.pro-1 {
+    background-size: 100% 100%;
+  }
+  #contents .con .how ul li:first-child {
+    padding-top: 6%;
+  }
+  #contents .con .introduce {
+    padding: 30px 20px;
+  }
+  #contents .con .introduce h4 {
+    background-position: 22% center;
+  }
+  #contents .con .introduce .in2 ul {
+    background: none;
+  }
+  #contents .con .introduce .in2 ul li.ar1 {
+    background-position: 50% 0;
+  }
+  #contents .con .introduce .in2 ul li.ar1 p {
+    padding: 47px 0 0 0;
+  }
+  #contents .con .introduce .in2 ul li.ar1 span {
+    padding: 10px 7px;
+    margin-top: 10px;
+  }
+  #contents .con .introduce .in2 ul li.ar2 span {
+    margin-top: 69px;
+    padding: 10px 15px;
+  }
+  #contents .con .introduce .in2 ul li.ar3 {
+    background-position: 50% 0;
+  }
+  #contents .con .introduce .in2 ul li.ar3 p {
+    padding: 47px 0 0 0;
+  }
+  #contents .con .introduce .in2 ul li.ar3 p span {
+    font-size: 1.15em;
+    padding: 0;
+    margin: 0;
+  }
+  #contents .con .introduce .in2 ul li.ar3 span {
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+  #contents .con ul.bu01 li {
+    background-position: 10px 7px;
+    padding-left: 18px;
+  }
+  #contents .con .pri-01 .box {
+    padding: 15px;
+  }
+  #contents .con .site ul li.L-tit {
+    width: 27%;
+    margin-right: 3%;
+  }
+  #contents .con .site ul li.L-tit span {
+    font-size: 1.2em;
+    padding: 20px 0 0 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .en #contents .con .intro-2 {
+    background-image: url("/assets/images/wallet/renew/intro_02_m.png");
+    padding: 4%;
+  }
+  .en #contents .con .intro-2 .tit {
+    font-size: 1.2em;
+    padding: 30px 0 50px 0;
+  }
+  .en #contents .con .intro-2 .tit span {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding-top: 14px;
+  }
+  .en #contents .con .intro-2 ul li {
+    width: 50%;
+    padding: 4% 0;
+  }
+  .en #contents .con .intro-2 ul li span {
+    padding: 10% 5% 0 5%;
+  }
+  .en #contents .con .introduce .in2 ul {
+    font-weight: normal;
+  }
+  .en #contents .con .introduce .in2 ul li span {
+    padding: 0;
+  }
+  .en #contents .con .introduce .in2 ul li.ar1 {
+    padding: 47px 0 0 5px;
+  }
+  .en #contents .con .introduce .in2 ul li.ar1 p {
+    padding: 0;
+  }
+  .en #contents .con .introduce .in2 ul li.ar1 span {
+    padding: 0;
+  }
+  .en #contents .con .introduce .in2 ul li.ar2 span {
+    padding-top: 36px;
+  }
+  .en #contents .con .introduce .in2 ul li.ar3 p {
+    padding: 47px 0 0 0;
+  }
+  .en #contents .con .introduce .in2 ul li.ar3 span {
+    padding: 0;
+  }
+}
+.zh .starcoin-definition {
+  color: #ffffff;
+  padding: 6% 5%;
+  float: left;
+  width: 100%;
+  background-image: url("/assets/images/wallet/renew/starcoin_logo.png"), url("/assets/images/wallet/renew/bg_starcoin.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 90% 50%, 50% 50%;
+}
+.zh .starcoin-definition .title {
+  color: #ffffff;
+  font-size: 2.66rem;
+  text-transform: uppercase;
+}
+.zh .starcoin-definition .desc {
+  color: #ffffff;
+  margin: 1% 0 3%;
+  line-height: 1.5rem;
+}
+.zh .starcoin-definition .desc strong {
+  display: block;
+}
+.zh .starcoin-definition .list {
+  width: 69%;
+}
+.zh .starcoin-definition .list li {
+  margin: 0 0 11px;
+  letter-spacing: -0.25px;
+  float: left;
+  width: 100%;
+}
+.zh .starcoin-definition .list li i {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 16px;
+  height: 21px;
+  float: left;
+  background: url("/assets/images/wallet/renew/icon_starcoin_list.png") no-repeat 0 50%;
+}
+.zh .starcoin-definition .list li p {
+  float: left;
+  color: #ffffff;
+  width: 70%;
+  width: calc(100% - 26px);
+  line-height: 1.4rem;
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-definition {
+    background-size: cover;
+    background-image: url("/assets/images/wallet/renew/bg_starcoin.png");
+    text-align: center;
+  }
+  .zh .starcoin-definition .title {
+    font-size: 1.66rem;
+  }
+  .zh .starcoin-definition .list {
+    text-align: left;
+    width: 100%;
+  }
+}
+.zh .starcoin-problem {
+  float: left;
+  width: 100%;
+  margin: 9% 0 0;
+  text-align: center;
+}
+.zh .starcoin-problem h4 {
+  color: #666666;
+  font-size: 1.53rem;
+  font-weight: normal;
+}
+.zh .starcoin-problem .desc {
+  color: #666666;
+  margin: 3% 0 5%;
+  line-height: 1.6rem;
+  background: url("/assets/images/wallet/renew/vision_12.png") no-repeat 50% 0;
+}
+.zh .starcoin-problem .list li {
+  float: left;
+  width: 24.33%;
+  margin: 0 0 0 0.89%;
+  letter-spacing: -0.25px;
+}
+.zh .starcoin-problem .list li b {
+  border: 5px solid #ffffff;
+  background: #804097;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.93rem;
+}
+.zh .starcoin-problem .list li b i {
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.zh .starcoin-problem .list li p {
+  padding: 11% 7%;
+  background: #eeeeee;
+  text-align: left;
+  color: #353535;
+  font-size: 0.93rem;
+  line-height: 1.53rem;
+  height: 129px;
+}
+.zh .starcoin-problem .list li:first-child {
+  margin: 0;
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-problem h4 {
+    font-size: 1.2rem;
+  }
+  .zh .starcoin-problem .list li {
+    width: 49%;
+    margin: 0;
+  }
+  .zh .starcoin-problem .list li:nth-of-type(even) {
+    margin: 0 0 0 2%;
+  }
+}
+.zh .starcoin-process {
+  float: left;
+  width: 100%;
+  margin: 10% 0 7%;
+}
+.zh .starcoin-process .process-map {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.zh .starcoin-process .process-map .process-element {
+  width: 122px;
+  height: 69px;
+  display: block;
+  background-color: #49b7e9;
+  border-left: 6px solid #bee4f5;
+  border-right: 6px solid #bee4f5;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -61px;
+}
+.zh .starcoin-process .process-map .process-element:before, .zh .starcoin-process .process-map .process-element:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 77px;
+  height: 79px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: #49b7e9;
+  left: 12px;
+}
+.zh .starcoin-process .process-map .process-element:before {
+  top: -44.1px;
+  border-top: 9px solid #bee4f5;
+  border-right: 9px solid #bee4f5;
+}
+.zh .starcoin-process .process-map .process-element:after {
+  bottom: -44.1px;
+  border-bottom: 9px solid #bee4f5;
+  border-left: 9px solid #bee4f5;
+  left: 12px;
+}
+.zh .starcoin-process .process-map .process-element > img {
+  z-index: 50;
+  display: block;
+  top: -10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+}
+.zh .starcoin-process .process-map .process-element > i {
+  color: #ffffff;
+  z-index: 50;
+  width: 58px;
+  display: inline-block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -29px;
+}
+.zh .starcoin-process .process-map .process-selement {
+  width: 51px;
+  height: 89px;
+  display: block;
+  background-color: #ffffff;
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  color: #69afdf;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 165px;
+}
+.zh .starcoin-process .process-map .process-selement:before, .zh .starcoin-process .process-map .process-selement:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 33px;
+  height: 33px;
+  -webkit-transform: scaleY(1.7) rotate(-135deg);
+  -ms-transform: scaleY(1.7) rotate(-135deg);
+  transform: scaleY(1.7) rotate(-135deg);
+  left: 0;
+  background-color: #ffffff;
+}
+.zh .starcoin-process .process-map .process-selement:before {
+  top: 21px;
+  color: #69afdf;
+  border-top: 4px solid;
+  border-right: 4px solid;
+  left: -18px;
+}
+.zh .starcoin-process .process-map .process-selement:after {
+  color: #69afdf;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  left: 33px;
+  top: 21px;
+}
+.zh .starcoin-process .process-map .process-selement > img {
+  z-index: 50;
+  display: block;
+  top: 14px;
+  position: absolute;
+  left: 50%;
+  margin-left: -24px;
+}
+.zh .starcoin-process .process-map .process-selement > i {
+  color: #ffffff;
+  z-index: 50;
+  width: 58px;
+  display: inline-block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -29px;
+}
+.zh .starcoin-process .process-map .process-selement.left {
+  left: 105px;
+  color: #99c7e7;
+}
+.zh .starcoin-process .process-map .process-selement.left:before, .zh .starcoin-process .process-map .process-selement.left:after {
+  color: #99c7e7;
+}
+.zh .starcoin-process .process-map .process-selement.right {
+  left: 490px;
+  color: #3492d4;
+}
+.zh .starcoin-process .process-map .process-selement.right:before, .zh .starcoin-process .process-map .process-selement.right:after {
+  color: #3492d4;
+}
+.zh .starcoin-process .process-map .process-selement-txt {
+  color: #666666;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  margin-left: -63.5px;
+  text-align: center;
+}
+.zh .starcoin-process .process-map .process-selement-txt.left {
+  left: 35px;
+  margin-left: 0;
+}
+.zh .starcoin-process .process-map .process-selement-txt.right {
+  left: 435px;
+  margin-left: 0;
+}
+.zh .starcoin-process .process-map .process-arrow {
+  position: absolute;
+  font-weight: bold;
+  z-index: 100;
+}
+.zh .starcoin-process .process-map .process-arrow mark {
+  background: none;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow01 {
+  top: 79px;
+  left: 135px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow01 mark {
+  position: absolute;
+  left: -34px;
+  top: 16px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow02 {
+  left: 50%;
+  margin-left: -10px;
+  top: 95px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow-line2 {
+  top: 198px;
+  z-index: 1;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+  left: 114px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+  left: 308px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow05 {
+  top: 318px;
+  left: 50%;
+  margin-left: -205px;
+}
+.zh .starcoin-process .process-map .process-arrow.arrow05 mark {
+  display: block;
+  text-align: center;
+  margin: 8px 0 0;
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-process .process-map {
+    width: 100%;
+    padding: 10% 0 3%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow01 {
+    top: 122px;
+    left: 66px;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow01 {
+    top: 126px;
+    left: 45px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow02 {
+    margin-left: -10px;
+    top: 134px;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2 {
+    top: 240px;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 13%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    left: auto;
+    right: 13%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 11.5%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 11.5%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 420px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 9.5%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 7.5%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 9%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 370px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow03 {
+    left: 7.5%;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow-line2.arrow04 {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow05 {
+    top: 358px;
+    left: 50%;
+    margin-left: -175px;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow05 img {
+    width: 335px;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .zh .starcoin-process .process-map .process-arrow.arrow05 {
+    margin-left: -150px;
+  }
+  .zh .starcoin-process .process-map .process-arrow.arrow05 img {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-process .process-map .process-selement {
+    top: 207px;
+  }
+  .zh .starcoin-process .process-map .process-selement.left {
+    left: 14%;
+  }
+  .zh .starcoin-process .process-map .process-selement.right {
+    left: auto;
+    right: 6%;
+  }
+  .zh .starcoin-process .process-map .process-selement-txt {
+    top: 306px;
+    margin-left: -55.5px;
+  }
+  .zh .starcoin-process .process-map .process-selement-txt.left {
+    left: 2%;
+    margin-left: 0;
+    width: 80px;
+  }
+  .zh .starcoin-process .process-map .process-selement-txt.right {
+    left: auto;
+    margin-left: 0;
+    width: 80px;
+    right: 2%;
+  }
+}
+.zh .starcoin-process .process-text {
+  width: 50%;
+  text-align: left;
+  padding: 6%;
+  float: right;
+}
+.zh .starcoin-process .process-text h4 {
+  color: #353535;
+  font-size: 1.66rem;
+  line-height: 2.13rem;
+}
+.zh .starcoin-process .process-text b {
+  color: #666666;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2% 0 9%;
+  display: block;
+}
+.zh .starcoin-process .process-text p {
+  color: #666666;
+  font-size: 0.93rem;
+  line-height: 1.6rem;
+  margin: 2% 0 0;
+}
+@media screen and (max-width: 500px) {
+  .zh .starcoin-process .process-text {
+    width: 100%;
+    margin-top: 380px;
+    padding: 6% 3%;
+  }
+  .zh .starcoin-process .process-text h4 {
+    font-size: 1.2rem;
+    line-height: 1.13rem;
+  }
+  .zh .starcoin-process .process-text b {
+    font-size: 1rem;
+  }
+}
+.zh .technology .list li {
+  list-style-image: url("/assets/images/wallet/renew/icon_list_style.png");
+  list-style-position: inside;
+}
+.zh .technology .title {
+  width: 269px;
+  margin: -30px auto 6%;
+  text-align: center;
+  background: #ffffff;
+  border: 4px solid #afbecf;
+  font-size: 1.3rem;
+  padding: 16px 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.zh .technology .blockchain {
+  width: 47.91%;
+  height: 447px;
+  float: left;
+  background: #f3f4f6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 9%;
+}
+.zh .technology .blockchain .blockchain-graphic {
+  text-align: center;
+}
+.zh .technology .blockchain .blockchain-graphic i {
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  text-align: center;
+  border: 5px solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 19px 0 0;
+}
+.zh .technology .blockchain .blockchain-graphic i img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.zh .technology .blockchain .blockchain-graphic i strong {
+  text-transform: capitalize;
+  color: #ffffff;
+  width: 60px;
+  line-height: 1.06rem;
+  display: inline-block;
+}
+.zh .technology .blockchain .blockchain-graphic i.block {
+  background-color: #804097;
+  border-color: #dbcee2;
+}
+.zh .technology .blockchain .blockchain-graphic i.new {
+  background-color: #49b7e9;
+  border-color: #bee4f5;
+}
+.zh .technology .blockchain .blockchain-graphic .arrow {
+  margin-top: -60px;
+}
+.zh .technology .blockchain .desc {
+  margin: 5% auto 0;
+  width: 80%;
+  line-height: 1.46rem;
+  padding: 10px 8%;
+  text-align: center;
+  background-color: #ffffff;
+}
+.zh .technology .blockchain .blockchain-character {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10%;
+  margin: 5% 0 0;
+}
+.zh .technology .blockchain .blockchain-character li {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+  color: #393939;
+}
+.zh .technology .blockchain.pree {
+  margin-right: 4.18%;
+}
+.zh .technology .blockchain.pree .title {
+  color: #00284c;
+}
+.zh .technology .technology-content {
+  float: left;
+  width: 100%;
+  padding: 8% 0;
+}
+.zh .technology .technology-content .technology-title {
+  font-size: 2rem;
+  color: #353535;
+  text-align: center;
+}
+.zh .technology .technology-content .technology-title:after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #999999;
+  display: block;
+  margin: 2.1% auto;
+}
+.zh .technology .technology-content .technology-desc {
+  text-align: center;
+  color: #555555;
+  width: 78%;
+  margin: 0 auto 3%;
+}
+.zh .technology .technology-content .dott-line {
+  border: 0;
+  border-top: 1px dotted #707070;
+  float: left;
+  width: 100%;
+  margin: 5% 0;
+}
+.zh .technology .technology-content.cryptocurrency {
+  background-color: #f3f4f6;
+  text-align: center;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow {
+  width: 67.79%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 5%;
+  text-align: center;
+  display: inline-block;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle {
+  float: left;
+  width: 109px;
+  height: 109px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 4px solid rgba(128, 64, 151, 0.21);
+  padding: 13px 0 0;
+  text-transform: uppercase;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.starocin {
+  color: #ffffff;
+  background: url("/assets/images/wallet/renew/bg_flow_circle_starcoin.png") no-repeat 50% 50%;
+  border: 0;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm {
+  padding: 32px 0 0;
+  margin: 0 30px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm strong {
+  display: inline-block;
+  width: 44px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+  padding: 27px 0 0;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank strong {
+  display: inline-block;
+  word-break: keep-all;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circles {
+  float: right;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+  margin: 9% 0;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain {
+  display: inline-block;
+  width: 47%;
+  padding: 10px 0;
+  text-transform: capitalize;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: 4px solid rgba(128, 64, 151, 0.21);
+  float: left;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain img {
+  margin-right: 10px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain strong {
+  font-size: 1.2rem;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain.private {
+  float: right;
+  background-color: #804097;
+  border-color: #dbcee2;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain.private strong {
+  color: #ffffff;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet {
+  width: 47%;
+  display: inline-block;
+  float: left;
+  height: 95px;
+  background-color: #ffffff;
+  border: 5px solid #bee4f5;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #49b7e9;
+  float: left;
+  margin-left: -10px;
+  margin-top: -5px;
+  padding: 11px 0 0;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon img {
+  display: block;
+  margin: 0 auto 5px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon strong {
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+  display: inline-block;
+  padding: 16px 0 0;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt strong {
+  color: #ed9025;
+  display: block;
+  margin: 0 0 13px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt mark {
+  color: #ffffff;
+  background: #a9a9a9;
+  font-style: italic;
+  padding: 3px 5px;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet.individual {
+  float: right;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.diagonal {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_diagonal.png");
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.down {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_down.png");
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.cross {
+  background-image: url("/assets/images/wallet/renew/arrow_cryp_cross.png");
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .down {
+  right: 25%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .down + .down {
+  right: 4.5%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .diagonal {
+  margin-left: 40px;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+  margin-top: -8.5%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .cross {
+  margin-left: -24px;
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .cross {
+    margin-left: -15px;
+  }
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .down {
+  left: 20%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last .down.last {
+  left: auto;
+  right: 20%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-desc-list {
+  float: left;
+  width: 100%;
+  padding: 2% 7%;
+  margin: 3% 0 0;
+  text-align: left;
+  background-image: url("/assets/images/wallet/renew/bg_cryp_desc_left.png"), url("/assets/images/wallet/renew/bg_cryp_desc_right.png");
+  background-repeat: no-repeat;
+  background-position: 3% 50%, 97% 50%;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-desc-list li {
+  margin: 2.5% 0 0;
+  line-height: 1.6rem;
+}
+.zh .technology .technology-content.cryptocurrency .cryp-desc-list li:first-child {
+  margin: 0;
+}
+.zh .technology .technology-content.pg .pg-flow {
+  width: 47.91%;
+  height: 439px;
+  float: left;
+  background: #f3f4f6;
+  padding: 4%;
+}
+.zh .technology .technology-content.pg .pg-flow header {
+  display: inline-block;
+}
+.zh .technology .technology-content.pg .pg-flow header .pg-circle {
+  width: 175px;
+  height: 175px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid #bee4f5;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 15px;
+  padding: 90px 0 0;
+  float: left;
+}
+.zh .technology .technology-content.pg .pg-flow header .pg-circle.kpop {
+  background-image: url("/assets/images/wallet/renew/icon_pg_kpop.png");
+  background-color: #49b7e9;
+}
+.zh .technology .technology-content.pg .pg-flow header .pg-circle.no-pay {
+  background-image: url("/assets/images/wallet/renew/icon_pg_no.png");
+  background-color: #e73a6b;
+  border-color: #f2bccb;
+}
+.zh .technology .technology-content.pg .pg-flow header .pg-circle.starpay {
+  border: 0;
+  background-image: url("/assets/images/wallet/renew/icon_cryp_starcoin.png"), url("/assets/images/wallet/renew/bg_pg_starpay.png");
+  background-position: 50% 35px, 0 0;
+}
+.zh .technology .technology-content.pg .pg-flow header .pg-circle strong {
+  display: inline-block;
+  width: 60px;
+  word-break: keep-all;
+  color: #ffffff;
+}
+.zh .technology .technology-content.pg .pg-flow header .arrow.next {
+  width: 40px;
+  height: 29px;
+  display: inline-block;
+  text-indent: -9999px;
+  background-image: url("/assets/images/wallet/renew/arrow_pg_next.png");
+  background-repeat: no-repeat;
+  margin: 16% 30px;
+  float: left;
+}
+.zh .technology .technology-content.pg .pg-flow .pg-list {
+  float: left;
+  width: 100%;
+  margin: 5% 0 0;
+}
+.zh .technology .technology-content.pg .pg-flow .pg-list li {
+  margin-top: 5%;
+  line-height: 1.6rem;
+  letter-spacing: -0.5px;
+}
+.zh .technology .technology-content.pg .pg-flow .pg-list li:first-child {
+  margin-top: 0;
+}
+.zh .technology .technology-content.pg .pg-flow.starpay-flow {
+  float: right;
+}
+.zh .technology .technology-content .blueprint {
+  width: 47.91%;
+  height: 561px;
+  float: left;
+  background-color: #f3f4f6;
+  padding: 0 4% 4%;
+  background-image: url("/assets/images/wallet/renew/img_blueprint_ch.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.zh .technology .technology-content .blueprint-list {
+  float: right;
+  width: 47.91%;
+  padding: 2% 0;
+}
+.zh .technology .technology-content .blueprint-list li {
+  line-height: 1.6rem;
+  margin-top: 3%;
+}
+.zh .technology .technology-content .blueprint-list li:first-child {
+  margin-top: 0;
+}
+.zh .technology .technology-content.system {
+  background-color: #f1ebf3;
+}
+.zh .technology .technology-content.system .system-img-area {
+  width: 91.52%;
+  margin: 0 auto;
+  height: 784px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  background-image: url("/assets/images/wallet/renew/img_system_ch.png");
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  padding: 4%;
+}
+.zh .technology .technology-content.system .system-img-area .system-list {
+  margin-top: 530px;
+  float: left;
+  width: 100%;
+  background: #f3f4f6;
+  padding: 3%;
+}
+.zh .technology .technology-content.system .system-img-area .system-list li {
+  line-height: 1.6rem;
+  margin-top: 3%;
+}
+.zh .technology .technology-content.system .system-img-area .system-list li:first-child {
+  margin-top: 0;
+}
+.zh .technology .technology-content.system .management-system {
+  float: left;
+  width: 91.52%;
+  margin-left: 4.24%;
+  background-color: #ffffff;
+  padding: 0 3% 3%;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents {
+  width: 47%;
+  float: left;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content {
+  -webkit-border-radius: 105px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #bee4f5;
+  padding: 5%;
+  margin-bottom: 2%;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.shape {
+  background: #49b7e9;
+  display: inline-block;
+  width: 100%;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.shape li {
+  float: left;
+  color: #ffffff;
+  line-height: 1.6rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.shape li:nth-of-type(odd) {
+  clear: both;
+  color: #edef37;
+  margin: 0 5px 0 0;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method {
+  margin-top: 2%;
+  background: #bfd898;
+  text-align: center;
+  border-color: #e7f0d8;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code {
+  font-size: 1.33rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national {
+  color: #dd1f57;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_national.png");
+  background-position: 0;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.national .arrow strong {
+  left: -35px;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch {
+  color: #143567;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_branch.png");
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.branch .arrow strong {
+  left: 8px;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents {
+  color: #252525;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents .arrow {
+  background-image: url("/assets/images/wallet/renew/arrow_contents.png");
+  background-position: 100% 0;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code.contents .arrow strong {
+  left: 29px;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code .arrow {
+  color: inherit;
+  position: absolute;
+  height: 36px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 40px;
+  font-size: 0.93rem;
+  letter-spacing: -0.5px;
+  width: 90px;
+  top: 23px;
+  left: -12px;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .management-system-content.method .code .arrow strong {
+  color: inherit;
+  width: 80px;
+  position: absolute;
+}
+.zh .technology .technology-content.system .management-system .management-system-contents .desc {
+  margin-top: 9%;
+  color: #535353;
+  text-shadow: 1px 1px 10px rgba(244, 244, 244, 0.44);
+  font-size: 0.93rem;
+  letter-spacing: -0.5px;
+}
+.zh .technology .technology-content.system .management-system .list {
+  width: 47%;
+  float: right;
+}
+.zh .technology .technology-content.system .management-system .list li {
+  margin-top: 3%;
+}
+.zh .technology .technology-content.system .management-system .list li:first-child {
+  margin-top: 0;
+}
+.zh .technology .technology-content.document .document-list {
+  border: 1px solid #ebebeb;
+  border-bottom: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.zh .technology .technology-content.document .document-list li {
+  float: left;
+  border-left: 1px solid #ebebeb;
+  width: 25%;
+  height: 199px;
+  padding: 6.5% 3%;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 1.4rem;
+}
+.zh .technology .technology-content.document .document-list li:nth-of-type(1), .zh .technology .technology-content.document .document-list li:nth-of-type(3), .zh .technology .technology-content.document .document-list li:nth-of-type(6), .zh .technology .technology-content.document .document-list li:nth-of-type(8), .zh .technology .technology-content.document .document-list li:nth-of-type(9), .zh .technology .technology-content.document .document-list li:nth-of-type(11) {
+  background-color: #f9f9f9;
+}
+.zh .technology .technology-content.document .document-list li:nth-of-type(4n+1) {
+  clear: both;
+  border-left: 0;
+}
+.zh .technology .technology-content.document .document-list li strong {
+  font-size: 1.06rem;
+  display: block;
+}
+.zh .technology .technology-content.document .document-list li.long {
+  padding: 5.5% 3%;
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .title {
+    width: 214px;
+    margin: -22px auto 6%;
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+  .zh .technology .blockchain {
+    height: auto;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+  .zh .technology .blockchain.pree {
+    margin-right: 0;
+  }
+  .zh .technology .blockchain .blockchain-graphic i {
+    width: 100px;
+    height: 100px;
+    padding: 12px 0 0;
+  }
+  .zh .technology .blockchain .blockchain-graphic i img {
+    width: 32px;
+  }
+  .zh .technology .blockchain .blockchain-graphic .arrow {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .zh .technology .blockchain .desc {
+    width: 90%;
+  }
+  .zh .technology .technology-content .technology-title {
+    font-size: 1.2rem;
+  }
+  .zh .technology .technology-content .technology-desc {
+    width: 90%;
+    margin: 0 auto 4%;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-desc-list {
+    padding: 3%;
+    background-image: none;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow {
+    width: 97%;
+    padding: 3%;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle {
+    width: 65px;
+    height: 65px;
+    border: 3px solid rgba(128, 64, 151, 0.21);
+    padding: 7px 0 0;
+    font-size: 0.8rem;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle img {
+    margin: 0 auto 2px;
+    width: 22px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm {
+    padding: 15px 0 0;
+    margin: 0 3px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.ibm strong {
+    width: 30px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .flow-circle.bank {
+    padding: 10px 0 0;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow {
+    width: 30px;
+    height: 30px;
+    top: 0;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.diagonal {
+    background-size: 27px;
+    margin-left: 0;
+    right: 138px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.down {
+    background-size: 10px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line .arrow.cross {
+    background-size: 30px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+    margin-top: -9.5%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.last {
+    margin-top: -11%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .arrow.down {
+    right: 92px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.arrow-line.first .arrow.down + .down {
+    right: 18px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+    margin: 9% 0;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain {
+    width: 48%;
+    padding: 10px 0;
+    border: 3px solid rgba(128, 64, 151, 0.21);
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain img {
+    margin-right: 0;
+    width: 20px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle .flow-blockchain strong {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line.middle {
+    margin: 11% 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet {
+    width: 48%;
+    height: auto;
+    border: 3px solid #bee4f5;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon {
+    width: 57px;
+    height: 57px;
+    margin-left: -10px;
+    margin-top: -2px;
+    padding: 7px 0 0;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon img {
+    margin: 0 auto;
+    width: 23px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .icon strong {
+    font-size: 0.8rem;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt {
+    padding: 6px 0 0;
+    width: 55%;
+    width: calc(100% - 57px);
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt strong {
+    font-size: 0.8rem;
+    margin: 0 0 4px;
+  }
+  .zh .technology .technology-content.cryptocurrency .cryp-flow .cryp-flow-line .wallet .wallet-txt mark {
+    padding: 1px;
+    font-size: 0.7rem;
+  }
+  .zh .technology .technology-content.pg .pg-flow {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .zh .technology .technology-content.pg .pg-flow header .pg-circle {
+    width: 110px;
+    height: 110px;
+    border: 4px solid #bee4f5;
+    padding: 60px 0 0;
+    background-size: 40px;
+  }
+  .zh .technology .technology-content.pg .pg-flow header .pg-circle strong {
+    font-size: 0.8rem;
+  }
+  .zh .technology .technology-content.pg .pg-flow header .pg-circle.starpay {
+    background-size: auto, cover;
+    background-position: 50% 12px ,50% 50%;
+  }
+  .zh .technology .technology-content.pg .pg-flow header .arrow.next {
+    width: 25px;
+    margin: 16% 10px;
+    background-size: 25px;
+  }
+  .zh .technology .technology-content.pg .pg-flow .pg-list {
+    text-align: left;
+  }
+  .zh .technology .technology-content .blueprint {
+    margin: 7% 0 0;
+    width: 100%;
+    background-image: url("/assets/images/wallet/renew/img_blueprint_ch_mo.png");
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .zh .technology .technology-content .blueprint {
+    background-size: 90%;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .technology-content .blueprint-list {
+    width: 100%;
+  }
+  .zh .technology .technology-content.system .system-img-area {
+    height: 1870px;
+    background-image: url("/assets/images/wallet/renew/img_system_ch_mo.png");
+    background-position: 50% 50%;
+  }
+  .zh .technology .technology-content.system .system-img-area .system-list {
+    margin-top: 1880px;
+    background: none;
+    padding: 0 0 2%;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 450px) {
+  .zh .technology .technology-content.system .system-img-area {
+    background-size: 80%;
+    height: 1590px;
+  }
+  .zh .technology .technology-content.system .system-img-area .system-list {
+    margin-top: 1600px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zh .technology .technology-content.system .management-system {
+    margin-top: 8%;
+    padding: 0 3%;
+  }
+  .zh .technology .technology-content.system .management-system .management-system-contents {
+    width: 100%;
+  }
+  .zh .technology .technology-content.system .management-system .management-system-contents .desc {
+    margin-top: 17%;
+    margin-bottom: 8%;
+  }
+  .zh .technology .technology-content.system .management-system .list {
+    width: 107%;
+    background: #f1ebf3;
+    margin-right: -3.5%;
+    padding-top: 5%;
+  }
+  .zh .technology .technology-content.document .document-list {
+    background: #f3f4f6;
+    border: 0;
+    padding: 4%;
+    text-align: left;
+  }
+  .zh .technology .technology-content.document .document-list li {
+    border: 0;
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+    list-style-image: url("/assets/images/wallet/renew/icon_list_style.png");
+    list-style-position: inside;
+    padding: 0;
+  }
+  .zh .technology .technology-content.document .document-list li.long {
+    padding: 0;
+  }
+  .zh .technology .technology-content.document .document-list li:nth-of-type(1), .zh .technology .technology-content.document .document-list li:nth-of-type(3), .zh .technology .technology-content.document .document-list li:nth-of-type(6), .zh .technology .technology-content.document .document-list li:nth-of-type(8), .zh .technology .technology-content.document .document-list li:nth-of-type(9), .zh .technology .technology-content.document .document-list li:nth-of-type(11) {
+    background-color: transparent;
+  }
+  .zh .technology .technology-content.document .document-list li strong {
+    display: inline-block;
+  }
+  .zh .technology .technology-content.document .document-list li:empty {
+    display: none;
+  }
+}
+.zh #contents .con .vision .in-2 {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0;
+}
+.zh #contents .con .vision .in-2 .coin-use ul {
+  overflow: hidden;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li {
+  float: left;
+  width: 33.33%;
+  height: 272px;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.15em;
+  padding-top: 34%;
+  font-weight: bold;
+  width: 53%;
+  margin: 0 auto;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li span {
+  display: block;
+  color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li.pic1 {
+  background: url("/assets/images/wallet/renew/vision_09.png") no-repeat 0 0;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li.pic2 {
+  background: url("/assets/images/wallet/renew/vision_10.png") no-repeat 0 0;
+}
+.zh #contents .con .vision .in-2 .coin-use ul li.pic3 {
+  background: url("/assets/images/wallet/renew/vision_11.png") no-repeat 0 0;
+}
+.zh #contents .con .vision .in-2 .coin-tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1% 23%;
+  background: rgba(81, 49, 93, 0.7);
+}
+.zh #contents .con .vision .in-2 .coin-tit p {
+  color: #ffffff;
+  padding: 15px 0 15px 73px;
+  background: url("/assets/images/wallet/renew/vision_08.png") no-repeat left 50%;
+  line-height: 1.5em;
+}
+.zh #contents .con .vision .in-3 h4 {
+  color: #666666;
+  font-size: 1.4em;
+  background: url("/assets/images/wallet/renew/vision_12.png") no-repeat 50% 0;
+  padding: 10px 0;
+}
+.zh #contents .con .vision .in-3 ul {
+  margin-top: 50px;
+  overflow: hidden;
+}
+.zh #contents .con .vision .in-3 ul li {
+  float: left;
+  width: 33.33%;
+  background: url("/assets/images/wallet/renew/vision_16.png") no-repeat 54% 40%;
+  height: 270px;
+}
+.zh #contents .con .vision .in-3 ul li p {
+  font-weight: bold;
+  padding: 149px 10px 0 10px;
+  text-align: center;
+}
+.zh #contents .con .vision .in-3 ul li .ico1 {
+  background: url("/assets/images/wallet/renew/vision_13.png") no-repeat 50% 0;
+}
+.zh #contents .con .vision .in-3 ul li .ico2 {
+  background: url("/assets/images/wallet/renew/vision_14.png") no-repeat 50% 0;
+}
+.zh #contents .con .vision .in-3 ul li .ico3 {
+  background: url("/assets/images/wallet/renew/vision_15.png") no-repeat 50% 0;
+}
+.zh #contents .con .vision .in-3 ul li span {
+  color: #666666;
+  display: block;
+  text-align: center;
+  padding: 20px 50px 0 50px;
+}
+.zh #contents .con .introduce {
+  background: url("/assets/images/wallet/renew/pay_01.png") no-repeat 0 0;
+  padding: 70px 130px;
+}
+.zh #contents .con .introduce h4 {
+  color: #ffffff;
+  background: url("/assets/images/wallet/renew/pay_02.png") no-repeat 38% center;
+  margin: 0 0 15px 0;
+  padding: 10px 0;
+}
+.zh #contents .con .introduce .topbox {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px 0 10px 0;
+}
+.zh #contents .con .introduce .topbox h5 {
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: normal;
+  text-align: center;
+}
+.zh #contents .con .introduce .topbox ul {
+  overflow: hidden;
+  margin: 35px 0;
+}
+.zh #contents .con .introduce .topbox ul li {
+  float: left;
+  width: 33.33%;
+  background: url("/assets/images/wallet/renew/pay_06.png") no-repeat right center;
+}
+.zh #contents .con .introduce .topbox ul li span {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 62px 0 0 0;
+}
+.zh #contents .con .introduce .topbox ul li span.ico1 {
+  background: url("/assets/images/wallet/renew/pay_03.png") no-repeat center 0;
+}
+.zh #contents .con .introduce .topbox ul li span.ico2 {
+  background: url("/assets/images/wallet/renew/pay_04.png") no-repeat center 0;
+}
+.zh #contents .con .introduce .topbox ul li span.ico3 {
+  background: url("/assets/images/wallet/renew/pay_05.png") no-repeat center 0;
+}
+.zh #contents .con .introduce .topbox ul li:last-child {
+  background: none;
+}
+.zh #contents .con .introduce .in2 ul {
+  overflow: hidden;
+  background: url("/assets/images/wallet/renew/pay_09.png") no-repeat 0 bottom;
+  padding: 20px 0;
+}
+.zh #contents .con .introduce .in2 ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.zh #contents .con .introduce .in2 ul li p {
+  color: #ffffff;
+}
+.zh #contents .con .introduce .in2 ul li p span {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.zh #contents .con .introduce .in2 ul li span {
+  color: #ffffff;
+  display: block;
+}
+.zh #contents .con .introduce .in2 ul li.ar1 {
+  background: url("/assets/images/wallet/renew/pay_07.png") no-repeat 40% 0;
+}
+.zh #contents .con .introduce .in2 ul li.ar1 p {
+  padding: 47px 117px 0 57px;
+}
+.zh #contents .con .introduce .in2 ul li.ar1 span {
+  padding: 36px 85px 0 19px;
+}
+.zh #contents .con .introduce .in2 ul li.ar2 {
+  background: url("/assets/images/wallet/renew/pay_08.png") no-repeat center 0;
+}
+.zh #contents .con .introduce .in2 ul li.ar2 span {
+  padding-top: 156px;
+}
+.zh #contents .con .introduce .in2 ul li.ar3 {
+  background: url("/assets/images/wallet/renew/pay_07.png") no-repeat 60% 0;
+}
+.zh #contents .con .introduce .in2 ul li.ar3 p {
+  padding: 47px 8px 0 62px;
+}
+.zh #contents .con .introduce .in2 ul li.ar3 p span {
+  padding: 0;
+}
+.zh #contents .con .introduce .in2 ul li.ar3 span {
+  padding: 62px 50px 0 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .zh #contents .con .vision {
+    width: 100%;
+  }
+  .zh #contents .con .vision h4 {
+    padding: 0 11%;
+  }
+  .zh #contents .con .vision .in-1 {
+    width: 100%;
+  }
+  .zh #contents .con .vision .in-1 ul {
+    padding-left: 0;
+  }
+  .zh #contents .con .vision .in-1 ul li {
+    background: none;
+  }
+  .zh #contents .con .vision .in-1 ul li div {
+    width: 100%;
+    height: 150px;
+  }
+  .zh #contents .con .vision .in-1 ul li .ico1 {
+    background-size: 100%;
+  }
+  .zh #contents .con .vision .in-1 ul li .ico2 {
+    background-size: 100%;
+  }
+  .zh #contents .con .vision .in-1 ul li .ico3 {
+    background-size: 100%;
+  }
+  .zh #contents .con .vision .in-2 .coin-tit {
+    padding: 1% 4%;
+  }
+  .zh #contents .con .vision .in-2 .coin-use {
+    padding-top: 37%;
+  }
+  .zh #contents .con .vision .in-2 .coin-use ul li {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .zh #contents .con .vision .in-2 .coin-use ul li p {
+    width: 100%;
+    padding: 10% 0 2% 0;
+  }
+  .zh #contents .con .vision .in-2 .coin-use ul li span {
+    padding: 3% 0 10% 0;
+  }
+  .zh #contents .con .vision .in-3 ul li {
+    float: none;
+    width: 100%;
+  }
+  .zh #contents .con .vision .in-3 h4 {
+    padding: 0 12%;
+  }
+  .zh #contents .con .introduce {
+    padding: 30px 20px;
+  }
+  .zh #contents .con .introduce h4 {
+    background-position: 22% center;
+  }
+  .zh #contents .con .introduce .in2 ul {
+    background: none;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar1 {
+    background-position: 50% 0;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar1 p {
+    padding: 47px 0 0 0;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar1 span {
+    padding: 10px 7px;
+    margin-top: 10px;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar2 span {
+    margin-top: 69px;
+    padding: 10px 15px;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar3 {
+    background-position: 50% 0;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar3 p {
+    padding: 47px 0 0 0;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar3 p span {
+    font-size: 1.15em;
+    padding: 0;
+    margin: 0;
+  }
+  .zh #contents .con .introduce .in2 ul li.ar3 span {
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+}

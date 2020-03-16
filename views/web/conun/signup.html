@@ -1,0 +1,292 @@
+<div id="frame">
+    <header class="snap">
+        <div class="wrap">
+            <img src="/img/logo_w.png" alt="logo" title="logo" class="snap">
+            <p class="title snap"><?= $this->lang->line('create<br>new wallet'); ?></p>
+        </div>
+    </header>
+    <!-- contents area -->
+    <section id="content" class="snap">
+        <!-- login -->
+
+        <form name="reg_form" action="<?= current_url() ?>" method="post" onsubmit="return formCheck();"
+              autocomplete="off" id="consignup" class="snap">
+            <input autocomplete="off" type="hidden" name="type" value="1">
+            <input autocomplete="off" type="hidden" name="member_id_enabled" id="member_id_enabled" value="">
+            <div class="wrap">
+                <div class="inputs"><!-- Name -->
+                    <span class="label snap2" data="member_name"><?= $this->lang->line('Name'); ?></span>
+                    <input class="default" type="text" name="member_name" id="member_name" required autofocus>
+                    <label for="member_name" id><?= $this->lang->line('Email'); ?></label>
+                </div>
+                <div class="inputs"> <!-- id -->
+                    <span class="label snap2" data="member_id"><?= $this->lang->line('Email'); ?></span>
+                    <button type="button" name="button" class="default mini" data="member_id"
+                            onclick='emaiAuth();'><?= $this->lang->line('SEND'); ?></button>
+                    <input class="default hinted" type="email" name="member_id" id="member_id" onblur='idcheck();'
+                           required>
+                    <label for="member_id"
+                           id="msg_member_id"><?= $this->lang->line('Email Address will be used as User ID'); ?>
+                        .</label>
+                </div>
+                <div class="inputs"><!-- Verify -->
+                    <span class="label snap2" data="mail_code"><?= $this->lang->line('Verify Your Email'); ?></span>
+                    <button type="button" name="button" class="default mini" data="mail_code"
+                            onclick="mailcheck(); "><?= $this->lang->line('VERIFY'); ?></button>
+                    <input class="default hinted" type="text" name="mail_code" id="mail_code" required>
+                    <label for="mail_code" id="msg_email"><?= $this->lang->line('Enter Verification Code'); ?>.</label>
+                </div>
+                <div class="inputs"><!-- Password -->
+                    <span class="label snap2" data="password"><?= $this->lang->line('Password'); ?></span>
+                    <input class="default hinted" type="password" name="password" id="password" required>
+                    <label for="password"><?= $this->lang->line('8~16 characters consisting of letters(A-Z, a-z), numbers, or special characters'); ?>
+                        .</label>
+                </div>
+                <div class="inputs"><!-- Confirm Password -->
+                    <span class="label snap2" data="password2"><?= $this->lang->line('Confirm Password'); ?></span>
+                    <input class="default hinted" type="password" name="password2" id="password2" required>
+                    <label for="password2"><?= $this->lang->line('Passwords should match'); ?>.</label>
+                </div>
+                <div class="inputs"><!-- Payment Password -->
+                    <span class="label snap2"
+                          data="wallet_password"><?= $this->lang->line('Payment Password'); ?></span>
+                    <input class="default hinted" type="password" name="wallet_password" id="wallet_password"
+                           onkeypress="onlyNumber();" required>
+                    <label for="wallet_password"><?= $this->lang->line('6-digit number you will use when send and pay'); ?>
+                        .</label>
+                </div>
+                <div class="inputs"><!-- Confirm Payment Password -->
+                    <span class="label snap2"
+                          data="wallet_password2"><?= $this->lang->line('Confirm Payment Password'); ?></span>
+                    <input class="default hinted" type="password" name="wallet_password2" id="wallet_password2"
+                           onkeypress="onlyNumber();" required>
+                    <label for="wallet_password2"><?= $this->lang->line('Passwords should match'); ?>.</label>
+                </div>
+                <div class="flex row justify">
+                    <div style="width:100%;">
+                        <input type="checkbox" name="optionsCheckboxes" id="optionsCheckboxes">
+                        <label for="optionsCheckboxes">
+                            <span class="checkbox"></span>
+                            <?= $this->lang->line('I Agree with CONUN WALLET Terms and Conditions'); ?>.
+                            <a href="/conun/account/terms" class="link"> <?= $this->lang->line('Read Full Text'); ?></a>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" name="button" class="default active"><?= $this->lang->line('SIGN UP'); ?></button>
+                <div class="links flex col">
+                    <a href="/conun" class="link"><?= $this->lang->line('Go Back to Login'); ?></a>
+                    <a href="/conun/seed/recovery" class="link"><?= $this->lang->line('Recover Wallet'); ?></a>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+<!-- script -->
+<script src="/js/action.js?version=1"></script>
+<script type="text/javascript">
+    var passwordRules = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/;
+    var email_verified = "N";
+
+    function mailcheck() {
+
+
+        var f = document.reg_form;
+
+         if(email_verified=="Y") {
+
+             if (document.getElementById('member_id_enabled').value != '000') {
+                 alert('<?=$this->lang->line('Member ID');?>');
+                 document.getElementById('member_id').select();
+                 return false;
+             } else if (f.mail_code.value == "") {
+                 alert("<?=$this->lang->line('Please enter your email verification number');?>");
+                 f.auth_number.focus();
+                 return false;
+             } else if (f.auth_number.value != f.mail_code.value) {
+                 alert("<?=$this->lang->line('E-mail confirmation numbers do not match');?>");
+                 f.auth_number.focus();
+                 return false;
+             } else {
+                 alert("<?=$this->lang->line('Email verified');?>");
+
+
+             }
+         }else{
+             alert('<?=$this->lang->line('Please verify your email');?>');
+         }
+    }
+
+    function formCheck() {
+
+        var f = document.reg_form;
+
+
+        idcheck();
+
+       if(email_verified =="N"){
+           alert('<?=$this->lang->line('Please verify your email');?>');
+           return false;
+
+       } else if (document.getElementById('member_id_enabled').value != '000') {
+            alert('<?=$this->lang->line('Member ID');?>');
+            document.getElementById('member_id').select();
+            return false;
+        } else if (f.auth_number.value != f.mail_code.value) {
+            alert("<?=$this->lang->line('E-mail confirmation numbers do not match');?>");
+            return false;
+        } else if ($("input:checkbox[id='optionsCheckboxes']").is(":checked") == false) {
+
+            alert('<?=$this->lang->line('You must agree to the terms.');?>');
+
+            return false;
+        } else if (f.password.value == "") {
+            alert("<?=$this->lang->line('New Password');?>");
+            f.password.focus();
+            return false;
+        } else if (f.password2.value == "") {
+            alert("<?=$this->lang->line('Cofirm Password');?>");
+            f.password2.focus();
+            return false;
+        } else if (f.password.value != f.password2.value) {
+            alert("<?=$this->lang->line('Password does not Match');?>");
+            f.password.focus();
+            return false;
+        } else if (f.wallet_password.value.length != 6) {
+            alert("<?=$this->lang->line('WithDraw  Password 6 length');?>");
+            f.wallet_password.focus();
+            return false;
+        } else if (f.wallet_password.value == "") {
+            alert("<?=$this->lang->line('WithDraw New Password');?>");
+            f.wallet_password.focus();
+            return false;
+        } else if (f.wallet_password2.value == "") {
+            alert("<?=$this->lang->line('WithDraw Confirm Password');?>");
+            f.wallet_password2.focus();
+            return false;
+        } else if (f.wallet_password.value != f.wallet_password2.value) {
+            alert("<?=$this->lang->line('Wallet Password does not Match');?>");
+            f.wallet_password.focus();
+            return false;
+        } else if (!passwordRules.test(f.password.value)) {
+            alert('<?=$this->lang->line('숫자와 영문자 조합으로 10~15자리를 사용해야 합니다.');?>');
+            return false;
+
+        }else{
+            document.getElementById("btn_submit").disabled = true;
+           // return  true;
+        }
+
+    }
+
+    function onlyNumber() {
+
+        if ((event.keyCode < 48) || (event.keyCode > 57))
+
+            event.returnValue = false;
+
+    }
+
+    $(document).on('scroll', function () {
+        $scroll = $(document).scrollTop();
+        if ($('header').height() - $scroll > 150) {
+            $height = 260 - $scroll;
+            $('header').css({'height': $height});
+        }
+		// 스크롤 130px 이하 원본상태로으로 간주
+		if ($scroll <= 130) {
+			if ( $('header').height() == 120 && ( $('#member_name').val() != "" && $('#member_id').val() != "" ) ) {
+				$('header').animate({'height': 260}, 400);
+			}
+		}
+    });
+    $('input[name="userid"], input[name="userveri"]').on('change', function () {
+        $target = $(this).attr('id');
+        if ($(this).val() != '') {
+            $('button[data=' + $target + ']').addClass('active');
+        }
+    });
+	// input 입력시에 키보드활성화 영역을 위한 위치조정
+	$(document).ready(function() {
+		$('header').click(function() {
+			if ( $(this).height() < 260 ) {
+				$('html, body').animate({'scrollTop': 0}, 400); //스크롤 위치 0px
+				$('header').animate({'height':260} , 400); // header 영역 활성화
+			}
+		});
+		$('.wrap').eq(1).click(function() {
+			$('header').animate({'height':120} , 400); // header 영역 강제 120px
+			var top = $('.wrap').eq(1).offset().top;
+			$('html, body').animate({'scrollTop': 130}, 400); //스크롤 위치 130px
+		});
+	});
+
+
+    var idcheck = function () {
+        $.ajax({
+            type: 'POST',
+            url: '/conun/check/idcheck',
+            data: {
+                //'member_id': encodeURIComponent($('#member_id').val()) // 인코딩
+                'member_id': $('#member_id').val()
+            },
+            cache: false,
+            async: false,
+            success: function (result) {
+                var msg = $('#msg_member_id');
+
+
+                switch (result) {
+                    case '110' :
+                        msg.html('<?=$this->lang->line('Your email address is too short');?>').css('color', 'red');
+                        break;
+                    case '120' :
+                        msg.html('<?=$this->lang->line('Please enter your correct email address');?>').css('color', 'red');
+                        break;
+                    case '130' :
+                        msg.html('<?=$this->lang->line('Email already exists');?>').css('color', 'red');
+                        break;
+                    case '140' :
+                        msg.html('<?=$this->lang->line('You are not a member.');?>').css('color', 'red');
+                        break;
+                    case '000' :
+                        msg.html('<?=$this->lang->line('Passed verification');?>').css('color', '#9aa01a');
+                        break;
+                    default :
+                        alert('<?=$this->lang->line('Wrong approach.');?>\n\n' + result);
+                        break;
+                }
+                $('#member_id_enabled').val(result);
+
+            }
+        });
+    }
+
+
+    var emaiAuth = function () {
+
+        if ($('#member_id_enabled').val() == "000"  /*&&  $("#maile_send").val()!="Y"*/) {
+
+            $.ajax({
+                type: 'POST',
+                url: '/conun/register/auth_mail',
+                data: {
+                    //'member_id': encodeURIComponent($('#member_id').val()) // 인코딩
+                    'email': $('#member_id').val()
+                },
+                cache: false,
+                async: false,
+                success: function (result) {
+                    var msg = $('#msg_email');
+                    email_verified="Y";
+
+                    msg.html('<?=$this->lang->line('We sent you a verification number by email');?>').css('color', '#9aa01a');
+                    msg.append(result);
+
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<header class="snap" id="setting">
+    <div class="wrap">
+        <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        <button type="button" name="button" class="clear" id="back" onclick="window.history.back()"><?=$this->lang->line('BACK');?></button>
+        <p class="title snap"><?=$this->lang->line('change<br>password');?></p>
+        <p class="title_nano"><?=$this->lang->line('To protect your personal informations and important assets, please change your password regularly');?>.</p>
+    </div>
+</header>
+<? include "menu.html"; ?>
+<section id="content" class="snap">
+
+        <form  class="snap" id="edit_pw"  action="<?=current_url()?>" method="post" onsubmit="return formCheck(this);">
+
+        <div class="wrap">
+            <div class="inputs">
+                <span class="label snap2" data="password"><?=$this->lang->line('Current Password');?></span>
+                <input class="default hinted" type="password" name="password" id="password" required>
+                <label for="password"><?=$this->lang->line('Enter current Password');?>.</label>
+            </div>
+            <div class="inputs">
+                <span class="label snap2" data="new_password"><?=$this->lang->line('New Password');?></span>
+                <input class="default hinted" type="password" name="new_password" id="new_password" required>
+                <label for="new_password"><?=$this->lang->line('Enter new Password, 8~16 characters consisting of letters and numbers');?>.</label>
+            </div>
+            <div class="inputs" style="margin-bottom:0;">
+                <span class="label snap2" data="newpw2"><?=$this->lang->line('Confirm New Password');?></span>
+                <input class="default hinted" type="password" name="new_password_confirm" id="newpw2" required>
+                <label for="newpw2"><?=$this->lang->line('Confirm your new Password');?>.</label>
+            </div>
+            <button type="submit" name="button" class="default active"><?=$this->lang->line('EDIT AND SAVE');?></button>
+        </div>
+    </form>
+</section>
+</div>
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+    });
+</script>
+
+
+<script language="javascript">
+    function formCheck(frm) {
+        if (frm.password.value == frm.new_password.value) {
+            alert("이전비밀번호와 새비밀번호가 같습니다.");
+            frm.new_password_confirm.focus();
+            return false;
+        }
+
+        else if (frm.new_password.value != frm.new_password_confirm.value) {
+            alert("새 비밀번호 확인이 틀립니다.");
+            frm.new_password_confirm.focus();
+            return false;
+        }else{
+            return true;
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

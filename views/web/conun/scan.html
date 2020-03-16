@@ -1,0 +1,141 @@
+ 
+      <header class="snap" id="pay">
+        <div class="wrap">
+          <a href="#" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+          <button type="button" name="button" class="clear" id="back" onclick="window.history.back()"><?=$this->lang->line('BACK');?></button>
+          <p class="title snap"><?=$this->lang->line('scan qrcode');?></p>
+          <p class="title_nano"><?=$this->lang->line('Scan QR Code to proceed to Purchase');?>.</p>
+
+        </div>
+      </header>
+     
+      <!-- contents area -->
+
+
+
+      <section id="content">
+      <button type="button" name="button" onclick="video.play();"  class="default active" style="position:fixed;bottom:90px;left:26px;width:calc(100% - 52px);z-index:10000;">SCAN</button>
+      <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+      <canvas id="canvas" hidden></canvas>
+      <div id="output" hidden>
+          <div id="outputMessage"> </div>
+          <div hidden><b>Data:</b> <span id="outputData"></span></div>
+      </div>
+      </section>
+
+      <script type="text/javascript">
+         /* let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+          scanner.addListener('scan', function (content) {
+ 
+              $("#qr_value").val(content);
+              $("#qr_form").submit();
+          });
+          Instascan.Camera.getCameras().then(function (cameras) {
+              if (cameras.length > 0) {
+
+
+                  scanner.start(cameras[cameras.length -1]);
+              } else {
+                  console.error('No cameras found.');
+              }
+          }).catch(function (e) {
+              console.error(e);
+          });
+          */
+
+
+         var video = document.createElement("video");
+         var canvasElement = document.getElementById("canvas");
+         var canvas = canvasElement.getContext("2d");
+         var loadingMessage = document.getElementById("loadingMessage");
+         var outputContainer = document.getElementById("output");
+         var outputMessage = document.getElementById("outputMessage");
+         var outputData = document.getElementById("outputData");
+
+         function drawLine(begin, end, color) {
+             canvas.beginPath();
+             canvas.moveTo(begin.x, begin.y);
+             canvas.lineTo(end.x, end.y);
+             canvas.lineWidth = 4;
+             canvas.strokeStyle = color;
+             canvas.stroke();
+         }
+
+         // Use facingMode: environment to attemt to get the front camera on phones
+         navigator.mediaDevices.getUserMedia({ audio: false,video: {width: 480, height:640 , facingMode: "environment" } }).then(function(stream) {
+             video.srcObject = stream;
+             video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+             video.setAttribute("muted", "muted"); // required to tell iOS safari we don't want fullscreen
+             video.setAttribute("id", "vid"); // required to tell iOS safari we don't want fullscreen
+             video.play();
+             requestAnimationFrame(tick);
+         });
+
+         function tick() {
+             loadingMessage.innerText = "⌛ Loading video..."
+             var code_Read =false;
+             if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                 loadingMessage.hidden = true;
+                 canvasElement.hidden = false;
+                 outputContainer.hidden = false;
+
+                 canvasElement.height = video.videoHeight;
+                 canvasElement.width = video.videoWidth;
+                 canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+                 var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+                 var code = jsQR(imageData.data, imageData.width, imageData.height, {
+                     inversionAttempts: "dontInvert",
+                 });
+                 if (code) {
+                     drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+                     drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+                     drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+                     drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+
+                     $("#qr_value").val(code.data);
+                     code_Read =true;
+
+
+
+
+
+                    // outputMessage.hidden = true;
+                    // outputData.parentElement.hidden = false;
+                    // outputData.innerText = code.data;
+
+
+                 } else {
+                     outputMessage.hidden = false;
+                     outputData.parentElement.hidden = true;
+                 }
+             }
+
+             if(code_Read == false){
+                 requestAnimationFrame(tick);
+             }else{
+
+                  $("#qr_form").submit();
+             }
+
+
+
+
+
+         }
+
+      </script>
+    </div>
+      <? include "menu.html"; ?>
+    <!-- script -->
+    <script src="/js/action.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+       // $height = $(window).height();
+      //  $('#canvas').css({'height':$height});
+      });
+    </script>
+      <form name="qr_form" id="qr_form" method="post" action="/conun/send">
+          <input type="hidden" name="qr_value" id="qr_value">
+      </form>
+  </body>
+</html>

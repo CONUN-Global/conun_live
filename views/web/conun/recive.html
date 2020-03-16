@@ -1,0 +1,47 @@
+<div id="frame">
+    <header class="snap" id="setting">
+        <div class="wrap">
+            <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+            <button type="button" name="button" class="clear" id="back" onclick="window.history.back()"><?=$this->lang->line('BACK');?></button>
+            <p class="title snap"><?=$this->lang->line('receive');?></p>
+            <p class="title_nano"><?=$this->lang->line('Scan QR Code to receive');?>.</p>
+        </div>
+    </header>
+    <? include "menu.html"; ?>
+    <section id="content" class="snap">
+        <div class="fill">
+            <div class="sidewrap">
+                <!--내지갑 QR-->
+                <div id="qrcode">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+    });
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "<?=$wallet;?>",
+        width: 600,
+        height: 600,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+<form name="qr_form" id="qr_form" method="post" action="/conun/send">
+    <input type="hidden" name="qr_value" id="qr_value">
+</form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+#wrap {margin: 10px; height: auto}
+
+#write { margin-top: 30px}
+#write td {height: 45px; line-height: 42px}
+#write  .tit {width:150px}
+#write  .txt {width:400px}
+#write .line {height: 1px; width: 100%; background-color: #e9e9e9}
+
+.btn {float: right;margin-top: 20px}
+#his {width: 100%}
+#his th {height:35px; background-color: #f0f0f0; line-height : 32px}
+#his td {height: 35px; line-height: 42px; text-align: center }
+
+#his .line {height: 1px; width: 100%; background-color: #e9e9e9}
+
+ .red {color: #d82e2e}
+#his .yellow  {color: #87920a}
+#his .blue  {color: #1e6fb5}
+#his .green  {color: #3f910c}
+
+.total {width: 200px; float: left}
+.util {width: 200px; float: right; margin-bottom: 20px}
+.util li {width:100px; float: left}

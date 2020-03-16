@@ -1,0 +1,48 @@
+<header class="snap">
+    <div class="wrap">
+        <img src="/img/logo_w.png" alt="logo" title="logo" class="snap">
+        <p class="title snap"><?=$this->lang->line('signup<br>complete');?></p>
+    </div>
+</header>
+<!-- contents area -->
+<section id="content" class="snap">
+    <div class="wrap">
+        <p class="title_min dark"><?=$this->lang->line('ACCOUNT INFOMATION');?></p>
+        <div class="flex row mab5 mat20">
+            <p class="title_min" style="width:50px;"><?=$this->lang->line('NAME');?></p>
+            <p><?=$mb->name;?></p> <!-- 가입 완료된 사람의 이름 -->
+        </div>
+        <div class="flex row">
+            <p class="title_min" style="width:50px;"><?=$this->lang->line('EMAIL');?></p>
+            <p><?=$mb->email;?></p> <!-- 가입 완료된 사람의 이메일 -->
+        </div>
+        <div class="h_bar mat30 mab30"></div>
+        <p class="title_min dark mab5"><?=$this->lang->line('WALLET RECOVERY TEXT');?></p>
+        <p class="title_min mab20" style="opacity:1;color:#BD1213;"><?=$this->lang->line('ment');?></p>
+        <p id="wallet_seed"><?=$seed;?></p>
+        <input type="text" id="wallet_seed_1" value="" style="position:fixed;z-index:-1000;left:-10000px;top:-10000px;">
+        <button type="button" name="button" class="default active mat30" onclick="copytoClip('wallet_seed_1');"><?=$this->lang->line('COPY RECOVERY TEXT');?></button>
+        <div class="links flex col">
+            <a href="/conun" class="link"><?=$this->lang->line('Go to Main');?></a>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $(document).on('scroll',function(){
+        $scroll = $(document).scrollTop();
+        if($('header').height()-$scroll>150){
+            $height = 260 - $scroll;
+            $('header').css({'height':$height});
+        }
+    })
+    $(document).ready(function(){
+        $seed = $('#wallet_seed').text();
+        $('input#wallet_seed_1').val($seed);
+    });
+</script>
+</body>
+</html>

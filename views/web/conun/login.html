@@ -1,0 +1,58 @@
+      <header class="snap">
+        <div class="wrap">
+          <img src="/img/logo_w.png" alt="logo" title="logo" class="snap">
+          <p class="title snap"><?=$this->lang->line('Welcome');?><br>back!</p>
+        </div>
+      </header>
+      <section id="content" class="snap">
+        <!-- login -->
+        <form id="conlogin" action="<?=current_url();?>" name="member_login" method="post" class="snap">
+
+          <div class="wrap">
+            <div class="inputs">
+              <span class="label snap2" data="member_id"><?=$this->lang->line('Email');?></span>
+              <input class="default dark" type="text" name="member_id" id="member_id" required>
+              <label for="member_id">Email</label>
+            </div>
+            <div class="inputs">
+              <span class="label snap2" data="password"><?=$this->lang->line('Password');?></span>
+              <input class="default dark" type="password" name="password" id="password" required>
+              <label for="password"><?=$this->lang->line('Password');?></label>
+            </div>
+            <div class="flex row justify">
+              <div style="width:50%;">
+                <input type="checkbox" name="saveID" id="saveID">
+                <label for="saveID"><span class="checkbox"></span><?=$this->lang->line('Save ID');?></label>
+              </div>
+              <div style="width:50%;">
+                <input type="checkbox" name="autoLogin" id="autoLogin">
+                <label for="autoLogin"><span class="checkbox"></span><?=$this->lang->line('Always Logged in');?></label>
+              </div>
+            </div>
+            <button type="submit" name="button" class="default active"  value="Login"><?=$this->lang->line('LOGIN');?></button>
+            <div class="links flex col">
+              <a href="../conun/register/reset_pw" class="link"><?=$this->lang->line('Forgot Password');?>?</a>
+              <a href="#" data="register/" class="link" onclick="screenChange('/register');"><?=$this->lang->line('Create New Account');?></a>
+              <a href="../conun/seed/recovery" class="link"><?=$this->lang->line('Recover Wallet');?></a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- script -->
+    <script src="/js/action.js"></script>
+      <script type="text/javascript">
+        //<![cdata[
+        function set_cookie(name, value, expiredays) {
+          var todayDate = new Date();
+          todayDate.setDate( todayDate.getDate() + expiredays );
+          document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+
+
+
+
+      </script>
+  </body>
+</html>

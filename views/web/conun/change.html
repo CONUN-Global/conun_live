@@ -1,0 +1,248 @@
+<?
+$pay =false;
+
+?>
+
+<form class="snap" id="change" action="/conun/exchange/send_ok?nonsense=1" method="post" onsubmit="return exchange_submit();">
+    <input type="hidden" name="bal" id="bal" class="form-control" value="" >
+    <input type="hidden" name="coin" id="coin" class="form-control" value="CON" >
+    <input type="hidden" name="wonPrice" id="wonPrice" class="form-control" value="<?=$sise['TICK']['CLOSING_PRICE'];?>" >
+    <input type="hidden" name="amount" id="amount" class="form-control" value="<?=$amount;?>" >
+    <input type="hidden" name="con_amount" id="con_amount" class="form-control" value="<?=$con_amount;?>" >
+    <input type="hidden" name="wallet_password" id="wallet_password" class="form-control"  >
+    <input type="hidden" name="send_type" id="send_type" class="form-control"  value="EXCHANGE" >
+    <input type="hidden" name="send_id" id="send_id" class="form-control"  value="<?=$partner_wallet;?>" >
+    <header class="snap" id="change">
+        <div class="wrap">
+            <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+
+            <button type="button" name="button" class="clear" id="back" onclick="location.href='/conun/';"><?=$this->lang->line('BACK');?></button>
+            <p class="title snap">change</p>
+            <p class="title_nano">
+                <?=$this->lang->line('You can change CON to CONP (CONUN Point)');?>.<br>
+                1 CONP = <span id="connow"><?=$sise['TICK']['CLOSING_PRICE'];?></span> &#8361;
+            </p>
+            <!-- 결제정보표시 -->
+            <div class="snap orderinfo" id="changeinfo">
+                <div class="flex row">
+                    <span class="title_min"><?=$this->lang->line('보유');?> CON</span>
+                    <div>
+                        <!-- 결제 대상의 상호명과 지갑주소 정보 -->
+
+
+                        <? foreach($bal_list as $item){?>
+                            <?
+                            $checked =false;
+                            if($item['COIN'] == "CON"){
+
+
+                                $pay=true;
+
+
+
+
+
+                                ?>
+
+
+                                <p class="point"><?=number_format($item['BALANCE'],6);?></p>
+                                <input type="hidden" name="con_balance" id="con_balance" value="<?=$item['BALANCE'];?>">
+                                <p class="mat5 title_min" style="word-break:break-all;"><?= number_format(bcmul($item['BALANCE'],$sise['TICK']['CLOSING_PRICE']),'2') ;?> &#8361;</p>
+
+                            <?}?>
+                        <?}?>
+
+
+
+                    </div>
+                </div>
+
+                <div class="flex row">
+                    <span class="title_min dark"><?=$this->lang->line('보유');?> CONP</span>
+                    <div>
+                        <!-- 보유중인 CONP -->
+
+
+
+                        <? foreach($bal_list as $item){?>
+                            <?
+                            $checked =false;
+                            if($item['COIN'] == "CONP"){
+
+
+                                $pay=true;
+
+
+
+
+
+                                ?>
+                                <p><?=number_format($item['BALANCE'],6);?></p>
+                                <input type="hidden" name="conp_balance" id="conp_balance" value="<?=$item['BALANCE'];?>">
+
+                            <?}?>
+                        <?}?>
+
+
+                        전환 후 CON 1,206.3577
+
+                        전환 후 CONP 8,775.15
+
+                    </div>
+                </div>
+                <div class="flex row" style="padding-top:10px;border-top:1px solid #dfdfdf;">
+                    <!-- 1CON의 원화가치(설정 언어 국가 화폐 가치) -->
+                    <span class="title_min">1 CON</span>
+                    <div id="connow"><span><?= $sise['TICK']['CLOSING_PRICE'] ;?></span> &#8361;</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- contents area -->
+
+
+
+    <section id="content" class="snap" style="padding-top:380px;">
+
+          <div class="snap">
+            <div class="wrap">
+                <div class="wrap">
+                    <p class="title_min dark"><?=$this->lang->line('CON AMOUNT');?> </p>
+                    <input type="number" required autofocus name="changefrom" id="changefrom" class="default hinted fill" value="" onkeyup="calc_amount(this);">
+                    <label for="changefrom"><?=$this->lang->line('Enter the amount of CON to change to CONP');?>.</label>
+                </div>
+                <div class="wrap">
+                    <!--
+                      위 'changefrom' 에 전환할 양을 입력하면,
+                      자동으로 계산되어 아래 인풋과, 전환 후 con, 전환 후 conp 가 입력되어야 한다.
+                    -->
+                    <input type="text" disabled name="changeresult" id="changeresult" class="default" value="">
+                    <label for="changeresult">CONP</label>
+                    <div class="title_mid mat10">
+                        <p>
+                            <span style="opacity:.5;"><?=$this->lang->line('전환 후');?> CON</span>
+                            <span id="after_con">0</span>
+                        </p>
+                        <p>
+                            <span style="opacity:.5;"><?=$this->lang->line('전환 후');?> CONP</span>
+                            <span id="after_conp">0</span>
+                        </p>
+                    </div>
+                </div>
+                <p class="title_min dark mat30"><?=$this->lang->line('PAYMENT PASSWORD');?></p>
+                <div class="inputs mat20 flex row justify">
+                    <input type="password" name="paypw" id="paypw1" required maxlength="1" pattern="[0-9]{1}">
+                    <input type="password" name="paypw" id="paypw2" required maxlength="1" pattern="[0-9]{1}">
+                    <input type="password" name="paypw" id="paypw3" required maxlength="1" pattern="[0-9]{1}">
+                    <input type="password" name="paypw" id="paypw4" required maxlength="1" pattern="[0-9]{1}">
+                    <input type="password" name="paypw" id="paypw5" required maxlength="1" pattern="[0-9]{1}">
+                    <input type="password" name="paypw" id="paypw6" required maxlength="1" pattern="[0-9]{1}">
+                </div>
+                <div class="links flex col dark">
+                    <a href="/conun/seed/recovery" class="link"><?=$this->lang->line('Forgot Payment Password?');?></a>
+                    <p class="title_nano"><?=$this->lang->line('You can reset your Payment Password,<br>If youre having trouble with it');?>.</p>
+                </div>
+                <button type="submit" name="button" class="default active"><?=$this->lang->line('CHANGE');?></button>
+                <p class="title_nano mat10"><?=$this->lang->line('Be careful! You cannot get your coins back after change');?>.</p>
+            </div>
+          </div>
+    </section>
+</form>
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $('input[name="paypw"]').on('focus', function(){
+        $(this).removeClass('fill');
+        $(this).attr('type','text');
+    });
+    $('input[name="paypw"]').on('blur', function(){
+        $(this).attr('type','password');
+        if($(this).val()!='' && !$(this).hasClass('fill')){
+            $(this).addClass('fill');
+        }
+    });
+    $('input[name="paypw"]').on('keyup',function(){
+        var i = $('input[name="paypw"]').index(this);
+        $pwval = $('input[name="paypw"]').eq(i).val().length;
+        if($pwval > 0 && i<5){
+            console.log('yes' + i);
+            $('input[name="paypw"]').eq(i+1).focus();
+        }
+    });
+
+
+    $(document).ready(function () {
+
+        var con_balance = $("#con_balance").val();
+        var conp_balance = $("#conp_balance").val();
+
+        $("#after_con").html(number_format(con_balance,'6'));
+        $("#after_conp").html(number_format(conp_balance,'6'));
+
+    });
+
+    function calc_amount(obj){
+        var conp_price=  parseFloat($(obj).val()) * parseFloat($("#wonPrice").val());
+
+        var con_balance = parseFloat( $("#con_balance").val() ) - parseFloat($(obj).val()) ;
+        var conp_balance = parseFloat( $("#conp_balance").val() )+ parseFloat(conp_price) ;
+
+
+
+
+
+
+      $("#changeresult").val(number_format(conp_price,2));
+      $("#after_con").html(number_format(con_balance,'6'));
+      $("#after_conp").html(number_format(conp_balance,'6'));
+
+
+    }
+
+    function removeComma(str)
+
+    {
+
+        n = parseInt(str.replace(/,/g,""));
+
+        return n;
+
+    }
+function exchange_submit() {
+
+var  password2 =  $("#paypw1").val()+ $("#paypw2").val()+$("#paypw3").val()+$("#paypw4").val()+$("#paypw5").val()+$("#paypw6").val();
+var coin = $("#coin").val();
+var amount = $("#amount").val();
+var con_amount = $("#con_amount").val();
+var exchage_price  =$("#changefrom").val();
+var bal = $("#con_balance").val();
+$("#wallet_password").val(password2);
+
+
+
+
+if(bal == ""){
+alert("<?=$this->lang->line('잔액이 부족 합니다.');?>");
+
+return false;
+
+
+}
+
+
+if(parseFloat(exchage_price)>parseFloat(bal)){
+alert("<?=$this->lang->line('잔액이 부족 합니다.');?>");
+
+return false;
+}
+
+
+
+
+
+return true;
+
+}
+
+
+</script>

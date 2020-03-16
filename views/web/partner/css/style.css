@@ -1,0 +1,160 @@
+/* =================================================================
+* Layout - CSS
+================================================================= */
+
+
+#wrap {width:100%; min-width: 1300px}
+
+#head {width: 100%; height: 60px; background-color: #333}
+#head .nav {width: 840px; height: 60px; float: left}
+#head .nav li {width: 120px; height: 60px; float: left; color: #fff; line-height: 52px; text-align: center; font-size: 13px}
+
+#head .nav a:active, .nav a:link, .nav a:visited {height: 60px; color: #fff; text-decoration: none; display:block}	
+#head .nav a:hover, .nav li:hover {height: 60px; background-color:#f0f0f0; color: #333; display:block}
+
+#head .on {color: #000; background-color:#fff}
+#head .on > a:visited {color: #000}
+
+#logobox {width: 240px; height: 60px; float: left}
+#logobox .logo {line-height: 52px; color: #fff; text-align: center; font-size: 15px}
+
+#head .nav .active {height: 60px; background-color:#928b22; color: #333 !important; }
+#container {min-height:780px; margin-left: 240px}
+
+#side  {min-height:600px; width: 240px; float: left; margin-left: -240px; position: relative; background-color: #fff}
+#side .topbox {margin-top: 10px; height: 30px}
+#side .topbox li {width:120px; float: left; text-align: center}
+
+
+#side_tit {margin-top: 40px; margin-left: 10px}
+
+
+#side_menu {width:100%}
+#side_menu .side_menu {margin-left: 20px}
+#side_menu .side_menu li  {height: 40px; line-height: 36px; font-size: 13px}
+#side_menu .side_menu a:active, .side_menu a:link, .side_menu a:visited {color: #333; text-decoration: none; display:block}	
+#side_menu .side_menu a:hover, .side_menu li:hover {background-color:#f0f0f0; color: #000; display:block}
+
+#conts {min-height:600px; position: relative; padding: 30px; background-color: #f0f0f0}
+
+
+/* 게시물 리스트 */
+#table {height:470px; padding: 30px; background-color: #fff}
+#lists  {width: 100%}
+#lists th {height: 55px; text-align: center; font-weight: bold }
+#lists td {height: 40px; line-height: 34px}
+#lists, th, td {border: 1px; text-align: center}
+#lists .on { background-color: #f5f5f5}
+#lists .line {border: 1px solid #e9e9e9}
+#lists img {margin-top: 8px;}
+#lists  tbody tr:hover {height: auto; background-color:#e4e4e4; color: #000}
+#lists .red {color: #d82e2e; font-weight: bold}
+#lists .yellow  {color: #87920a; font-weight: bold}
+#lists .blue  {color: #1e6fb5; font-weight: bold}
+#lists .green  {color: #3f910c; font-weight: bold}
+/*=================================================================================
+*  Page - 페이지 네이션
+=================================================================================*/
+#pages { margin-top: 20px;}
+
+#page a {
+margin: 2px;
+padding: 0.5em 0.64em 0.43em 0.64em;
+background-color: #ee4e4e;
+text-decoration: none; /* no underline */
+color: #fff;
+}
+
+#page a:hover, #page a:active {
+padding: 0.5em 0.64em 0.43em 0.64em;
+margin: 2px;
+background-color: #de1818;
+
+color: #fff;
+}
+
+#page_con{
+padding: 0.5em 0.67em 0.43em 0.64em;
+margin: 2px;
+background-color: #4b4b4b;
+font-weight:bold;
+color: #fff;
+}
+
+/* Find */
+
+#util {width:100px; height:40px; float: right} 
+#util li {width :50px; float: left}
+#search {width:600px; height:40px; margin-bottom: 5px}
+.findbox {width: 100%; height: 45px}
+
+/* ETC */
+
+.infobox {width: 100%;  height: 35px} /* TITLE */
+.bold {font-weight: bold}
+.line-width  {height:1px; background-color:#e5e5e5}
+.line-height {width:1px; background-color: #e5e5e5}
+
+/*=================================================================================
+*  레이어 팝업
+=================================================================================*/
+
+.layer-popup {width:590px; height: 750px}
+.layer-popup {display:none; position:absolute; left:50%; top:175px; z-index:10; padding:0px 0px 0px; margin-left:0px; background-color:#fff; border:1px solid #e9e9e9;}
+.layer-popup .close {width: 50px; height: 50px; float: right; margin-top: 10px; margin-right: 10px; margin-bottom: 10px}
+
+#layer {margin: 20px}
+#layer .menu {width:100%; height:35px; background-color: #e2574c}
+#layer .menu li {width: 100px; height:35px; float: left; line-height: 32px; text-align: center; color: #fff}
+
+#layer .menu a:active, .menu a:link, .menu a:visited {height: 35px; color: #fff; text-decoration: none; display:block}	
+#layer .menu a:hover, .menu li:hover {height: 35px;color: #fff; display:block; background-color: #000}
+#layer li.on {background: #333}
+
+
+
+/* =================================================================
+* 대시보드 - CSS
+================================================================= */
+
+
+#boxwrap {width : 50%; height: 350px; float: left; margin-bottom: 10px}
+#boxwrap .box {width: 98%; height:120%; background-color: #fff}
+#boxwrap .stats {padding: 20px}
+
+#boxwrap .tit {width:30%; height: 50px; line-height: 47px; float: left}
+#boxwrap .txt {width:70%; height: 50px; line-height: 47px; float: left}
+
+
+}
+.modal-otp .modal-header {
+    display: block;
+    padding: 1rem;
+}
+.modal-otp .modal-header .close {
+    margin-top: -2.6rem;
+    padding: 1rem 1.5rem;
+}
+.modal-otp .modal-title {
+    text-align :center!important;
+}
+.otp-text-red {
+    display: block;
+    padding-left: 2px;
+    height: 1.4rem;
+    padding-top: .2rem;
+    color: #ff0000;
+    font-size: 0.7rem;
+}
+.otp-text-green {
+    display: block;
+    padding-left: 2px;
+    height: 1.4rem;
+    padding-top: .2rem;
+    color: #2bb673;
+    font-size: 0.7rem;
+}
+.otp-info {
+    font-size: 1rem;
+}
+

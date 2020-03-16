@@ -1,0 +1,79 @@
+<div id="boxwrap">
+	<div class="box">
+		<div class="stats">
+			<h2> 기본 정보 </h2>
+			<div class="line-width"></div>
+			<div class="tit"> 가입된 회원수 </div>
+			<div class="txt"> <?=$member_total?> 명 </div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+	
+		
+
+<div id="boxwrap">
+	<div class="box">
+		<div class="stats">
+			<h2> 이더리움 정보 </h2>
+			<div class="line-width"></div>			
+			<div class="tit"> 총 받은 수량 </div>
+			<div class="txt"> <?=$in_money?> ETH</div>
+			<div style="clear: both"></div>	
+			
+			<div class="tit"> 오늘 요청 이더리움</div>
+			<div class="txt"> <?=number_format($today_q)?> </div>
+			<div style="clear: both"></div>	
+			<div class="tit"> 오늘 받은 이더리움</div>
+			<div class="txt"> <?=number_format($today_c)?> </div>
+			<div style="clear: both"></div>		
+		</div>
+		<br><br>
+	</div>
+</div>
+
+
+
+<div id="boxwrap">
+	<div class="box">
+		<div class="stats">
+			<h2>REVV 정보 </h2>
+			<div class="line-width"></div>
+			
+			<div class="tit"> 총 발생 REVV</div>
+			<div class="txt">  <?=number_format($coin_money)?> </div>
+			<div style="clear: both"></div>
+			
+			<div class="tit"> 어제 발생 REVV</div>
+			<div class="txt">  <?=number_format($yesterday_r)?> </div>
+			<div style="clear: both"></div>
+			
+			<div class="tit"> 오늘 발생 REVV</div>
+			<div class="txt"> <?=number_format($today_r)?> </div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="boxwrap">
+	<div class="box">
+		<div class="stats">
+			<h2> 바로가기 </h2>
+			<div class="line-width"></div>
+			
+			<div class="tit"> <a href="/admin/member/lists">회원관리</a></div>
+			<div class="txt"> </div>
+			<div style="clear: both"></div>
+			
+			<div class="tit"> <a href="/admin/coin/lists">REVV 토큰관리</a></div>
+			<div class="txt"> </div>
+			<div style="clear: both"></div>
+			
+			<div class="tit"> <a href="/admin/point/lists">ETH 관리</a></div>
+			<div class="txt"> </div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,118 @@
+<div id="frame">
+    <header class="snap">
+        <div class="wrap">
+            <img src="/img/logo_w.png" alt="logo" title="logo" class="snap">
+            <p class="title snap"><?=$this->lang->line('reset<br>password');?></p>
+        </div>
+    </header>
+    <!-- contents area -->
+    <section id="content" class="snap">
+        <form id="resetpw" name="resetpw" action="<?=$_SERVER['PHP_SELF'];?> " method="post" class="snap">
+            <div class="wrap">
+                <div class="inputs"> <!-- id -->
+                    <span class="label snap2" data="member_id"><?=$this->lang->line('Email');?></span>
+                    <button type="button" name="button" class="default mini" data="userid" onclick='emaiAuth();'><?=$this->lang->line('SEND');?></button>
+                    <input class="default hinted" type="email" name="member_id" id="member_id" required>
+                    <label for="member_id" id="msg_email"><?=$this->lang->line('Enter your registered Email address');?>.</label>
+                </div>
+                <div class="inputs" style="margin-bottom:0;"><!-- Verify -->
+                    <span class="label snap2" data="mail_code"><?=$this->lang->line('Verify Your Email');?></span>
+                    <button type="button" name="button" class="default mini" data="mail_code" onclick="mailcheck();"><?=$this->lang->line('VERIFY');?></button>
+                    <input class="default hinted" type="text" name="mail_code" id="mail_code" required>
+                    <label for="mail_code"><?=$this->lang->line('Enter Verification Code');?>.</label>
+                </div>
+                <button type="submit" name="button" class="default active"><?=$this->lang->line('VERIFY AND RESET');?></button>
+                <div class="links flex col">
+                    <a href="/conun" class="link"><?=$this->lang->line('Go Back to Login');?></a>
+                    <a data="/register" class="link" onclick="screenChange('/register');"><?=$this->lang->line('Create New Account');?></a>
+                    <a href="/conun/seed/recovery" class="link"><?=$this->lang->line('Recover Wallet');?></a>
+                </div>
+
+            </div>
+        </form>
+    </section>
+</div>
+
+<!-- script -->
+<script src="/js/action.js"></script>
+
+<script type="text/javascript">
+    function formCheck()
+    {
+
+        var f = document.resetpw;
+       if(f.auth_number.value != f.mail_code.value ){
+            alert("<?=$this->lang->line('E-mail confirmation numbers do not match');?>");
+            return false;
+        }
+        document.getElementById("btn_submit").disabled = true;
+    }
+
+    function mailcheck() {
+
+
+        var f = document.resetpw;
+
+
+          if($("#mail_code").val() == ""){
+            alert("<?=$this->lang->line('Please enter your email verification number');?>");
+            f.mail_code.focus();
+            return false;
+        }
+          else if(typeof f.auth_number === undefined ){
+              alert("<?=$this->lang->line('E-mail Send');?>");
+              $("#mail_code").focus();
+              return false;
+          }
+        else if($("#auth_number").val()!= $("#mail_code").val()){
+            alert("<?=$this->lang->line('E-mail confirmation numbers do not match');?>");
+              $("#mail_code").focus();
+            return false;
+        }
+        else  {
+            alert("<?=$this->lang->line('Email verified');?>");
+
+        }
+    }
+    var emaiAuth = function () {
+
+
+            $.ajax({
+                type: 'POST',
+                url: '/conun/register/auth_mail',
+                data: {
+                    'email': $('#member_id').val()
+                },
+                cache: false,
+                async: false,
+                success: function (result) {
+                    var msg = $('#msg_email');
+
+
+                    msg.html('<?=$this->lang->line('We sent you a verification number by email')?>').css('color', '#9aa01a');
+                    msg.append(result);
+
+                }
+            });
+
+    }
+
+    $(document).on('scroll',function(){
+        $scroll = $(document).scrollTop();
+        if($('header').height()-$scroll>150){
+            $height = 260 - $scroll;
+            $('header').css({'height':$height});
+        }
+    })
+    $(document).ready(function(){
+        $seed = $('#wallet_seed').text();
+        $('input#wallet_seed_1').val($seed);
+
+
+
+
+
+
+
+    });
+</script>

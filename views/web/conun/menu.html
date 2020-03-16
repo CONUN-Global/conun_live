@@ -1,0 +1,34 @@
+<?
+    $menu = $this->uri->segment(2, 0);
+
+$menu1= "off";
+$menu2= "off";
+$menu3= "off";
+$menu4= "off";
+$menu5= "off";
+
+if($menu == "coin"){
+$menu1= "on";
+}else if($menu == "account" || $menu == "profile"  ){
+$menu2= "on";
+}else if($menu == "lists"){
+$menu3= "on";
+}else if($menu == "notice"){
+$menu4= "on";
+}else if($menu == "setting"){
+$menu5= "on";
+}
+ 
+
+?>
+
+<nav>
+    <!-- 하단메뉴 -->
+    <div class="wrap flex row justify">
+        <a href="/conun/coin" id="ico_home" class="<?=$menu1;?>" alt="home" title="home"></a>
+        <a href="/conun/account" id="ico_my" class="<?=$menu2;?>" alt="mypage" title="mypage"></a>
+        <a href="/conun/lists" id="ico_log" class="<?=$menu3;?>" alt="history" title="history"></a>
+        <a href="/conun/notice" id="ico_contact" class="<?=$menu4;?>" alt="notice" title="notice"></a>
+        <a href="/conun/setting" id="ico_setting" class="<?=$menu5;?>" alt="setting" title="setting"></a>
+    </div>
+</nav>

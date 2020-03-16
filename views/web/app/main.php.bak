@@ -1,0 +1,216 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#btnCopyClip").click(function(){
+		$("#clipURL").css("display", "block");
+	});
+
+	var clipboardSupport = true;
+	try {
+		$.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+		var version = $.browser.version;
+		version = new Number(version.substring(0, version.indexOf(".")));
+		
+		//모바일 접속인지 확인
+		if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+			//클립보드 복사기능이 될경우 (크롬 42+)
+			if ($.browser.chrome == true && version >= 42) {
+				clipboardSupport = true;
+			} else {
+				clipboardSupport = false;
+			}
+		}
+	} catch(e) {
+	}
+
+	if (clipboardSupport) {
+		$("#btnCopyClip").show();
+		$("#txtCopyClip").hide();
+	} else {
+		$("#btnCopyClip").hide();
+		$("#txtCopyClip").show();
+	}
+
+	var clipboard = new Clipboard('#btnCopyClip');
+		clipboard.on('success', function(e) {
+		alert("Token Address copied.");
+	});
+	var clipboard = new Clipboard('#btnEtcCopyClip1');
+		clipboard.on('success', function(e) {
+		alert("Coin Address copied.");
+	});
+	clipboard.on('error', function(e) {
+		alert("Click the Copy button.");
+
+		setTimeout(function() {
+			$("#etc_clipURL").css("display", "none");
+		}, 10000);	// 최하 1000 임 1초
+
+	});
+
+});
+</script>
+
+
+<div class="br-pagebody">
+    <div class="row row-sm">
+        <!-- col-3 -->
+        
+        <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
+            <div class="bg-info rounded overflow-hidden">
+	            <div class="pd-x-20 pd-t-20_r2 d-flex align-items-center">
+                	<!--<i class="ion-ios-person-outline tx-60 lh-0 tx-white op-7"></i> -->
+					<img class="tx-60 lh-0 tx-white op-7" src="/views/web/app/img/people.png">
+					<div class="mg-l-20">
+						<p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10 font">Personal information</p>
+						<p class="tx-white tx-lato tx-bold mg-b-0 lh-1 font"><?=$this->session->userdata('member_id')?></p>
+						<span class="tx-11 tx-roboto tx-white-8"><?=$name?></span>
+                	</div>
+              	</div>
+			  	<div class="con_ib">
+					<div class="ib_left"></div>
+					<div class="  ib_right"><a class="pad" href="/app/profile">Edit</a></div>
+			  	</div>
+			  	<div id="ch1" class="ht-50 tr-y-1"></div>
+            </div>
+        </div><!-- col-3 -->
+        <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0" style="<?=$token_view?>">
+            <div class="bg-purple rounded overflow-hidden">
+              	<div class="pd-x-20 pd-t-20_r d-flex align-items-center">
+                	<i class="ion ion-ios-color-filter-outline tx-60 lh-0 tx-white op-7"></i>
+					<div class="mg-l-20">
+						<p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">REVV token</p>
+						<p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1"><a id="clipURL"><?=$token_wallet?></a></p>
+						<span class="tx-11 tx-roboto tx-white-8 two"><span><?=number_format($token_coin, 4)?></span> Token</span>
+                	</div>
+              	</div>
+			  	<div class="">
+					<div class="con_ib w02 ib_left"><a href="/app/coin/createAddr">Coin swap</a></div>
+					<div class="ib_righ con_ib w04 "></div>
+			  	</div>
+			  	<div id="ch3" class="ht-50 tr-y-1"></div>
+            </div>
+        </div><!-- col-3 -->
+        <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0" style="<?=$coin_view?>">
+            <div class="bg-teal rounded overflow-hidden">
+              	<div class="pd-x-20 pd-t-20 d-flex align-items-center">
+				<i class="ion ion-planet tx-60 lh-0 tx-white op-7"></i>
+				<!--	<img class="tx-60 lh-0 tx-white op-7" style="width:30px" src="/views/web/app/img/eth.png"> -->
+					<div class="mg-l-20">
+						<p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">REVVCOIN</p>
+						<p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1"><a id="etc_clipURL"><?=$wallet?></a></p>
+						<span class="tx-11 tx-roboto tx-white-8 two"><span></span><?=number_format($bal, 4)?> CTC</span>
+                	</div>
+            	</div>
+				<div class="con_ib w03">
+					<div class="ib_left"><a class="pad2" id="btnEtcCopyClip1" data-clipboard-action="copy" data-clipboard-target="#etc_clipURL" style='cursor:pointer'>Copy address</a></div>
+				</div>
+				<div id="ch2" class="ht-50 tr-y-1"></div>
+        	</div>
+        </div><!-- col-3 -->
+        
+		<div class="col-md-12" style="margin:40px 0 20px 0; ">
+			<div class="card" style="box-shadow: 2px 2px 3px #3e5971;">
+				<div class="card-header" style="; background-size: cover; background-position: top center; line-height:13px; padding-top:20px; background-color: #3e5971">
+					<h4 class="title" style="color:#fff; font-size:18px; font-weight:bold">Transmission history</h4>
+					<p class="category" style="color:#fff; font-size:14px">Latest history(5TH)</p>
+				</div>
+				<div class="card-content table-responsive">
+					<table class="table">
+					<col width="20%" />
+					<col width="30%" />
+					<col width="30%" />
+					<col width="20%" />
+					<thead class="text-primary">	                           
+					<tr>
+						<th>Division</th>
+						<th>Address</th>
+						<th>Price</th>
+						<th>Date</th>
+					</tr>
+					</thead>
+					<tbody>
+					<?
+					$i=0; 
+					ksort($item);
+					if(!empty($item))
+					{
+						foreach($item as $key => $row) {
+							if($row["CATEGORY"] == 'move') {
+								if($row["OTHERACCOUNT"] == 'admin')
+									continue;
+								else
+									$row["CATEGORY"] = 'send';
+							}
+							$i += 1; 
+							if($i == 6)
+							{
+								break;
+							}
+							$regdate	=  date("y-m-d",strtotime($row["TIME"]));
+					?>
+					<tr>
+						<td align="center"><?=$row["CATEGORY"]?></td>
+						<td align="center"><?=$row["ADDRESS"] == '' ? '관리자' : $row["ADDRESS"]?></td>
+						<td align="center"><?=number_format($row["AMOUNT"],4)?> REVV</td>
+						<td align="center"><?=$regdate?></td>
+					</tr>
+					<?		
+						}
+					}
+					else
+						{?>
+						<td align="center" colspan="4"> 데이터가 없습니다</td>
+					<?}?>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-12" style="margin:20px 0 20px 0;">
+			<div class="card" style="box-shadow: 2px 2px 3px #7c7d80;">
+				<div class="card-header" style="background:#7c7d80; line-height:13px; padding-top:31px">
+					<h4 class="title" style="color:#fff; font-size:18px; font-weight:bold">Notice</h4>
+					<p class="category" style="color:#fff; font-size:14px">Notice announcement</p>
+				</div>
+				<div class="card-content table-responsive">
+					<table class="table">
+					<col width="70%" />
+					<col width="30%" />
+					<thead class="text-primary">	                            
+					<tr>
+						<th style="text-align: left !important;">Title</th>
+						<th>Date</th>
+					</tr>
+					</thead>
+					<tbody>
+					<? 
+					$i=0; 
+					foreach($bbs as $acc) {
+						$i += 1; 
+						if($i == 6){break;}
+						$regdate	=  date("y-m-d",strtotime($acc->regdate));
+					?>
+					<tr>
+						<td><a href="/app/bbs/views/<?=$acc->bbs_no?>"><font color="#000"><?=$acc->subject?></font></a></td>
+						<td align="center"><?=$regdate?></td>
+					</tr>
+					<? } ?>	
+					</tbody>
+					</table>
+				</div>
+				<?if ($level == 10  ) {?>
+	            <a href="/app/bbs"><button type="button" class="btn btn-info pull-right" style="margin-right:3%">Write</button></a>
+                <div class="clearfix"></div>
+                <?}?>
+			</div>
+		</div>
+		
+    </div><!-- br-pagebody -->
+</div><!-- br-mainpanel -->

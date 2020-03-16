@@ -1,0 +1,232 @@
+<?
+ $pay =false;
+
+?>
+<header class="snap" id="pay">
+  <div class="wrap">
+    <a href="/conun" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+    <button type="button" name="button" class="clear" id="back" onclick="window.history.back()"><?=$this->lang->line('BACK');?></button>
+    <p class="title snap"><?=$this->lang->line('your order');?></p>
+    <!-- 결제정보표시 -->
+    <div class="snap orderinfo" id="orderinfo">
+      <div class="flex row">
+        <span class="title_min"><?=$this->lang->line('TO');?></span>
+        <div>
+          <!-- 결제 대상의 상호명과 지갑주소 정보 -->
+          <p id="orderfrom" class="mab5"><?=$partner_company;?></p>
+          <p id="orderfromdetail" class="title_nano" style="word-break:break-all;"><?=$partner_wallet;?></p>
+        </div>
+      </div>
+      <div class="flex row">
+        <span class="title_min"><?=$this->lang->line('PRICE');?></span>
+        <div>
+          <!-- 결제 대상의 가격(콘)과 원화가치(설정 언어 국가 화폐 가치) -->
+          <p id="ordercon"><span><?=number_format($con_amount,4);?></span> CON</p>
+          <p id="ordervalue"><span><?=number_format($amount,2);?></span> &#8361;</p>
+        </div>
+      </div>
+      <div class="flex row" style="padding-top:10px;border-top:1px solid #dfdfdf;">
+        <!-- 1CON의 원화가치(설정 언어 국가 화폐 가치) -->
+        <span class="title_min">1 CON</span>
+        <div id="connow"><span><?=$sise['TICK']['CLOSING_PRICE'];?></span> &#8361;</div>
+      </div>
+    </div>
+  </div>
+</header>
+      <!-- contents area -->
+      <section id="content" class="snap" style="padding-top:380px;">
+
+        <form class="snap" id="payment" action="/conun/send/send_ok?nonsense=1" method="post" onsubmit="return payment_submit();">
+          <input type="hidden" name="bal" id="bal" class="form-control" value="" >
+          <input type="hidden" name="coin" id="coin" class="form-control" value="" >
+          <input type="hidden" name="wonPrice" id="wonPrice" class="form-control" value="<?=$sise['TICK']['CLOSING_PRICE'];?>" >
+          <input type="hidden" name="amount" id="amount" class="form-control" value="<?=$amount;?>" >
+          <input type="hidden" name="con_amount" id="con_amount" class="form-control" value="<?=$con_amount;?>" >
+          <input type="hidden" name="wallet_password" id="wallet_password" class="form-control"  >
+          <input type="hidden" name="send_type" id="send_type" class="form-control"  value="<?=$send_type;?>" >
+          <input type="hidden" name="send_id" id="send_id" class="form-control"  value="<?=$partner_wallet;?>" >
+          <input type="hidden" name="qr_value" id="qr_value" class="form-control"  value="<?=$qr_value;?>" >
+
+          <div class="wrap">
+            <p class="title_min dark"><?=$this->lang->line('SELECT PAYMENT METHOD');?></p>
+            <!--
+            결제 가능 코인 및 각 코인별 잔액 표시하며, 기본 선택 옵션은 CON.
+            선택한 코인이 잔액 부족으로 결제불가 시 '잔액이 부족합니다' 알럿을 띄우고
+            결제 가능한 코인으로 자동선택.
+
+            결제 가능한 잔액이 있는 코인이 아예 없는 경우,
+            페이지 접근과 동시에 '잔액이 모자라거나 결제할 수 있는 코인이 없습니다.' 와 같은 알럿을 띄우고
+            메인 페이지로 리디렉트.
+            -->
+
+            <div class="flex col mat20 mab20">
+
+              <? foreach($bal_list as $item){?>
+              <?
+                $checked =false;
+                 if($item['COIN'] == "CON"){
+
+                    if($item['BALANCE'] >= $con_amount){
+                       $pay=true;
+                       $checked ="checked";
+                     }
+
+              ?>
+              <input type="radio" class="boxradio" name="paymethod" balance="<?=$item['BALANCE'];?>"   coin_id="<?=$item['COIN'];?>"   value="con" id="pay_con" checked="<?=$checked;?>">
+              <label for="pay_con" class="snap2 off">CON<span id="con"><?=number_format($item['BALANCE'],6);?></span></label>
+              <?}?>
+              <?}?>
+
+
+
+              <? foreach($bal_list as $item){?>
+              <? if($item['COIN'] == "CONP"){
+                 if($item['BALANCE'] >= $con_amount && $pay==false){
+                  $pay=true;
+                  $checked ="checked";
+
+                 }
+
+
+               ?>
+              <input type="radio" class="boxradio" name="paymethod" value="conp" coin_id="<?=$item['COIN'];?>"  balance="<?=$item['BALANCE'];?>" id="pay_conp"  checked="<?=$checked;?>">
+              <label for="pay_conp" class="snap2 off">CONP<span id="conp"><?=number_format($item['BALANCE'],2);?></span></label>
+              <?}?>
+              <?}?>
+
+              <? foreach($bal_list as $item){?>
+              <? if($item['COIN'] == "MOCP"){
+
+                      if($send_type !="BONUS"){
+                          $disabled="disabled";
+                      }else{
+                          $disabled="";
+                      }
+
+
+                  ?>
+              <input type="radio" class="boxradio" name="paymethod" value="mocp"  coin_id="<?=$item['COIN'];?>"  balance="<?=$item['BALANCE'];?>" id="pay_moc" <?=$disabled;?>  >
+              <label for="pay_moc" class="snap2 off">MOCP<span id="mocp"><?=number_format($item['BALANCE']);?></span></label>
+              <?}?>
+              <?}?>
+
+
+
+
+
+            </div>
+            <div id="benefit">
+              <!-- 적립예정 모크모크 포인트 -->
+              <p><span id="expectmocp"><?=number_format($bonus_amount);?> MOCP</span> <?=$this->lang->line('WILL BE SAVED');?>.</p>
+              <p class="title_nano"><?=$this->lang->line('point');?>.</p>
+            </div>
+            <p class="title_min dark mat30"><?=$this->lang->line('PAYMENT PASSWORD');?></p>
+            <div class="inputs mat20 flex row justify">
+              <input type="password" name="paypw" id="paypw1" class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+              <input type="password" name="paypw" id="paypw2" class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+              <input type="password" name="paypw" id="paypw3" class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+              <input type="password" name="paypw" id="paypw4"  class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+              <input type="password" name="paypw" id="paypw5"  class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+              <input type="password" name="paypw" id="paypw6"  class="nextVal" required maxlength="1" pattern="[0-9]{1}">
+            </div>
+            <div class="links flex col dark">
+              <a href="/conun/seed/recovery" class="link"><?=$this->lang->line('Forgot Payment Password?');?></a>
+              <p class="title_nano"><?=$this->lang->line('You can reset your Payment Password,<br>If youre having trouble with it');?>.</p>
+            </div>
+            <button type="submit" name="button" class="default active" ><?=$this->lang->line('PAY');?></button>
+            <p class="title_nano mat10"><?=$this->lang->line('ment1');?>.</p>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- script -->
+    <script src="/js/action.js"></script>
+    <script type="text/javascript">
+      // $(document).ready(function(){
+      //   $height = $('header').height()-20;
+      //   $('#content').css({'padding-top':$height});
+      // });
+
+
+      $(document).ready(function() {
+
+        $(".nextVal").keyup(function () {
+          $(this).next(".nextVal").focus();
+        });
+
+        $('input[name="paymethod"]').on('change', function () {
+          if (!$(this).siblings('label').hasClass('off')) {
+            $(this).siblings('label').addClass('off');
+
+
+          }
+          $("#coin").val($(this).attr("coin_id"));
+          $("#bal").val($(this).attr("balance"));
+        });
+
+
+
+
+
+      });
+
+
+      $("#coin").val($('input[name="paymethod"]:checked').attr('coin_id'));
+      $("#bal").val($('input[name="paymethod"]:checked').attr('balance'));
+
+      function payment_submit() {
+
+        var  password2 =  $("#paypw1").val()+ $("#paypw2").val()+$("#paypw3").val()+$("#paypw4").val()+$("#paypw5").val()+$("#paypw6").val();
+        var coin = $("#coin").val();
+        var amount = $("#amount").val();
+        var con_amount = $("#con_amount").val();
+        var bal = $("#bal").val();
+        $("#wallet_password").val(password2);
+
+
+
+          /*
+                <input type="hidden" name="bal" id="bal" class="form-control" value="" >
+                <input type="hidden" name="coin" id="coin" class="form-control" value="" >
+                <input type="hidden" name="wonPrice" id="wonPrice" class="form-control" value="<?=$sise['TICK']['CLOSING_PRICE'];?>" >
+                <input type="hidden" name="amount" id="amount" class="form-control" value="<?=$amount;?>" >
+                <input type="hidden" name="con_amount" id="con_amount" class="form-control" value="<?=$con_amount;?>" >
+          */
+
+           if(coin == "CON"){
+               if(parseFloat(con_amount)>parseFloat(bal)){
+                    alert("<?=$this->lang->line('잔액이 부족 합니다.');?>");
+
+                    return false;
+               }
+           } else if(coin == "CONP") {
+             if(parseFloat(amount)>parseFloat(bal)){
+
+               console.log(amount);
+               console.log(bal);
+                 alert("<?=$this->lang->line('잔액이 부족 합니다.');?>");
+
+               return false;
+             }
+
+
+
+
+
+           }
+        if(coin == "CON") {
+          $("#amount").val(con_amount);
+        }
+           return true;
+
+      }
+
+
+      <? if($pay == false){ ?>
+         alert("<?=$this->lang->line('잔액이 모자라거나 결제할 수 있는 코인이 없습니다.');?>");
+         location.href="/conun"
+      <?}?>
+    </script>
+  </body>
+</html>

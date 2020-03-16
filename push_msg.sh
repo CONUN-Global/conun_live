@@ -1,0 +1,12 @@
+(sleep 5 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 10 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 15 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 20 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 25 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 30 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 35 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 40 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 45 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 50 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 55 && php -q /home/api/index.php api scheduler msg_push) &
+(sleep 60 && php -q /home/api/index.php api scheduler msg_push) &

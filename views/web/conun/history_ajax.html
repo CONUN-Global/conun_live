@@ -1,0 +1,249 @@
+<?
+
+$loop = 0;
+foreach ($item as $list){
+
+?>
+
+<?
+
+
+$list_date = date("Y/m/d", strtotime($list[TIME]));
+$list_time = date("H:i", strtotime($list[TIME]));
+$today = date('Y/m/d');
+$yesterday = date('Y/m/d', strtotime("-1 days"));
+$coin = strtolower($list[txid]);
+
+
+$history = $this->m_coin->get_history($list[TXID]);
+
+
+if ($list[TYPE] == "") {
+    $output = "in";
+    $output_text = "RECEIVE";
+    $list[TYPE] = "RECEIVE";
+} else {
+    $output = "out";
+    if ($list[TYPE] == "PAYMENT") {
+        $output_text = "PAY";
+
+    } else if ($list[TYPE] == "EXCHANGE") {
+        $output_text = "CHANGE";
+
+    } else {
+        $output_text = $list[TYPE];
+    }
+}
+
+
+?>
+
+<? if ($list_date != $temp_date && $loop > 0) { ?>
+    </tbody>
+    </table>
+
+<?
+} ?>
+
+
+<? if ($filter == "" || $filter == $list[TYPE]){ ?>
+<? if ($list_date != $temp_date) { ?>
+
+
+    <? if ($list_date == $today) { ?>
+        <p class="title_min"><?= $this->lang->line('Today'); ?></p>
+    <? } else if ($list_date == $yesterday) { ?>
+        <p class="title_min"><?= $this->lang->line('Yesterday'); ?></p>
+    <?
+    } else { ?>
+        <p class="title_min"><?= $list_date; ?></p>
+    <?
+    } ?>
+
+<?
+} ?>
+
+
+<table class="default" cellpadding="0" cellspacing="0">
+    <tbody>
+    <!--
+      출금인 경우 type="out", 입금인 경우 type="in"
+      data 에 각 거래의 거래id값이 들어갑니다.
+      tr 에 onclick function 으로 각 거래 상세 내용을 호출합니다.
+    -->
+    <?
+    } ?>
+    <? if ($list[TYPE] == "EXCHANGE") { ?>
+        <?
+        $price = bcmul($list[POINT], $list[EXCHANGE_PRICE], 2);
+
+        ?>
+
+        <?
+        if ($filter == "" || $filter == "EXCHANGE") {
+
+            ?>
+            <tr type="in" data="<?= $list[TXID]; ?>">
+
+                <td>
+                    <input type="hidden" id="txinfo" value="<?= number_format($list[POINT], 8); ?>"
+                           price="<?= number_format($price, 2); ?>" coin="CONP" out="0" trans="EXCHANGE"
+                           target="<?= $list[EVENT_ADDRESS]; ?>" wallet="<?= $list[EVENT_ADDRESS]; ?>"
+                           time="<?= $list[TIME]; ?>" gas="<?= $history->gasfee; ?>" add="<?= $list[BONUNS_POINT]; ?>"
+                           txid="<?= $list[TXID]; ?>">
+                    <input type="hidden" id="balinfo" con="1" conp="10" mocp="100" eth="1000">
+                    <div class="flex row">
+                        <button type="button" class="coin_type"
+                                coin="<?= strtolower($list[COIN]); ?>"><?= $list[COIN]; ?></button>
+                        <div>
+                            <p>
+                                <span class="trans_type"><?= $output_text; ?></span>
+                                <span class="trans_target"></span>
+
+                            </p>
+
+                            <p class="trans_amount">+ <?= number_format($list[POINT], 8); ?> CONP</p>
+
+                        </div>
+                    </div>
+                </td>
+                <td class="title_nano"><?= $list_time; ?></td>
+
+            </tr>
+
+
+            <tr type="out" data="<?= $list[TXID]; ?>">
+
+                <td>
+                    <input type="hidden" id="txinfo" value="<?= number_format($list[POINT], 8); ?>"
+                           price="<?= number_format($price, 2); ?>" coin="CON" out="1" trans="EXCHANGE"
+                           target="<?= $list[EVENT_ADDRESS]; ?>" wallet="<?= $list[EVENT_ADDRESS]; ?>"
+                           time="<?= $list[TIME]; ?>" gas="<?= $history->gasfee; ?>" add="<?= $list[BONUNS_POINT]; ?>"
+                           txid="<?= $list[TXID]; ?>">
+                    <input type="hidden" id="balinfo" con="1" conp="10" mocp="100" eth="1000">
+
+                    <div class="flex row">
+                        <button type="button" class="coin_type"
+                                coin="<?= strtolower($list[COIN]); ?>"><?= $list[COIN]; ?></button>
+                        <div>
+                            <p>
+                                <span class="trans_type"><?= $output_text; ?></span>
+                                <span class="trans_target"><?= $list[PARTNER_NAME]; ?></span>
+
+                            </p>
+
+                            <p class="trans_amount">- <?= number_format($list[AMOUNT], 8); ?> CON</p>
+
+                        </div>
+                    </div>
+                </td>
+                <td class="title_nano"><?= $list_time; ?></td>
+
+            </tr>
+        <?
+        } ?>
+
+    <?
+    } else { ?>
+        <?
+
+        if ($filter == "" || $filter == $list[TYPE]) {
+
+            ?>
+            <tr type="<?= $output; ?>" data="<?= $list[TXID]; ?>">
+
+                <?
+                $out = 1;
+                if ($list[TYPE] == "PAYMENT") {
+                    $price = bcmul($list[AMOUNT], $list[PAYMENT_PRICE], 2);
+
+                }
+                if ($output_text == "RECEIVE") {
+                    $list[TYPE] = 'RECEIVE';
+                    $out = 0;
+
+
+                    $list[EVENT_ID] = $list[OTHERID];
+
+                    if ($list[EVENT_ID] == "") {
+
+                        $list[PARTNER_NAME]= $list[ADDRESS];
+                    } else {
+                        $list[PARTNER_NAME]= $list[EVENT_ID];
+                    }
+
+                }
+
+
+
+
+                if($list[PARTNER_NAME]==""){
+
+                    $target=$list[EVENT_ID];
+                }else{
+                    $target=$list[PARTNER_NAME];
+                }
+
+
+                ?>
+                <input type="hidden" id="txinfo" value="<?= number_format($list[AMOUNT], 8); ?>" price="<?= $price; ?>"
+                       coin="<?= $list[COIN]; ?>" out="<?= $out; ?>" trans="<?= $list[TYPE]; ?>"
+                       target="<?= $target; ?>" wallet="<?= $list[ADDRESS]; ?>"
+                       time="<?= $list[TIME]; ?>" gas="<?= $history->gasfee; ?>" add="<?= $list[BONUNS_POINT]; ?>"
+                       txid="<?= $list[TXID]; ?>">
+                <input type="hidden" id="balinfo" con="1" conp="10" mocp="100" eth="1000">
+                <td>
+                    <div class="flex row">
+                        <button type="button" class="coin_type"
+                                coin="<?= strtolower($list[COIN]); ?>"><?= $list[COIN]; ?></button>
+                        <div>
+                            <p>
+                                <span class="trans_type"><?= $output_text; ?></span>
+                                <? if ($list[TYPE] == "PAYMENT") { ?>
+                                    <span class="trans_target"><?= $list[PARTNER_NAME]; ?></span>
+                                <? } else { ?>
+                                    <span class="trans_target">
+                                   <? if ($list[EVENT_ID] == "") { ?>
+
+                                       <?= $list[ADDRESS]; ?>
+
+                                   <?
+                                   } else { ?>
+                                       <?= $list[EVENT_ID]; ?>
+                                   <?
+                                   } ?>
+
+
+                                 </span>
+                                <?
+                                } ?>
+
+                            </p>
+                            <? if ($output == "out") { ?>
+                                <p class="trans_amount">
+                                    - <?= number_format($list[AMOUNT], 8); ?> <?= $list[COIN]; ?></p>
+                            <?
+                            } else { ?>
+                                <p class="trans_amount">
+                                    + <?= number_format($list[AMOUNT], 8); ?> <?= $list[COIN]; ?></p>
+                            <?
+                            } ?>
+                        </div>
+                    </div>
+                </td>
+                <td class="title_nano"><?= $list_time; ?></td>
+
+            </tr>
+        <?
+        } ?>
+    <?
+    } ?>
+
+    <?
+    $temp_date = $list_date;
+    $loop++;
+    }
+    ?>
+
+    </tbody>
+</table>

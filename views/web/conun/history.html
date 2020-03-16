@@ -1,0 +1,233 @@
+<header class="snap" id="setting">
+    <div class="wrap">
+        <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        <p class="title snap"><?=$this->lang->line('transaction<br>history');?></p>
+        <div class="flex row justify mat20">
+            <input type="radio" name="history_filter" id="history_all" checked onclick="cheange_coin('','');">
+            <label for="history_all">ALL</label>
+            <input type="radio" name="history_filter" id="history_con" onclick="cheange_coin('CON','');">
+            <label for="history_con">CON</label>
+            <input type="radio" name="history_filter" id="history_conp"  onclick="cheange_coin('CONP','');">
+            <label for="history_conp">CONP</label>
+            <input type="radio" name="history_filter" id="history_moc" onclick="cheange_coin('MOCP','');">
+            <label for="history_moc">MOCP</label>
+            <input type="radio" name="history_filter" id="history_eth" onclick="cheange_coin('ETH','');">
+            <label for="history_eth">ETH</label>
+        </div>
+    </div>
+</header>
+<script>
+    var cal = null;
+    var COIN = "";
+    var filter= "";
+
+    function onDateChange(date){
+        change_coin_date();
+        //document.getElementById('container2').innerHTML = date;
+    }
+    
+    function cheange_coin(coin,date) {
+        COIN = coin;
+        $.get( "/conun/lists/lists_ajax?COIN="+coin+"&DATE="+date+"&filter="+filter, function(jqXHR) {
+            $("#history_list").html(jqXHR);
+            bind_tex();
+
+         }, 'html' /* xml, text, script, html */)
+            .done(function(jqXHR) {
+
+            });
+
+
+    }
+
+    function change_coin_date() {
+        $.get( "/conun/lists/lists_ajax?COIN="+COIN+"&DATE="+$("#history_date_filter").val()+"&filter="+filter, function(jqXHR) {
+            $("#history_list").html(jqXHR);
+            bind_tex();
+
+        }, 'html' /* xml, text, script, html */)
+            .done(function(jqXHR) {
+
+            });
+
+
+    }
+
+    
+
+
+</script>
+<? include "menu.html"; ?>
+<section id="content" class="snap">
+    <div class="sidewrap flex row justify" id="history_filter" style="top: 233px;">
+        <!-- 날짜필터 -->
+        <input type="date" value="" min="" max="2020-03-05" id="history_date_filter" onchange="change_coin_date();">
+        <!-- 거래유형필터 -->
+        <button type="button" id="history_type_filter" onclick="openModal('filter');"><img src="/img/icons/ico_filter.png" alt="filter" style="width:16px;height:auto;"> </button>
+    </div>
+    <div class="sidewrap" id="history_list">
+
+
+    </div>
+
+</section>
+</div>
+<!-- filter modal -->
+<div class="modal" type="filter">
+    <div class="item">
+        <p class="title">
+            필터
+        </p>
+        <div class="content">
+            <form id="pay_filter" method="post">
+                <input type="radio" name="pay_filter" id="pay_filter_all" checked>
+                <label for="pay_filter_all"><span class="radio"></span><?=$this->lang->line('전체');?></label>
+                <input type="radio" name="pay_filter" id="pay_filter_pay">
+                <label for="pay_filter_pay"><span class="radio"></span><?=$this->lang->line('결제');?></label>
+                <input type="radio" name="pay_filter" id="pay_filter_send">
+                <label for="pay_filter_send"><span class="radio"></span><?=$this->lang->line('전송');?></label>
+                <input type="radio" name="pay_filter" id="pay_filter_rcv">
+                <label for="pay_filter_rcv"><span class="radio"></span><?=$this->lang->line('받기');?></label>
+                <input type="radio" name="pay_filter" id="pay_filter_change">
+                <label for="pay_filter_change"><span class="radio"></span><?=$this->lang->line('전환');?></label>
+                <!-- <input type="radio" name="pay_filter" id="pay_filter_add">
+                <label for="pay_filter_add"><span class="radio"></span>적립</label> -->
+            </form>
+        </div>
+        <button type="button" name="close" onclick="closeModal();"></button>
+    </div>
+    <div class="modalbg"></div>
+</div>
+<!-- history log. openReceipt() 를 참조. -->
+<div id="receipt" class="modal">
+    <div class="inner flex col">
+        <button type="button" name="close" onclick="closeModal();"></button>
+        <div id="header">
+            <p class="title_nano" style="margin-bottom:26px;">
+                <span class="type">유형</span><!-- 거래유형 -->
+                <span class="time">0000.00.00 00:00:00</span><!-- 거래일시 -->
+            </p>
+            <p class="title_min dark" id="txtarget">대상</p><!-- 거래대상 -->
+            <p class="title_nano" id="txtarget_w">0x123456pqiejfkapwei</p><!-- 거래대상의 지갑주소 -->
+            <p class="title mat10" id="txprice">10,000 W</p><!-- 거래가격 -->
+        </div>
+        <div id="mid" class="flex row">
+            <div style="background-image:url(/img/bg_receipt_left.png)"></div>
+            <div style="background-image:url(/img/bg_receipt_center.png)"></div>
+            <div style="background-image:url(/img/bg_receipt_right.png)"></div>
+        </div>
+        <div id="cont">
+            <!-- 거래 유형이 'pay' 와 'change' 인 경우에만 표시 -->
+            <div id="trans_detail" class="orderinfo">
+                <p class="title_min dark mab20">DETAILS</p>
+                <div class="flex row">
+                    <span class="title_min">Method</span>
+                    <div class="title_min" style="opacity:1;" id="txcoin">CONP</div><!-- 결제코인종류 -->
+                </div>
+                <div class="flex row">
+                    <span class="title_min">Amount</span>
+                    <div class="point" id="txval">0</div><!-- 결제코인 사용량 -->
+                </div>
+                <div class="flex row">
+                    <span class="title_min">Gas</span>
+                    <div class="title_min" style="opacity:1;" id="txgas">0 ETH</div><!-- Gas 수수료 -->
+                </div>
+                <div class="flex row">
+                    <span class="title_min">MOCP</span>
+                    <div class="title_min" style="opacity:1;" id="txadd">+ 0</div><!-- 적립 MOCP -->
+                </div>
+            </div>
+         <div id="balance_after" class="orderinfo">
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="modalbg"></div>
+</div>
+<!-- script -->
+<script src="/js/action.js?version=6"></script>
+<script type="text/javascript">
+
+    function  bind_tex(){
+        $('#history_list tr').on('click', function(){
+            $txinfo = $(this).find('input#txinfo');
+            $balinfo = $(this).find('input#balinfo');
+
+
+
+
+            console.log($txinfo);
+
+            var txinfo = [
+                { val : $txinfo.val(),
+                    price : $txinfo.attr('price'),
+                    coin : $txinfo.attr('coin'),
+                    out : $txinfo.attr('out'),
+                    trans : $txinfo.attr('trans'),
+                    target : $txinfo.attr('target'),
+                    wallet : $txinfo.attr('wallet'),
+                    time : $txinfo.attr('time'),
+                    gas : $txinfo.attr('gas'),
+                    add : $txinfo.attr('add'),
+                    txid : $txinfo.attr('txid')
+                },
+                {
+                    con : $balinfo.attr('con'),
+                    conp : $balinfo.attr('conp'),
+                    mocp : $balinfo.attr('mocp'),
+                    eth : $balinfo.attr('eth')
+                }
+            ];
+            openReceipt(txinfo[0], txinfo[1]);
+            console.log(txinfo);
+        });
+
+
+
+
+    }
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+        $('#history_filter').css({'top':$('header').height()-20});
+        // 날짜선택 인풋 오늘날짜
+        $('#history_date_filter').val(getToday());
+        //날짜를 변경하여 리스트를 sorting 한 경우 (== form 제출)에는 선택된 값이 표시되어야 한다.
+        //파라미터 혹은 다른 기준으로 날짜 값 제출 여부를 확인하고 그렇지 않을 경우에만 위의 getToday값을 표시한다.
+
+        $('#history_date_filter').attr('max', getToday());
+        //최소값은 가입날짜로 되어야 하며, 형태는 yyyy-mm-dd 이다.
+        // $('#history_date_filter').attr('min', );
+        cheange_coin('','');
+        bind_tex();
+
+        $("#pay_filter_all").click(function () {
+            filter = "";
+            cheange_coin(COIN,'');
+        });
+        $("#pay_filter_pay").click(function () {
+            filter = "PAYMENT";
+            cheange_coin(COIN,'');
+        });
+
+        $("#pay_filter_send").click(function () {
+            filter = "SEND";
+            cheange_coin(COIN,'');
+        });
+        $("#pay_filter_rcv").click(function () {
+            filter = "RECIVE";
+            cheange_coin(COIN,'');
+        });
+
+        $("#pay_filter_change").click(function () {
+            filter = "EXCHANGE";
+            cheange_coin(COIN,'');
+        });
+
+
+    });
+</script>
+</body>
+</html>

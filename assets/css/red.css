@@ -1,0 +1,235 @@
+a:focus {
+	color: #0d7fb2;
+}
+.spliter {
+	background: #0d7fb2;
+}
+.yellow-btn {
+	background: #0d7fb2;
+}
+.invert-btn {
+	border: 1px solid #0d7fb2 !important;
+}
+.c-btn:hover,
+.mask .c-btn:hover {
+	color: #0d7fb2;
+}
+/* ---------------------------------- INNER PAGE SECTION e53838-------------------------------- */
+.page-content-wrapper .blog-post-holder a.readmore {
+	background: #0d7fb2 none repeat scroll 0 0;
+}
+.page-content-wrapper a.with-arrow-btn {
+	background: #0d7fb2;
+}
+.page-content-wrapper a.with-arrow-btn:hover {
+	color: #0d7fb2;
+}
+.with-arrow-btn:hover span i {
+	color: #0d7fb2;
+}
+.small-services:hover .gray-background {
+	border: 5px solid #0d7fb2;
+}
+.small-services:hover i {
+	color: #0d7fb2;
+}
+.page-content .contact-holder, .page-content .contact-holder span, .page-content .contact-holder .detail-holder i {
+	color: #0d7fb2;
+}
+.page-content .contact-holder .left-detail .spliter {
+	background: #0d7fb2;
+}
+.page-content .contact-holder input[type=submit]:hover {
+	background: #0d7fb2;
+	border: 1px solid #0d7fb2;
+}
+.page-content .contact-page-ops span.spliter {
+	background: #0d7fb2;
+}
+.services-list li a:hover, .services-list li.active a {
+	color: #0d7fb2 !important;
+}
+.testi-author-meta img {
+	border: 2px solid #0d7fb2;
+}
+/* ---------------------------------- PAGINATION -------------------------------- */
+.pagination ul li a {
+	background: #0d7fb2;
+}
+/* ---------------------------------- PRELOADER -------------------------------- */
+.loader-line-wrap:nth-child(1) .loader-line {
+	border-color: #0d7fb2;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+	border-color: #0d7fb2;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+	border-color: #0d7fb2;
+}
+/* ---------------------------------- TOP BAR ---------------------------------- */
+.top-bar {
+	background: #0d7fb2;
+}
+/* ---------------------------------- HEADER ---------------------------------- */
+.slider-wrapper header.sticky {
+	border-bottom: 4px solid #0d7fb2;
+}
+.slider-wrapper header nav.main-nav > ul > li:hover > a,
+.slider-wrapper header nav.main-nav ul li ul li a:hover,
+.slider-wrapper header nav.main-nav > ul > li.active > a {
+	background: #0d7fb2;
+}
+.slider-wrapper header.sticky .right-menu .cd-primary-nav-trigger .cd-menu-icon,  .slider-wrapper header.sticky .right-menu .cd-primary-nav-trigger .cd-menu-icon::before,  .slider-wrapper header.sticky .right-menu .cd-primary-nav-trigger .cd-menu-icon:after {
+	background-color: #0d7fb2;
+}
+.slider-wrapper .rider-slider a {
+	background: #0d7fb2;
+}
+/* ---------------------------------- ABOUT US SECTION ---------------------------------- */
+.section-wrapper .heding-wrapper span, .section-wrapper .container .heding-wrapper span {
+	color: #0d7fb2;
+}
+.box-link a:hover .icon-center span {
+	color: #0d7fb2;
+}
+.box-link a:hover .icon-center h3 {
+	color: #0d7fb2;
+}
+.box-link a:hover .icon-center {
+	border-color: #0d7fb2;
+}
+.section-wrapper .heding-wrapper a:hover {
+	color: #0d7fb2;
+}
+.responsive-banner {
+	background: #0d7fb2;
+}
+.about-box span i {
+	color: #0d7fb2;
+}
+/* ---------------------------------- FEATURES SECTION -------------------------------- */
+.box-link a:hover .feature-icon {
+	color: #0d7fb2;
+}
+.box-link a:hover .feature-text h3 {
+	color: #0d7fb2;
+}
+/* ---------------------------------- EXPERENCES SECTION -------------------------------- */
+.yellow-background {
+	background: #0d7fb2;
+}
+.more-about a {
+	border: 1px solid #0d7fb2;
+}
+.more-about a:hover {
+	color: #0d7fb2 !important;
+}
+
+/* ---------------------------------- SKILLS ---------------------------------- */
+.wahtwedo-tabs-bg {
+    background: url('../img/mir_news.png') no-repeat;
+    background-image: url('../img/mir_news.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	/*background: #0d7fb2;*/
+}
+
+/* ---------------------------------- SERVICES SECTION ---------------------------------- */
+#services .info {
+	background-color: rgba(229, 56, 56, 0.93);
+}
+/* ---------------------------------- PORTFOLIO SECTION ---------------------------------- */
+.portfolio-wrapper ul li.active a {
+	color: #0d7fb2;
+}
+.portfolio-wrapper #portfolio-list .portfolio-holder a.fancybox, .portfolio-wrapper #portfolio-list .portfolio-holder a.fancybox:hover {
+	background: #0d7fb2;
+}
+/* ---------------------------------- TEAM SECTION ---------------------------------- */
+.team-holder a i {
+	color: #0d7fb2;
+}
+.team-holder:hover .spliter {
+	width: 70px;
+	background: #0d7fb2;
+}
+.team-box a i:hover {
+	color: #0d7fb2;
+}
+/* ---------------------------------- TESTMONIALS SECTION ---------------------------------- */
+.testimonial-wrapper h2 {
+	color: #0d7fb2;
+}
+/* ---------------------------------- PRICE SECTION ---------------------------------- */
+.big-wrapper:hover a {
+	background: #0d7fb2;
+	border: 1px solid #0d7fb2;
+}
+/* ---------------------------------- BLOG SECTION ---------------------------------- */
+.blog-content:hover .img-holder .author span {
+	background: #0d7fb2;
+}
+.blog-content h4 a {
+	color: #0d7fb2;
+}
+/* ---------------------------------- CONTACT SECTION ---------------------------------- */
+.contact-holder input[type=submit]:hover {
+	background: #0d7fb2;
+	border: 2px solid #0d7fb2;
+}
+/* ---------------------------------- FOOTER SECTION ---------------------------------- */
+footer a:hover {
+	color: #0d7fb2;
+}
+footer .footer-left ul li a:hover {
+	background: #0d7fb2;
+}
+.botton-bar a:hover {
+	color: #0d7fb2;
+}
+/* ---------------------------------- SCROLL TO TOP ---------------------------------- */
+.scrollToTop {
+	border: 5px solid #0d7fb2;
+}
+.scrollToTop:hover {
+	background: #0d7fb2;
+}
+/*********************************** tabber *****************************************/
+.border-left {
+	border-left: 1px solid #0d7fb2;
+}
+/* ===== about us page styling here ======== */
+.abou-skills {
+	background: #0d7fb2;
+}
+/* ======= blog page start here ========= */
+.page-content-wrapper .blog-post-holder .meta-item a:hover {
+	color: #0d7fb2;
+}
+.page-content-wrapper .blog-post-holder h1 a:hover {
+	color: #0d7fb2;
+}
+/* ========  index main page for selection temlate section =========== */
+.indx-h2 a:hover {
+	color: #0d7fb2;
+}
+/*------- Just Navigation ----------- */
+@media (min-width:320px) and (max-width:1024px) {
+.cd-primary-nav a:hover,
+.cd-primary-nav .active a {
+	background: #0d7fb2;
+}
+}
+/* ===== PLAGINS COLORS ===== */
+.view-fourth .mask {
+	background-color: #0d7fb2 !important;
+}
+
+.ms-skin-black-2 .ms-nav-next,
+.ms-skin-black-2 .ms-nav-prev {
+	background-color: #0d7fb2 !important;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+    background-color: #0d7fb2;
+}

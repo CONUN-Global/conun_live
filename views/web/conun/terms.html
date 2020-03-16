@@ -1,0 +1,61 @@
+<header class="snap" id="setting">
+    <div class="wrap">
+        <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        <button type="button" name="button" class="clear" id="back" onclick="window.history.back()">BACK</button>
+        <p class="title snap">terms and conditions</p>
+        <p class="title_nano">Version 0.1.1 (Latest)</p>
+    </div>
+</header>
+<?php
+ if($this->session->userdata('member_id')){
+?>
+<? include "menu.html"; ?>
+<?php }?>
+<section id="content" class="snap">
+    <div class="wrap">
+        <!-- 임시로 코넌의 이용약관 일부를 입력하였습니다 -->
+        <div class="paragraph">
+            <b>1 Purpose and Overview</b>
+            <div>
+                The purpose of terms of service is to define and fulfill the rights, duties and responsibilities of the users who are used in relation to the overall service use of distributed computing platforms provided by CONUN Global (hereinafter referred to as "the Company") and are provided services through the Company's website (www.conun.io).
+                <br><br>
+                Users acknowledge that users have read, understood, abide by and comply with all applicable laws and regulations in order to access or use the Website. If users do not agree to the terms of service, you will not be able to access the website.
+            </div>
+        </div>
+        <div class="paragraph">
+            <b>2 General Definition</b>
+            <div>
+                The terms used in this terms of service are defined as follows.
+                <br><br>
+                CONUN is the name of Distributed Computing Platform Service and services are provided with active participation of users.
+                <p class="indent">
+                    ① Membership refers to the accounts of users who participate in various services of the company.
+                    <span class="h_bar"></span>
+                    ② ID means the member's e-mail address for member identification and use of the company's services.
+                    <span class="h_bar"></span>
+                    ③ Password means the combination of English alphabet and number registered by the member himself/herself in order to check the identity of the member and to protect the interests and confidentiality of the member.
+                    <span class="h_bar"></span>
+                    ④ Manager is a person designated by the Company for overall management and smooth operation of services provided by the Company.
+                    <span class="h_bar"></span>
+                    ⑤ Pre-Sale refers to the pre-sale of the CONUN coin that the company conducts in the form of a cloud funding. Members can participate in coin-sale with all procedures and qualifications in accordance with the laws and regulations of their respective countries. The company is not responsible for any consequences that may arise due to the procedures and qualifications.
+                    <span class="h_bar"></span>
+                    ⑥ CONUN coin refers to an cryptocurrency issued by a distributed computing platform service. CONUN coin is issued to the member as a token later.
+                    <span class="h_bar"></span>
+                    ⑦ Advisor refers to the recommendation of the member who introduced the company to the member. The advisor must be a member of the company.
+                </p>
+            </div>
+        </div>
+		<?php// echo $this->lang->line('terms')['text']; ?>
+    </div>
+</section>
+</div>
+<!-- script -->
+<script src="/js/action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+    });
+</script>
+</body>
+</html>

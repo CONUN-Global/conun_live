@@ -1,0 +1,102 @@
+
+      <header><!-- 상단로고 -->
+        <div class="wrap">
+          <a href="#" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        </div>
+      </header>
+
+
+      <? include "menu.html"; ?>
+
+
+
+
+      <!-- contents area -->
+      <section id="content">
+        <!-- home -->
+        <!-- 홈메뉴 -->
+        <div class="sidewrap flex row justify snap" id="home_nav">
+            <?if ($this->session->userdata('level') == 2) {?>
+            <a onclick="screenChange('/scan');" class="ico_menu" id="ico_pay"><span><?=$this->lang->line('SCAN');?></span></a>
+
+            <?}else{?>
+            <a onclick="screenChange('/qr');" class="ico_menu" id="ico_pay"><span><?=$this->lang->line('PAY');?></span></a>
+            <?}?>
+            <a onclick="screenChange('/recive');" class="ico_menu" id="ico_addr"><span><?=$this->lang->line('ADDR');?></span></a>
+            <a onclick="screenChange('/coin_send');" class="ico_menu" id="ico_send"><span><?=$this->lang->line('SEND');?></span></a>
+            <a onclick="screenChange('/exchange');" class="ico_menu" id="ico_change"><span><?=$this->lang->line('CHANGE');?></span></a>
+        </div>
+
+
+
+
+          <div id="myconwrap" class="snap">
+              <div id="mycon">
+
+                  <p class="title_min">
+                      MY CON
+                  </p>
+
+
+                  <? foreach($bal_list as $item){?>
+                      <? if($item['COIN'] == "CON"){?>
+                          <p id="con"><?=number_format($item['BALANCE'],6);?></p>
+                          <p id="convalue"><?=$item['BALANCE']*$sise['TICK']['CLOSING_PRICE'];?> WON</p>
+                      <?}?>
+                  <?}?>
+              </div>
+          <!-- 1CON 현재 가격 -->
+          <div id="nowcon" class="flex row justify">
+              <p class="coin"><?=$sise['TICK']['CLOSING_PRICE'];?> &#8361; <span class="title_min">/ 1CON</span></p>
+              <button type="button" name="button" id="refreshcon" onClick="window.location.reload()"></button> <!-- 수치 새로고침 -->
+
+          </div>
+          <!-- 현재 CON 보유 현황 및 가치 -->
+
+        </div>
+        <!-- 현재 포인트 및 이더 보유 현황 -->
+        <div class="sidewrap snap" id="coins">
+          <div class="flex row">
+            <div>
+
+
+                <? foreach($bal_list as $item){?>
+                <? if($item['COIN'] == "CONP"){?>
+                <p class="title_min">CONP</p>
+                <p class="coin" id="conp"><?=number_format($item['BALANCE'],6);?></p>
+
+                <?}?>
+                <?}?>
+            </div>
+            <div class="v_bar"></div>
+            <div>
+
+                <? foreach($bal_list as $item){?>
+                <? if($item['COIN'] == "MOCP"){?>
+                <p class="title_min">MOCP</p>
+                <p class="coin" id="mocp"><?=number_format($item['BALANCE'],6);?></p>
+
+                <?}?>
+                <?}?>
+            </div>
+          </div>
+            <? foreach($bal_list as $item){?>
+            <? if($item['COIN'] == "ETH"){?>
+          <p><span class="coin" id="eth"><?=number_format($item['BALANCE'],6);?></span><span class="title_min">ETH</span></p>
+            <?}?>
+            <?}?>
+        </div>
+      </section>
+    </div>
+
+    <!-- script -->
+    <script src="/js/action.js?version=1"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $h_height = $('header').height();
+        $('#content').css({'padding-top':$h_height});
+      });
+
+    </script>
+  </body>
+</html>

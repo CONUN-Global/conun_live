@@ -1,0 +1,159 @@
+<header class="snap" id="account">
+    <div class="wrap">
+        <a href="/conun/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+        <p class="title_min mat30"><?=$this->lang->line('WELCOME');?></p>
+        <div class="flex row justify">
+            <p class="title snap"><?=$name;?></p>
+            <a href="#" onclick="openModal('logout');">
+                <button type="button" name="button" class="mini" id="logout"><?=$this->lang->line('LOGOUT');?></button>
+            </a>
+        </div>
+        <p class="title_min"><?=$email;?></p>
+    </div>
+</header>
+
+
+<? include "menu.html"; ?>
+
+<section id="content" class="snap">
+    <div class="fill">
+        <div class="sidewrap">
+            <!-- 파트너계정인 경우 버튼 표시
+            클릭시 파트너 관리자 페이지로 이동 -->
+
+
+            <?if ($this->session->userdata('level') == 10) {?>
+            <button type="button" name="button" class="default mat5"  onclick="location.href='/admin';">
+                <img src="/img/icons/ico_ptn.png" alt="partner" style="width:auto;height:14px;" class="mar10">
+                Admin
+            </button>
+            <?}?>
+            <?if ($this->session->userdata('level') == 2) {?>
+            <button type="button" name="button" class="default mat5" onclick="location.href='/partner';">
+                <img src="/img/icons/ico_ptn.png" alt="partner" style="width:auto;height:14px;" class="mar10">
+                Partner
+            </button>
+            <?}?>
+
+
+
+
+
+            <!-- . -->
+            <!-- 내지갑 -->
+            <div id="mywallet">
+                <div>
+                    <p class="title_min"><?=$this->lang->line('MY WALLET');?></p>
+                    <p class="title_nano" id="mywalletaddress_1"><?=$coin_addr;?></p>
+                    <input type="text" value="" id="mywalletaddress" style="position:fixed;z-index:-1000;left:-1000;top:-1000;">
+                </div>
+                <div class="flex row">
+                    <p class="ico_menu" id="adrcopy" onclick="copytoClip('mywalletaddress');"><span><?=$this->lang->line('COPY');?></span></p>
+                    <div class="v_bar"></div>
+                    <p class="ico_menu" id="adrqr" onclick="openModal('myqr');"><span><?=$this->lang->line('QR Code');?></span></p>
+
+                </div>
+            </div>
+            <!-- . -->
+            <!-- 마이페이지메뉴 -->
+            <table class="default" cellpadding="0" cellspacing="0">
+                <tbody>
+                <!-- 비밀번호 -->
+                <tr>
+                    <td>
+                        <img src="/img/icons/ico_key.png" alt="password">
+                        <?=$this->lang->line('Password');?>
+                    </td>
+                    <td>
+                        <a href="/conun/profile/password" title="edit password"><button type="button" name="button" class="mini"><?=$this->lang->line('EDIT');?></button></a>
+                    </td>
+                </tr>
+                <!-- 결제비밀번호 -->
+                <tr>
+                    <td>
+                        <img src="/img/icons/ico_key.png" alt="payment password">
+                        <?=$this->lang->line('Payment Password');?>
+                    </td>
+                    <td>
+                        <a href="/conun/profile/wallet_password" title="edit payment password"><button type="button" name="button" class="mini"><?=$this->lang->line('EDIT');?></button></a>
+                    </td>
+                </tr>
+                <!-- 이용약관 -->
+                <tr>
+                    <td>
+                        <div class="flex row">
+                            <img src="/img/icons/ico_document.png" alt="terms and conditions">
+                            <div>
+                                <p><?=$this->lang->line('Terms and Conditions');?></p>
+                                <p class="title_nano"><?=$this->lang->line("You've agreed to CONUN Wallet Terms and Conditions on");?> <?=date("Y-m-d",strtotime($regdate));?>.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="/conun/account/terms" title="read terms and conditions"><button type="button" name="button" class="mini"><?=$this->lang->line('READ');?></button></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- . -->
+        </div>
+    </div>
+    <div class="wrap" style="text-align:center;">
+        <p class="title_nano" id="user_join_date"><?=$this->lang->line('Joined on');?> <?=date("Y-m-d",strtotime($last_login));?></p>
+       <!-- <a href="#" class="link" style="color:#393944;"><?=$this->lang->line('Close Account');?></a>-->
+    </div>
+</section>
+</div>
+<div class="modal" type="logout"  style="display: none;width: 100%;height: 100%;top: 0px;left: 0px;">
+    <div class="item">
+        <p class="title">
+            <?=$this->lang->line('로그아웃<br>하시겠습니까');?>?
+        </p>
+        <div class="content">
+            <p>
+                <?=$this->lang->line('지갑에서 로그아웃 합니다. 로그아웃 하면 자동 로그인 설정이 해제됩니다');?>.
+            </p>
+        </div>
+        <button type="button" name="close" onclick="closeModal();"></button>
+        <button type="button" name="logout" onclick="window.location.href='/conun/account/out'" class="default active"><?=$this->lang->line('로그아웃 하기');?></button>
+    </div>
+    <div class="modalbg"></div>
+</div>
+<div class="modal" type="myqr" style="display: none;width: 100%;height: 100%;top: 0px;left: 0px">
+    <div class="item">
+        <p class="title">
+              <?=$this->lang->line('내 지갑');?>
+        </p>
+        <div class="content">
+            <div id="myqr" title="<?=$coin_addr;?>">
+
+                <canvas width="600" height="600" style="display: none;"></canvas>
+            </div>
+        </div>
+        <button type="button" name="close" onclick="closeModal();"></button>
+    </div>
+    <div class="modalbg"></div>
+</div>
+
+<!-- script -->
+<script src="/js/action.js"></script>
+<script src="/js/qr.js"></script>
+
+<script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("myqr"), {
+        text: "<?=$coin_addr;?>",
+        width: 600,
+        height: 600,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+        $seed = $('#mywalletaddress_1').text();
+        $('input#mywalletaddress').val($seed);
+    });
+</script>
+</body>
+</html>

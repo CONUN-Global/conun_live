@@ -1,0 +1,123 @@
+<header class="snap" id="setting">
+    <div class="wrap">
+        <a href="/conun" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
+    </div>
+</header>
+
+<? include "menu.html"; ?>
+
+
+<section id="content" class="snap">
+    <div class="sidewrap">
+        <table class="default" cellpadding="0" cellspacing="0">
+            <tbody>
+            <!-- auto login -->
+            <tr>
+                <td>
+                    <img src="/img/icons/ico_login.png" alt="auto login">
+                    <?=$this->lang->line('Auto Login');?>
+                </td>
+                <td>
+                    <? if($_COOKIE['autologin']){?>
+                        <a href="/conun/setting/autologin?action=off" title="auto login"><button type="button" name="button" class="mini active  " ><?=$this->lang->line('ON');?></button></a>
+                    <?}else{?>
+                        <a href="/conun/setting/autologin?action=on" title="auto login"><button type="button" name="button" class="mini  " ><?=$this->lang->line('OFF');?></button></a>
+                    <?}?>
+
+                </td>
+            </tr>
+            <!-- language -->
+            <tr>
+                <td>
+                    <img src="/img/icons/ico_lang.png" alt="language setting">
+                    <?=$this->lang->line('Language');?>
+                </td>
+                <td>
+                    <a href="#" title="edit language" onclick="openModal('lang');"onclick="openModal('lang');">
+                        <? if($_COOKIE['language'] =="eng"){?>
+                        <button type="button" name="button" class="mini">ENGLISH</button>
+                        <? }else if($_COOKIE['language'] =="kr"){?>
+                            <button type="button" name="button" class="mini">한국어</button>
+                        <? }else if($_COOKIE['language'] =="mya"){?>
+                            <button type="button" name="button" class="mini">မြန်မာအက္ခရာ</button>
+                        <? }else if($_COOKIE['language'] =="jp"){?>
+                            <button type="button" name="button" class="mini">日本語</button>
+                        <?}else{?>
+                            <button type="button" name="button" class="mini">ENGLISH</button>
+                        <?}?>
+ 
+                    </a>
+                </td>
+            </tr>
+            <!-- Notice -->
+            <tr>
+                <td>
+                    <img src="/img/icons/ico_notice.png" alt="Notice">
+                    <?=$this->lang->line('Notice');?>
+                </td>
+                <td>
+                    <a href="/conun/notice" title="read Notice"><button type="button" name="button" class="mini"><?=$this->lang->line('READ');?></button></a>
+                </td>
+            </tr>
+            <!-- Version -->
+            <tr>
+                <td>
+                    <img src="/img/icons/ico_info.png" alt="Version Info">
+                    <?=$this->lang->line('Version Info');?>
+                </td>
+                <td>
+                    <?=VERSION;?>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</div>
+
+<div class="modal" type="lang">
+    <div class="item">
+        <p class="title">
+            언어 변경
+        </p>
+        <div class="content">
+            <form id="conun_lang" method="post">
+                <input type="radio" name="conun_lang" id="conun_lang_kr">
+                <label for="conun_lang_kr"><span class="radio"></span>한국어</label>
+                <input type="radio" name="conun_lang" id="conun_lang_en">
+                <label for="conun_lang_en"><span class="radio"></span>English</label>
+                <input type="radio" name="conun_lang" id="conun_lang_jp">
+                <label for="conun_lang_jp"><span class="radio"></span>日本語</label>
+                <input type="radio" name="conun_lang" id="conun_lang_my">
+                <label for="conun_lang_my"><span class="radio"></span>မြန်မာအက္ခရာ</label>
+            </form>
+        </div>
+        <button type="button" name="close" onclick="closeModal();"></button>
+    </div>
+    <div class="modalbg"></div>
+</div>
+<!-- script -->
+<script src="/js/action.js?version=2"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $height = $('header').height()-20;
+        $('#content').css({'padding-top':$height});
+
+        $("#conun_lang_kr").click(function () {
+            location.href="/conun/setting/changelang?language=kr";
+        });
+
+        $("#conun_lang_en").click(function () {
+            location.href="/conun/setting/changelang?language=eng";
+        });
+
+        $("#conun_lang_my").click(function () {
+            location.href="/conun/setting/changelang?language=mya";
+        });
+        $("#conun_lang_jp").click(function () {
+            location.href="/conun/setting/changelang?language=jp";
+        });
+    });
+</script>
+</body>
+</html>

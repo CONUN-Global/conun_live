@@ -1,0 +1,12 @@
+#mask {z-index: -1}
+
+.formwrap {
+    display:inline;
+    width:auto;
+}
+
+
+.btn_find {
+
+top: 8px;
+}
