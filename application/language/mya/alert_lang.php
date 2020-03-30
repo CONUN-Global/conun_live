@@ -64,6 +64,11 @@ $lang['WithDraw  Password 6 length'] = 'WithDraw  Password 6 length';
 $lang['WithDraw New Password'] = 'WithDraw New Password';
 $lang['WithDraw Confirm Password'] = 'WithDraw Confirm Password';
 $lang['WithDraw Confirm Password'] = 'WithDraw Confirm Password';
-
-
+$lang['terms'] = [
+	'top' => [
+		'title' => 'CONUN WALLET TERMS OF USE',
+		'ver' => 'Version 0.1.1 (Latest)',
+	],
+	'text' => '<pre>ဗမာ</pre>'
+];
 ?>

@@ -2,8 +2,8 @@
     <div class="wrap">
         <a href="/" id="logo"><img src="/img/logo_color.png" alt="home" title="home" style="width:100%;height:auto;"></a>
         <button type="button" name="button" class="clear" id="back" onclick="window.history.back()">BACK</button>
-        <p class="title snap">terms and conditions</p>
-        <p class="title_nano">Version 0.1.1 (Latest)</p>
+        <p class="title snap"><?php echo $this->lang->line('terms')['top']['title']; ?><!-- terms and conditions --></p>
+        <p class="title_nano"><?php echo $this->lang->line('terms')['top']['ver']; ?><!-- Version 0.1.1 (Latest) --></p>
     </div>
 </header>
 <?php
@@ -13,7 +13,7 @@
 <?php }?>
 <section id="content" class="snap">
     <div class="wrap">
-        <!-- 임시로 코넌의 이용약관 일부를 입력하였습니다 -->
+        <!-- 임시로 코넌의 이용약관 일부를 입력하였습니다
         <div class="paragraph">
             <b>1 Purpose and Overview</b>
             <div>
@@ -44,8 +44,8 @@
                     ⑦ Advisor refers to the recommendation of the member who introduced the company to the member. The advisor must be a member of the company.
                 </p>
             </div>
-        </div>
-		<?php// echo $this->lang->line('terms')['text']; ?>
+        </div> -->
+		<?php echo $this->lang->line('terms')['text']; ?>
     </div>
 </section>
 </div>

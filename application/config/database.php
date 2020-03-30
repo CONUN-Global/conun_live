@@ -48,10 +48,10 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-$db['default']['hostname'] = 'mysql:host=13.209.174.218:3306;dbname=wallet';
+$db['default']['hostname'] = 'mysql:host=localhost:3306;dbname=wallet';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'conun!@#$';
-$db['default']['database'] = 'wallet';
+$db['default']['database'] = 'new_wallet';
 $db['default']['dbdriver'] = 'pdo';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

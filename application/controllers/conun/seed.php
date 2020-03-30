@@ -41,6 +41,8 @@ class Seed extends CI_Controller
 
 
         if ($key && $this->session->userdata('member_id') && $mb->member_memnic == "") {
+
+            $key = aes_encrypt($key);
             $sql = "update m_member set member_memnic='" . $key . "' where member_id='" . $this->session->userdata('member_id') . "'";
             $this->db->query($sql);
         }

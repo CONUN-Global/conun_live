@@ -48,6 +48,8 @@ class M_member extends CI_Model {
     }
 
     function get_member_memonic($crypt, $filder='*') {
+
+        $crypt=aes_encrypt($crypt);
         $this->db->select($filder);
         $this->db->from('m_member');
         $this->db->where("member_memnic='$crypt'");
