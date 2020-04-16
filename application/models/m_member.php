@@ -3,7 +3,7 @@ class M_member extends CI_Model {
 
 
  private $urls = "http://api.conunkorea.io/api/wallet_api_self";
- private $url = "http://api.conunkorea.io//api/wallet_api_self";
+ private $url = "http://api.conunkorea.io/api/wallet_api_self";
 
 
 	function __construct()
@@ -424,7 +424,7 @@ class M_member extends CI_Model {
 		$data = curl_exec($ch);
 		$curl_errno = curl_errno($ch);
 		$curl_error = curl_error($ch);
- 
+
 		curl_close($ch);
 
 		return $data;

@@ -55,7 +55,7 @@
 		<!-- 상단메뉴-->
 		<ul class="nav">
 			<li class="<?active_chk($group,'대시보드')?>"><a href="/partner">대시보드</a></li>
-			<li class="<?active_chk($group,'매출관리')?>"><a href="/partner/coin/lists">코인 관리</a></li>
+			<li class="<?active_chk($group,'코인관리')?>"><a href="/partner/coin/lists">코인 관리</a></li>
            <li class="<?active_chk($group,'QR관리')?>"><a href="/partner/qr/qrLists">QR 관리</a></li>
  	</ul>
 		<!--//상단메뉴-->
