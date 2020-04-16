@@ -61,7 +61,7 @@
 			<li class="<?active_chk($group,'회원관리')?>"><a href="<?=MEMBER_LIST?>">회원관리</a></li>
 			<? }?>
             <? if($this->session->userdata('level') == "10") { ?>
-			<li class="<?active_chk($group,'매출관리')?>"><a href="<?=COIN_LIST?>">코인 관리</a></li>
+			<li class="<?active_chk($group,'코인관리')?>"><a href="<?=COIN_LIST?>">코인 관리</a></li>
             <? } ?>
 <!--			<li class="<?active_chk($group,'매출관리')?>"><a href="<?=POINT_LIST?>">이더리움 관리</a></li>
 			<li class="<?active_chk($group,'2차관리')?>"><a href="<?=ICO_LIST?>">ICO 관리</a></li> -->

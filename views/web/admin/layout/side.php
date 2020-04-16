@@ -32,7 +32,7 @@
         <li><a href="/admin/new_coin/exchange_list">전환현황</a></li>
         <li><a href="/admin/new_coin/payment_day">일별결제현황</a></li>
         <li><a href="/admin/new_coin/payment_month">월별결제현황</a></li>
-        <li><a href="/admin/new_coin/payment_year">년별결제현황</a></li>
+        <li><a href="/admin/new_coin/payment_year">연별결제현황</a></li>
 	</ul>
 </div>
 

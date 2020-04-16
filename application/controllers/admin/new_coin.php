@@ -28,7 +28,7 @@ class New_coin extends CI_Controller
     function exchange_list()
     {
         $data = array();
-        $data['title'] = "결제현황";
+        $data['title'] = "전환현황";
         $data['group'] = "코인관리";
         $cfg = get_cfg(); // 환경설정부분
         $data['cfg'] = $cfg; // 환경설정부분
@@ -197,7 +197,7 @@ class New_coin extends CI_Controller
     function payment_day()
     {
         $data = array();
-        $data['title'] = "결제현황";
+        $data['title'] = "일별 결제현황";
         $data['group'] = "코인관리";
         $cfg = get_cfg(); // 환경설정부분
         $data['cfg'] = $cfg; // 환경설정부분
@@ -290,7 +290,7 @@ class New_coin extends CI_Controller
     function payment_month()
     {
         $data = array();
-        $data['title'] = "결제현황";
+        $data['title'] = "월별 결제현황";
         $data['group'] = "코인관리";
         $cfg = get_cfg(); // 환경설정부분
         $data['cfg'] = $cfg; // 환경설정부분
@@ -380,7 +380,7 @@ class New_coin extends CI_Controller
     function payment_year()
     {
         $data = array();
-        $data['title'] = "결제현황";
+        $data['title'] = "연별 결제현황";
         $data['group'] = "코인관리";
         $cfg = get_cfg(); // 환경설정부분
         $data['cfg'] = $cfg; // 환경설정부분
